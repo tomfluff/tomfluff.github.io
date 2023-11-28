@@ -1,0 +1,25 @@
+a.fancy-button {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #3eb7f0;
+  border: 1px solid #3eb7f0;
+  padding: 0.5em 0.8em;
+}
+a.fancy-button:hover {
+  color: #069;
+  border-color: #069;
+}
+
+.news-item {
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #ccc;
+}
+.news-item:last-of-type {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.news-date {
+  font-size: 1.2em;
+  color: #999;
+}

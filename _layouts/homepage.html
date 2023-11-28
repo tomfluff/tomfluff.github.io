@@ -29,6 +29,7 @@
     {% if site.auto_dark_mode %}
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
+    <link rel="stylesheet" href="./assets/css/news.css">
     {% else %}
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
@@ -43,7 +44,7 @@
         <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
         {% endif %}
 
-        <h1>{{ site.title }}</h1>
+        <h1><a href="/">{{site.title }}</a></h1>
 
         {% if site.position %}
         <position style="font-size:1.10rem;">{{ site.position }}</position>

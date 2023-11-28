@@ -4,20 +4,14 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am a Master's student at The University of Tokyo, advised by Prof. [Takeo IGARASHI](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/). I am also a research intern at [Honda Research Institute Japan](https://www.jp.honda-ri.com/en/). I received my Bachelor's degree from [Tel-Aviv University](https://english.tau.ac.il/) in 2018, with a double major in Computer Science and Film Studies. I also have several years of experience as a software engineer in the Israeli high-tech industry. 
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Human-Computer Interaction:** creativity support tools, human-in-the-loop machine learning
+- **Accessibility:** assistive technology, inclusive design, universal design
 
-## News
-
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+{% include_relative _includes/news.md %}
 
 {% include_relative _includes/publications.md %}
 
-{% include_relative _includes/services.md %}

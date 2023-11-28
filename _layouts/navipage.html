@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include layout/_head.html %}
+  <body>
+    <div class="wrapper">
+      <header>
+        {% include layout/_sidebar.html %}
+
+      </header>
+      <section>
+
+        <div id="navigation">
+            <a href="{{ site.baseurl }}/">Home</a>
+        </div>
+
+      {{ content }}
+
+      <br>
+
+      {% include layout/_footer.html %}
+
+      </section>
+      <footer>
+        
+      </footer>
+    </div>
+    {% include layout/_scripts.html %}
+  </body>
+</html>

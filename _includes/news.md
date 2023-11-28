@@ -9,6 +9,6 @@
 {% endfor %}
 </ul>
 
-<div style="flex: 1 1 auto; text-align: right; margin-top: 1em;margin-bottom:1em;">
-    <a class="fancy-button" href="/news">See More</a>
+<div class="link-more">
+    <a class="fancy" href="/news">See More</a>
 </div>

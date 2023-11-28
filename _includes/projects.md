@@ -3,7 +3,7 @@
 <div class="projects">
 <ul>
 
-{% for link in site.data.projects.main %}
+{% for link in site.data.projects.main limit:5 %}
 
 <li>
 <div class="pub-row">
@@ -30,7 +30,7 @@
       <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
       {% endif %}
       {% if link.year %}
-      <strong style="margin-left:1em"> <i style="color:#e74d3c">{{ link.year }}</i></strong>
+      <strong style="margin-left:1em"> <i>{{ link.year }}</i></strong>
       {% endif %}
       {% if link.others %} 
       {{ link.others }}
@@ -45,5 +45,9 @@
 {% endfor %}
 
 </ul>
+
+<div class="link-more" style="margin-top:-1rem;">
+    <a class="fancy" href="/projects">See More</a>
+</div>
 </div>
 

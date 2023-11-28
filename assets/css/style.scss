@@ -13,3 +13,23 @@ email {
 #navigation {
     margin-bottom: 1em;
 }
+
+div.link-more {
+    flex: 1 1 auto;
+    text-align: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+  
+a.fancy {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #3eb7f0;
+    border: 1px solid #3eb7f0;
+    padding: 0.5em 0.8em;
+}
+  
+a.fancy:hover {
+    color: #069;
+    border-color: #069;
+}

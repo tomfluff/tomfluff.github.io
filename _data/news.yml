@@ -2,14 +2,14 @@ main:
   - date: 2023-11-29
     # image:
     headline: "Oral presentation about our work on e-learning accessibility at WISS 2023."
-    description: 'During the Workshop of Interactive Systems and Software (WISS) 2023, we will present our work on e-learning accessibility. The work is titled "Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上" and is a collaboration with Prof. Takeo IGARASHI and Prof. Ariel SHAMIR.'
+    description: 'During the Workshop of Interactive Systems and Software (WISS) 2023, we will present our work on e-learning accessibility. The work is titled "Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上" and is a collaboration with Prof. Takeo Igarashi and Prof. Ariel SHAMIR.'
 
   - date: 2023-10-20
     # image:
-    headline: "Received the Google AIR Grant for our work on e-learning accessibility together with Prof. Takeo IGARASHI."
+    headline: "Received the Google AIR Grant for our work on e-learning accessibility together with Prof. Takeo Igarashi."
     description: "For our work on e-learning accessibility, we received the Google Award for Inclusion Research Grant. The grant will support our work on making e-learning more accessible to people with disabilities. The grant supervisor is [James Stout](https://handsfreecoding.org/) who is the Director of Accessibility at Google."
 
   - date: 2023-10-18
     # image:
     headline: "Our paper about e-learning accessibility was accepted to WISS 2023."
-    description: "Our paper titled 'Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上' was accepted to the Workshop of Interactive Systems and Software (WISS) 2023. The paper is a collaboration with Prof. Takeo IGARASHI and Prof. Ariel SHAMIR."
+    description: "Our paper titled 'Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上' was accepted to the Workshop of Interactive Systems and Software (WISS) 2023. The paper is a collaboration with Prof. Takeo Igarashi and Prof. Ariel SHAMIR."

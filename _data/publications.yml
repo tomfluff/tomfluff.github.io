@@ -1,5 +1,6 @@
 main:
   - title: "Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上"
+    alt: "Smart Replay: Improving Visual and Temporal Accessibility in e-Learning Videos"
     authors: <strong>Sechayk Yotam</strong>, Shamir Ariel, and Igarashi Takeo
     conference_short: WISS
     conference: Workshop of Interactive Systems and Software <strong>(WISS)</strong>, 2023.

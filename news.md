@@ -1,10 +1,8 @@
 ---
-layout: homepage
+layout: navipage
 ---
 
 # News
-
-[Home](/)
 
 {% for news in site.data.news.main %}
 <div class="news-item">

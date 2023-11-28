@@ -1,0 +1,25 @@
+main:
+  - title: "HealthUp (prevent food waste) - Sustainability Cloud Powered Project"
+    year: 2022
+    description: "REACT and Django based web application to help prevent food waste and efficiently use food inventory. Manage ingredients and food, find recipes based on inventory list and additional filters, view health attributes of each recipe and handle expired foods correctly."
+    image:
+    pdf:
+    page: "https://healthup-0.web.app/"
+    code:
+    video:
+  - title: "LyricEd (learn English through music) - Educational WebApp Project"
+    year: 2017
+    description: "A python based web application using various API integrations. The website offers gamification of English learning by giving users tools to complete missing lyrics from a song they choose while listening to that song playing. Users can control level, view scores and track progress."
+    image:
+    pdf:
+    page: "https://github.com/tomfluff/portfolio/tree/master/python/LyricEd"
+    code:
+    video:
+  - title: "Sunny Day (realtime sun protection) - eHealth Application Project"
+    year: 2016
+    description: "A Xamarin Forms application integrating the Microsoft Band 2 for sun protection and sun-block reminders. The application's backend was built using Microsoft Azure App Services, including SQL databases and SQLite for cloud sync and Azure Blob services. The project also utilized computer-vision image processing implemented in Python with OpenCV."
+    image:
+    pdf:
+    page: "https://sunnydayw8w.wixsite.com/sunnyday"
+    code:
+    video:

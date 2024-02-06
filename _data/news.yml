@@ -1,4 +1,9 @@
 main:
+  - date: 2024-01-12
+    # image:
+    headline: "Our work on collaborative storytelling was accepted to Interaction 2024."
+    description: "Our work title MyStoryKnight was accepted to the Interaction 2024 conference in Tokyo Japan. We will be presenting a demo of our system and the interactivity it allows."
+  
   - date: 2023-12-01
     image: /assets/img/news/2023-12-01.jpg
     headline: "Received the Helpfeel award at the WISS 2023 conference."

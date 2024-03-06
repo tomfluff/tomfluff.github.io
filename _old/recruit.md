@@ -1,5 +1,8 @@
 ---
 layout: navipage
+created: 2024-02-08
+updated: 2024-03-06
+deprecated: true
 ---
 # Letter of Recruitment
 

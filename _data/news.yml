@@ -1,4 +1,9 @@
 main:
+  - date: 2024-03-01
+    # image:
+    headline: "Our work <i>SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos</i> was accepted to CHI 2024 Late Breaking Work track."
+    description: "Our work on e-learning accessibility was accepted to the ACM CHI 2024 conference in the Late Breaking Work track. We will be presenting a poster of our work showcasing the SmartLearn system and research findings."
+    
   - date: 2024-01-12
     # image:
     headline: "Our work on collaborative storytelling was accepted to Interaction 2024."

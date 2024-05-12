@@ -1,4 +1,19 @@
 main:
+  - date: 2024-05-14
+    # image:
+    headline: "Presenting *SmartLearn* at CHI 2024 LBW Track"
+    description: "Presenting a Poster for our work \"*SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos*\" at the CHI 2024 conference at Hawaii, Late Breaking Work track."
+ 
+  - date: 2024-04-01
+    # image:
+    headline: "Start Ph.D. course at The University of Tokyo"
+    description: "Started a 3-year program as a Creative Informatics Ph.D. candidate at The University of Tokyo advised by Prof. Takeo Igarashi, and co-advised by Prof. Ariel Shamir from Reichman University. "
+  
+  - date: 2024-03-21
+    # image:
+    headline: "Graduated with Masters in Creative Informatics from The University of Tokyo"
+    description: "Graduated The University of Tokyo with a Creative Informatics Master's advised by Prof. Takeo Igarashi."
+ 
   - date: 2024-03-01
     # image:
     headline: "Our work <i>SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos</i> was accepted to CHI 2024 Late Breaking Work track."

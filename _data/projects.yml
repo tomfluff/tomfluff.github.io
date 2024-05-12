@@ -1,4 +1,12 @@
 main:
+  - title: MyStoryKnight (human-AI storytelling) - Collaborative Storytelling with Tangible Input"
+    year: 2023
+    description: "REACT and Flask based web application using the OpenAI LLM-based APIs for human-AI collaborative storytelling with tangible user input in the form of a physical drawing for character generation. Generating an adventure-like story with user choice affecting the story development."
+    image:
+    pdf: "https://www.interaction-ipsj.org/proceedings/2024/data/pdf/3B-54.pdf"
+    page: "https://tomfluff.github.io/MyStoryKnight/"
+    code: "https://github.com/tomfluff/MyStoryKnight"
+    video:
   - title: "HealthUp (prevent food waste) - Sustainability Cloud Powered Project"
     year: 2022
     description: "REACT and Django based web application to help prevent food waste and efficiently use food inventory. Manage ingredients and food, find recipes based on inventory list and additional filters, view health attributes of each recipe and handle expired foods correctly."

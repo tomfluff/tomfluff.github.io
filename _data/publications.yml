@@ -1,4 +1,26 @@
 main:
+  - title: "Visual-Temporal Accessibility for Slide-based e-learning Videos"
+    alt: ""
+    authors: <strong>Sechayk Yotam</strong>, Shamir Ariel, and Igarashi Takeo
+    conference_short: CHI24
+    conference: Conference on Human Factors in Computing Systems <strong>(CHI EA '24)</strong>, 2024.
+    pdf: https://dl.acm.org/doi/pdf/10.1145/3613905.3650883
+    code: 
+    # bibtex:
+    image: ./assets/img/publication/chi_2024_SmartLearn_teaser_image.png
+    video: https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3613905.3650883&file=3613905.3650883-talk-video.mp4
+    notes: Late breaking work
+  - title: "MyStoryKnight: A Character-drawing Driven Storytelling System Using LLM Hallucinations"
+    alt: ""
+    authors: <strong>Sechayk Yotam</strong>, Penarska Gabriela A., Randsalu Isa A., Arzate Cruz Christian, and Igarashi Takeo
+    conference_short: INTERACTION
+    conference: Information Processing Society of Japan Symposium <strong>(INTERACTION)</strong>, 2024.
+    pdf: https://www.interaction-ipsj.org/proceedings/2024/data/pdf/3B-54.pdf
+    code: https://github.com/tomfluff/MyStoryKnight
+    # bibtex:
+    image: ./assets/img/publication/interaction_2024_MyStoryKnight_teaser_image.png
+    video: 
+    notes: Interactive demo.
   - title: "Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上"
     alt: "Smart Replay: Improving Visual and Temporal Accessibility in e-Learning Videos"
     authors: <strong>Sechayk Yotam</strong>, Shamir Ariel, and Igarashi Takeo

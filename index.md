@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. candidate at The University of Tokyo, advised by Prof. [Takeo Igarashi](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/), and co-advised by Prof. [Ariel Shamir](https://faculty.runi.ac.il/arik/site/index.asp) of Reichman University. I master's degree from The University of Tokyo in Creative Informatics at 2024, and my bachelor's degree from [Tel-Aviv University](https://english.tau.ac.il/) in 2018, with a double major in Computer Science and Film Studies. I also have several years of experience as a software engineer in the tech industry. 
+I am a Ph.D. candidate at The University of Tokyo, advised by Prof. [Takeo Igarashi](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/), and co-advised by Prof. [Ariel Shamir](https://faculty.runi.ac.il/arik/site/index.asp) of Reichman University. I master's degree from The University of Tokyo in Creative Informatics at 2024, and my bachelor's degree from Tel-Aviv University in 2018, with a double major in Computer Science and Film Studies. I also have several years of experience as a software engineer in the tech industry. 
 
 ## Research Interests
 

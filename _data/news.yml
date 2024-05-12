@@ -1,7 +1,7 @@
 main:
   - date: 2024-05-14
     # image:
-    headline: "Presenting *SmartLearn* at CHI 2024 LBW Track"
+    headline: "Presenting <i>SmartLearn</i> at CHI 2024 LBW Track"
     description: "Presenting a Poster for our work \"*SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos*\" at the CHI 2024 conference at Hawaii, Late Breaking Work track."
  
   - date: 2024-04-01

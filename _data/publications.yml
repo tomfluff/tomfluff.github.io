@@ -2,7 +2,7 @@ main:
   - title: "Visual-Temporal Accessibility for Slide-based e-learning Videos"
     alt: ""
     authors: <strong>Sechayk Yotam</strong>, Shamir Ariel, and Igarashi Takeo
-    conference_short: CHI24
+    conference_short: CHI
     conference: Conference on Human Factors in Computing Systems <strong>(CHI EA '24)</strong>, 2024.
     pdf: https://dl.acm.org/doi/pdf/10.1145/3613905.3650883
     code: 
@@ -20,7 +20,7 @@ main:
     # bibtex:
     image: ./assets/img/publication/interaction_2024_MyStoryKnight_teaser_image.png
     video: 
-    notes: Interactive demo.
+    notes: Interactive demo
   - title: "Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上"
     alt: "Smart Replay: Improving Visual and Temporal Accessibility in e-Learning Videos"
     authors: <strong>Sechayk Yotam</strong>, Shamir Ariel, and Igarashi Takeo
@@ -31,4 +31,4 @@ main:
     # bibtex:
     image: ./assets/img/publication/wiss_2023_smart_replay_teaser.jpg
     video: https://www.wiss.org/WISS2023Proceedings/data/04.mp4
-    notes: Short presentation.
+    notes: Short presentation

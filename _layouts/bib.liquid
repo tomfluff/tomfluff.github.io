@@ -181,9 +181,11 @@
     <div class="periodical">
       {{ periodical | strip }}
     </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    {% if entry.note %}
+      <div class="periodical">
+        <small>Note: {{ entry.note | strip | downcase }}</small>
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">

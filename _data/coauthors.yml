@@ -1,34 +1,71 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"shamir":
+  - firstname: ["Ariel", "A."]
+    url: https://faculty.runi.ac.il/arik/site/index.asp
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"pavel":
+  - firstname: ["Amy", "A."]
+    url: https://amypavel.com/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"igarashi":
+  - firstname: ["Takeo", "T."]
+    url: https://www-ui.is.s.u-tokyo.ac.jp/~takeo/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"penarska":
+  - firstname: ["Gabriela", "G.", "Gabriela A."]
+    url:
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"randsalu":
+  - firstname: ["Ingrid", "I.", "Ingrid A."]
+    url:
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"cruz":
+  - firstname: ["Christian", "C.", "Christian Arzate", "Christian Arzate Cruz"]
+    url: https://arzate-christian.github.io/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"gomez":
+  - firstname: ["Randy", "R."]
+    url: https://www.jp.honda-ri.com/en/members/gomez-randy/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"drago":
+  - firstname: ["Riccardo", "R."]
+    url:
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"dogan":
+  - firstname: ["Mustafa", "M.", "Mustafa Doga", "Mustafa Doga Dogan"]
+    url: https://www.dogadogan.com/
+
+"sanna":
+  - firstname: ["Andrea", "A."]
+    url:
+
+"ji":
+  - firstname: ["Yuexiang", "Y."]
+    url:
+
+"maejima":
+  - firstname: ["Akinobu", "A."]
+    url:
+
+"koyama":
+  - firstname: ["Yuki", "Y."]
+    url: https://koyama.xyz/
+
+"hundt":
+  - firstname: ["Andrew", "A."]
+    url:
+
+"murai":
+  - firstname: ["Fabricio", "F."]
+    url:
+
+"dori-hacohen":
+  - firstname: ["Shiri", "S."]
+    url:
+
+"mohanbabu":
+  - firstname: ["Ananya", "Ananya Gubbi", "Ananya G."]
+    url: https://ananyagm.com/
+
+"pimenova":
+  - firstname: ["Veronica", "V."]
+    url: https://veronicapim.github.io/

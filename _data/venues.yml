@@ -1,9 +1,20 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"ASSETS":
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"CHI":
+  color: "#f15a24"
 
-"Vision":
+"WISS":
   color: "#009f36"
+
+"INTERACTION":
+  color: "#ff6f00"
+
+"ROMAN":
+  color: "#8b4513"
+
+"SIGGRAPH":
+  color: "#ff0000"
+
+"DIS":
+  color: "#800080"

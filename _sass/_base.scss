@@ -747,6 +747,7 @@ footer.sticky-bottom {
           margin-bottom: 0.5rem;
           color: var(--global-card-bg-color) !important;
 
+          div,
           a {
             color: white;
 
@@ -777,8 +778,8 @@ footer.sticky-bottom {
         }
 
         > em {
-          border-bottom: 1px solid;
           font-style: normal;
+          font-weight: bold;
         }
 
         > span.more-authors {
@@ -810,6 +811,11 @@ footer.sticky-bottom {
         }
         a.award.btn {
           border-color: var(--global-highlight-color);
+        }
+        .award-text {
+          margin-left: 0.1rem;
+          font-weight: normal;
+          font-style: oblique !important;
         }
       }
 

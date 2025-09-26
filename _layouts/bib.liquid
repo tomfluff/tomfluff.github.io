@@ -188,9 +188,17 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
-        <a class="award btn btn-sm z-depth-0" role="button">
-          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
-        </a>
+        {% assign award_text = entry.award | downcase %}
+        <div class="award z-depth-0">
+          {%- if award_text contains 'honorable' -%}
+            🎗️
+          {%- elsif award_text contains 'best' -%}
+            🏆
+          {%- else -%}
+            📜
+          {%- endif -%}
+          <span class="award-text">{{ entry.award }}</span>
+        </div>
       {% endif %}
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
@@ -337,13 +345,6 @@
           {% endif %}
         </div>
       {% endif %}
-    {% endif %}
-
-    {% if entry.award %}
-      <!-- Hidden Award block -->
-      <div class="award hidden d-print-inline">
-        <p>{{ entry.award | markdownify }}</p>
-      </div>
     {% endif %}
 
     {% if entry.abstract %}

@@ -1,20 +1,20 @@
 "ASSETS":
-  color: "#00369f"
+  color: "#1f77b4"
 
 "CHI":
-  color: "#f15a24"
+  color: "#d62728"
 
 "WISS":
-  color: "#009f36"
+  color: "#9467bd"
 
 "INTERACTION":
-  color: "#ff6f00"
+  color: "#ce56a9"
 
 "ROMAN":
-  color: "#8b4513"
+  color: "#db6b08"
 
 "SIGGRAPH":
-  color: "#ff0000"
+  color: "#8c564b"
 
 "DIS":
-  color: "#800080"
+  color: "#118f9c"

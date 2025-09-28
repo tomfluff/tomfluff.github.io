@@ -6,7 +6,7 @@ subtitle: 🎓 PhD Candidate @ <a href="https://www.u-tokyo.ac.jp/en/">The Unive
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_color.jpg
   image_circular: true # crops the image to make it circular
   more_info:
 
@@ -24,8 +24,15 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Ph.D. candidate at The University of Tokyo, advised by [Takeo Igarashi](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/), and co-advised by [Ariel Shamir](https://faculty.runi.ac.il/arik/site/index.asp) of Reichman University.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+In 2018 I received a BS in Computer Science and Film Studies as a double-major from Tel-Aviv University, followed by 3+ years as a software engineer at Cadence Design Systems. In 2022, I relocated to Japan to pursue an MSc in Creative Informatics at The University of Tokyo, graduating in 2024.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My main research interest is accessibility, where I develop and evaluate solutions to help low-vision people more easily use their residual vision to access content. As a **low-vision person** myself, I am motivated to improve visual access to education, media, and everyday-tasks.
+
+Before starting my BS I solo-traveled for one year around the world visiting 14 countries. It was an amazing journey where everyday is a new adventure. During this one year I managed to get my 🥽 PADI advanced diving licence in Thailand, 🪂 skydive over [Lake Taupō](https://en.wikipedia.org/wiki/Lake_Taup%C5%8D) in New-Zealand, and 🚗 hitchhike over 3000 km from Vancouver, Canada to Anchorage, Alaska.
+
+<blockquote class="stylish-quote">
+  I shall pass this way but once; any good that I can do or any kindness I can show to any human being; let me do it now. Let me not defer nor neglect it, for I shall not pass this way again.
+<cite>Etienne de Grellet</cite>
+</blockquote>

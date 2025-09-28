@@ -1431,3 +1431,35 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+.stylish-quote {
+  position: relative;
+  margin: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-left: 4px solid var(--global-theme-color);
+  background-color: var(--global-code-bg-color-accent);
+  border-radius: 8px;
+
+  &::before {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--global-theme-color);
+    position: absolute;
+    content: "\201C";
+    top: -0.5rem;
+    left: 0.5rem;
+  }
+
+  cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: oblique;
+    text-align: right;
+    &::before {
+      content: "\2014 \00A0"; /* Em dash and non-breaking space */
+    }
+  }
+}

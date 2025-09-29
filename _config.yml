@@ -190,6 +190,7 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _news/announcement_*.md # exclude announcement posts from the news collection
 keep_files:
   - CNAME
   - .nojekyll

@@ -1,9 +1,8 @@
 ---
 layout: post
-date: 2024-04-01 09:00:00-0400
-inline: false
+date: 2024-04-01 09:00:00+0900
+inline: true
 related_posts: false
-title: "Start Ph.D. course at The University of Tokyo"
 ---
 
-Started a 3-year program as a Creative Informatics Ph.D. candidate at The University of Tokyo advised by Prof. Takeo Igarashi, and co-advised by Prof. Ariel Shamir from Reichman University.
+Started a 3-year PhD program in Creative Informatics at The University of Tokyo advised by [Prof. Takeo Igarashi](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/) and co-advised by [Prof. Ariel Shamir](https://faculty.runi.ac.il/arik/site/index.asp).

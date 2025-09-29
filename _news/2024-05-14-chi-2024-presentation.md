@@ -1,9 +1,8 @@
 ---
 layout: post
-date: 2024-05-14 09:00:00-0400
-inline: false
+date: 2024-05-16 09:00:00-1000
+inline: true
 related_posts: false
-title: "Presenting SmartLearn at CHI 2024 LBW Track"
 ---
 
-Presenting a Poster for our work "_SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos_" at the CHI 2024 conference at Hawaii, Late Breaking Work track.
+Presenting a poster for _"SmartLearn"_ at the CHI 2024, Late Breaking Work track. 🗣️

@@ -3,10 +3,10 @@ layout: post
 date: 2023-12-01 09:00:00+0900
 inline: false
 related_posts: false
-title: '<i>"Smart Replay"</i> awarded the Helpfeel award (WISS 2023) 🎊'
+title: 'Awarded the Helpfeel award for <i>"Smart Replay"</i> (WISS 2023) 🎉'
 ---
 
-On a backdrop of the end of 2023, surrounded by snowy mountain rangesd, I had the opportunity to present our work _Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上_ at **WISS 2023 (Workshop on Interactive Systems and Software)**. This was my very first oral presentation of a paper at a conference—a memorable milestone in my research journey.
+On a backdrop of the end of 2023, surrounded by snowy mountain ranges, I had the opportunity to present our work _"Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上"_ at **WISS 2023 (Workshop on Interactive Systems and Software)**. This was my very first oral presentation of a paper at a conference—a memorable milestone in my research journey.
 
 To our delight, our project on e-learning accessibility received the **Helpfeel Award**, recognizing both the technical contribution and the broader vision of making video learning more inclusive for people with disabilities.
 

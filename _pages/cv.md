@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: CV
 nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf # you can also use external links here
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+cv_pdf: cv-2025.pdf # you can also use external links here
+description: You can download a PDF version of my CV using the dedicated &nbsp;<i class="fa-solid fa-file-pdf"></i> download link.
 toc:
   sidebar: left
 ---

@@ -1,157 +1,216 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Yotam Sechayk",
+    "label": "PhD Student",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "ysechayk@acm.org",
+    "phone": "",
+    "url": "https://tomfluff.github.io/",
+    "summary": "PhD student in Creative Informatics at The University of Tokyo, researching accessibility and human-computer interaction",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "",
+      "postalCode": "",
+      "city": "Tokyo",
+      "countryCode": "JP",
+      "region": "Japan"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "yotams",
+        "url": "https://www.linkedin.com/in/yotams/"
       }
     ]
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "The University of Tokyo, Japan",
+      "location": "Tokyo, Japan",
+      "url": "",
+      "area": "Creative Informatics, Graduate School of Information Science and Technology",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "startDate": "2024-04-01",
+      "endDate": "present",
+      "score": "",
+      "courses": ["Advisor: Prof. Takeo Igarashi", "Co-advisor: Prof. Ariel Shamir (Reichman University)"]
+    },
+    {
+      "institution": "The University of Tokyo, Japan",
+      "location": "Tokyo, Japan",
+      "url": "",
+      "area": "Creative Informatics, Graduate School of Information Science and Technology",
+      "studyType": "MSc",
+      "startDate": "2022-04-01",
+      "endDate": "2024-03-31",
+      "score": "",
+      "courses": ["Advisor: Prof. Takeo Igarashi"]
+    },
+    {
+      "institution": "Tel Aviv University, Israel",
+      "location": "Tel Aviv, Israel",
+      "url": "",
+      "area": "Double major in Computer Science and Film & Television",
+      "studyType": "BS",
+      "startDate": "2014-10-01",
+      "endDate": "2018-09-30",
+      "score": "93/100",
+      "courses": ["Graduated with honors"]
     }
   ],
+  "work": [
+    {
+      "name": "Honda Research Institute Japan",
+      "position": "Research Intern",
+      "url": "",
+      "startDate": "2024-09-19",
+      "endDate": "2025-03-18",
+      "summary": "Research internship in human-robot interaction (HRI) under the supervision of Dr. Christian Arzate Cruz. Improving emotional recognition from facial expressions using 3D morphable models from videos.",
+      "highlights": ["Human-Robot Interaction", "Emotional Recognition", "Machine Learning"]
+    },
+    {
+      "name": "Cadence Design Systems, Israel",
+      "position": "Software Engineer",
+      "url": "",
+      "startDate": "2018-02-01",
+      "endDate": "2020-10-31",
+      "summary": "Working on simulation tools for semiconductor design and verification."
+    }
+  ],
+  "volunteer": [],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "MEXT Scholarship for PhD Studies in Japan",
+      "date": "2024-01-01",
+      "awarder": "Japanese Government",
+      "url": "",
+      "summary": "MEXT Scholarship for PhD Studies in Japan (2024-2027)"
+    },
+    {
+      "title": "Softbank Beyond AI Research Grant",
+      "date": "2025-01-01",
+      "awarder": "Softbank",
+      "url": "",
+      "summary": "Softbank Beyond AI Research Grant"
+    },
+    {
+      "title": "Honorable Mention Award",
+      "date": "2025-01-01",
+      "awarder": "ASSETS 2025",
+      "url": "",
+      "summary": "Honorable Mention Award (VeasyGuide @ ASSETS 2025)"
+    },
+    {
+      "title": "Google Accessibility in Research Grant",
+      "date": "2023-01-01",
+      "awarder": "Google",
+      "url": "",
+      "summary": "Google Accessibility in Research Grant"
+    },
+    {
+      "title": "Helpfeel Award for Corporate Excellence",
+      "date": "2023-01-01",
+      "awarder": "WISS 2023",
+      "url": "",
+      "summary": "Helpfeel Award for Corporate Excellence (Smart Replay @ WISS 2023)"
+    },
+    {
+      "title": "MEXT Scholarship for Master's Studies in Japan",
+      "date": "2022-01-01",
+      "awarder": "Japanese Government",
+      "url": "",
+      "summary": "MEXT Scholarship for Master's Studies in Japan (2022-2024)"
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "VeasyGuide: Personalized Visual Guidance for Low-vision Learners on Instructor Actions in Presentation Videos",
+      "publisher": "ASSETS '25",
+      "releaseDate": "2025-10-27",
+      "url": "https://doi.org/10.1145/3663547.3746372",
+      "summary": "A tool that uses motion detection to identify instructor actions and dynamically highlight and magnify them for low-vision learners. Won Honorable Mention Award."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "ImprovMate: Multimodal AI Assistant for Improv Actor Training",
+      "publisher": "DIS '25 Companion",
+      "releaseDate": "2025-07-01",
+      "url": "https://doi.org/10.1145/3715668.3736363",
+      "summary": "An AI-powered system that leverages LLMs to automate narrative stimuli generation for improvisation training, helping actors focus on creativity."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Data Augmentation for 3DMM-based Arousal-Valence Prediction for HRI",
+      "publisher": "ROMAN 2024",
+      "releaseDate": "2024-08-26",
+      "url": "https://doi.org/10.1109/RO-MAN60168.2024.10731438",
+      "summary": "A data augmentation technique using 3D morphable models to improve arousal-valence prediction accuracy in human-robot interaction settings."
+    },
+    {
+      "name": "SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos",
+      "publisher": "CHI EA '24",
+      "releaseDate": "2024-05-11",
+      "url": "https://doi.org/10.1145/3613905.3650883",
+      "summary": "An innovative tool designed to enhance accessibility of video-based e-learning content through advanced video analysis techniques addressing focus, navigation, and pacing issues."
+    },
+    {
+      "name": "MyStoryKnight: A Character-drawing Driven Storytelling System Using LLM Hallucinations",
+      "publisher": "INTERACTION 2024",
+      "releaseDate": "2024-02-01",
+      "url": "",
+      "summary": "A storytelling system that creates adventure-type stories with multiple branches using character drawings as input and leveraging LLM hallucinations for interactive story generation."
+    },
+    {
+      "name": "ShowMe: 対話的な強調表示と拡大表示によるプレゼンテーションビデオの視覚的アクセシビリティの改善",
+      "publisher": "WISS 2024",
+      "releaseDate": "2024-12-01",
+      "url": "",
+      "summary": "A tool that highlights and magnifies instructor visual actions in presentation videos to support low-vision learners, reducing frustration and fatigue."
+    },
+    {
+      "name": "Smart Replay: eラーニング動画における視覚的・時間的アクセシビリティの向上",
+      "publisher": "WISS 2023",
+      "releaseDate": "2023-12-01",
+      "url": "",
+      "summary": "An e-learning accessibility tool that analyzes learning videos and generates accessible playback options. Won Helpfeel Award for Corporate Excellence."
+    },
+    {
+      "name": "Task Mode: Dynamic Filtering for Task-Specific Web Navigation using LLMs",
+      "publisher": "ASSETS '25",
+      "releaseDate": "2025-10-27",
+      "url": "https://doi.org/10.1145/3663547.3746401",
+      "summary": "A system that dynamically filters web content based on user-specified goals using large language models, particularly beneficial for screen reader users."
+    },
+    {
+      "name": "A Longitudinal Autoethnography of Email Access for a Professional with Chronic Illness and ADHD: Preliminary Insights",
+      "publisher": "ASSETS '25",
+      "releaseDate": "2025-10-27",
+      "url": "https://doi.org/10.1145/3663547.3759764",
+      "summary": "A 14-year autoethnography examining email accessibility challenges for professionals with chronic illness and ADHD, proposing design insights for accessible workplace communication systems."
+    },
+    {
+      "name": "Confidence Estimation of Few-shot Patch-based Learning for Anime-style Colorization",
+      "publisher": "SIGGRAPH Posters '25",
+      "releaseDate": "2025-07-01",
+      "url": "https://doi.org/10.1145/3721250.3742964",
+      "summary": "A confidence estimation method for automatic anime colorization that compares local patches to indicate colorization confidence levels for each image region."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Research",
+      "level": "Advanced",
+      "icon": "fa-solid fa-microscope",
+      "keywords": ["Human-Computer Interaction", "Accessibility", "E-learning", "Human-Robot Interaction", "Computer Vision", "3D Morphable Models"]
+    },
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Software Development", "Computer Science", "Simulation Tools", "Web Development"]
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Hebrew",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -159,42 +218,54 @@
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
+    },
+    {
+      "language": "Japanese",
+      "fluency": "Advanced",
+      "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Accessibility Research",
+      "icon": "fa-solid fa-universal-access",
+      "keywords": ["E-learning Accessibility", "Visual-Temporal Accessibility", "Assistive Technologies", "Low-vision Support"]
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Human-Computer Interaction",
+      "icon": "fa-solid fa-user-cog",
+      "keywords": ["Interactive Systems", "User Experience", "Human-Robot Interaction", "Storytelling Platforms"]
+    },
+    {
+      "name": "Creative Technology",
+      "icon": "fa-solid fa-lightbulb",
+      "keywords": ["Creative Informatics", "Film & Television", "Interactive Media", "Digital Arts"]
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "VeasyGuide",
+      "summary": "Open source tool to support low-vision learners in following presentation videos.",
+      "highlights": ["Accessibility", "Low-vision Support", "E-learning"],
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-31",
+      "url": "https://veasyguide.github.io/"
+    },
+    {
+      "name": "ImprovMate",
+      "summary": "An interactive web application that helps users practice and improve their improvisation skills through guided exercises and real-time feedback.",
+      "highlights": ["Interactive Web App", "Real-time Feedback", "Skill Development"],
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-31",
+      "url": "https://improvmate.github.io/"
+    },
+    {
+      "name": "MyStoryKnight",
+      "summary": "An interactive storytelling platform that enables users to create their own choose-your-own-adventure stories using real-world drawings.",
+      "highlights": ["Interactive Storytelling", "Drawing Integration", "Adventure Games"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "url": "https://tomfluff.github.io/MyStoryKnight/"
     }
   ]
 }

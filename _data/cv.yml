@@ -2,96 +2,86 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Yotam Sechayk
     - name: Date of Birth
-      value: 14th March 1879
+      value: 20th July 1991
     - name: Languages
-      value: English, German
+      value: Hebrew, English, Japanese
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+      institution: The University of Tokyo, Japan
+      year: 2024 - present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Creative Informatics Program, Graduate School of Information Science and Technology
+        - title: Advisors
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Prof. Takeo Igarashi
+            - Prof. Ariel Shamir
+    - title: MSc
+      institution: The University of Tokyo, Japan
+      year: 2022 - 2024
       description:
-        - Description 1.
-        - Description 2.
+        - Creative Informatics Program, Graduate School of Information Science and Technology
+        - title: Advisor
+          contents:
+            - Prof. Takeo Igarashi
+        - title: Thesis
+          contents:
+            - "Smart Replay: Visual-Temporal Accessibility in e-learning Videos"
+    - title: BS
+      institution: Tel Aviv University, Israel
+      year: 2014 - 2018
+      description:
+        - Double major in Computer Science and Film & Television
+        - Graduated with honors (GPA: 93/100)
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Intern
+      institution: Honda Research Institute Japan
+      year: 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Research internship in human-robot interaction (HRI) under the supervision of Dr.  Christian Arzate Cruz. Improving emotional recognition from facial expressions using 3D morphable models from videos.
+
+    - title: Software Engineer
+      institution: Cadence Design Systems, Israel
+      year: 2018 - 2020
       description:
-        - Description 1.
-        - Description 2.
+        - Working on simulation tools for semiconductor design and verification.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://veasyguide.github.io/">VeasyGuide</a>
+      year: 2025
+      description: Open source tool to support low-vision learners in following presentation videos.
+
+    - title: <a href="https://improvmate.github.io/">ImprovMate</a>
+      year: 2025
+      description: An interactive web application that helps users practice and improve their improvisation skills through guided exercises and real-time feedback.
+
+    - title: <a href="https://tomfluff.github.io/MyStoryKnight/">MyStoryKnight</a>
+      year: 2024
+      description: An interactive storytelling platform that enables users to create their own choose-your-own-adventure stories using real-world drawings.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - MEXT Scholarship for Master's Studies in Japan (2022-2024)
+    - year: 2023
       items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
+        - Google Accessibility in Research Grant
+        - Helpfeel Award for Corporate Excellence (Smart Replay @ WISS 2023)
+    - year: 2024
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - MEXT Scholarship for PhD Studies in Japan (2024-2027)
+    - year: 2025
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Softbank Beyond AI Research Grant
+        - Honorable Mention Award (VeasyGuide @ ASSETS 2025)

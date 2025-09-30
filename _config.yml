@@ -190,7 +190,16 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - _news/announcement_*.md # exclude announcement posts from the news collection
+  - _pages/about_einstein* # exclude about_einstein pages
+  - _pages/books.md # exclude books page
+  - _pages/projects.md # exclude projects page
+  - _pages/dropdown.md # exclude dropdown page
+  - _pages/profiles.md # exclude profiles page
+  - _pages/repositories.md # exclude repositories page
+  - _pages/teaching.md # exclude teaching page
+  - _projects/*_project.md # exclude default individual project pages
+  - _news/_/* # exclude announcement posts from the news collection
+  - _posts/_/* # exclude backup posts
 keep_files:
   - CNAME
   - .nojekyll
@@ -255,8 +264,8 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: [] # these tags will be displayed on the front page of your blog
+display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

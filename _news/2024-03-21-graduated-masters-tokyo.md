@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Graduated The University of Tokyo with a Creative Informatics Master's advised by Prof. Takeo Igarashi. 🎓
+Graduated The University of Tokyo with a Creative Informatics Master's advised by [Prof. Takeo Igarashi](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/). 🎓

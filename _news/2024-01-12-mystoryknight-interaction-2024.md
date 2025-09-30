@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our project MyStoryKnight accepted as a demo to INTERACTION 2024! ✨
+Our project [MyStoryKnight](https://tomfluff.github.io/MyStoryKnight) accepted as a demo to INTERACTION 2024! ✨

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presenting a poster for _"SmartLearn"_ at the CHI 2024, Late Breaking Work track. 🗣️
+Presented a poster for _SmartLearn_ at the CHI 2024, late breaking work track. 🗣️

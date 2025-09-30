@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
 nav: true
 nav_order: 1
 pagination:
@@ -101,6 +101,12 @@ pagination:
 
 {% endif %}
 
+{% assign posts_size = site.posts | size %}
+{% if posts_size == 0 %}
+
+<div class="text-center" style="margin-top: 2rem;"><h4 style="color: var(--global-divider-color);"><i>No available posts to display.</i></h4></div>
+{% endif %}
+  
   <ul class="post-list">
 
     {% if page.pagination.enabled %}

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Received the Google Award for Inclusion Research Grant to advance accessible e-learning, supervised by [James Stout](https://handsfreecoding.org/).
+Received the **Google Award for Inclusion** Research Grant to advance accessible e-learning, supervised by [James Stout](https://handsfreecoding.org/)!

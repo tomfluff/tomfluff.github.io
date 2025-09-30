@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-We presented our work _Smart Replay_ at WISS 2023. 🗣️
+Presented our work _Smart Replay_ at WISS 2023. 🗣️

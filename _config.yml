@@ -198,8 +198,6 @@ exclude:
   - _pages/repositories.md # exclude repositories page
   - _pages/teaching.md # exclude teaching page
   - _projects/*_project.md # exclude default individual project pages
-  - _news/_/* # exclude announcement posts from the news collection
-  - _posts/_/* # exclude backup posts
 keep_files:
   - CNAME
   - .nojekyll

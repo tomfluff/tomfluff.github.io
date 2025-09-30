@@ -14,7 +14,7 @@ To our delight, our project on e-learning accessibility received the **Helpfeel 
     <div class="col-md-10">
         <div class="row mt-3">
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/news/2023-12-01.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/news/2023-12-01-a.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             </div>
             <div class="col-sm mt-3 mt-md-0">
                 {% include figure.liquid loading="eager" path="assets/img/news/2023-12-01-b.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}

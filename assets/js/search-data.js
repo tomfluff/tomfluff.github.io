@@ -30,12 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-awarded-the-mext-scholarship-for-research-students-monbukagakusho-文部科学省奨学金-to-pursue-my-master-s-in-japan",
+        },{id: "news-awarded-the-mext-scholarship-for-research-students-monbukagakusho-文部科学省奨学金-to-pursue-my-master-s-in-japan",
           title: 'Awarded the MEXT Scholarship for Research Students (Monbukagakusho: 文部科学省奨学金) to pursue my Master’s...',
           description: "",
           section: "News",},{id: "news-started-my-master-s-program-at-the-university-of-tokyo-under-the-supervision-of-prof-takeo-igarashi",

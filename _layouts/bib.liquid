@@ -192,10 +192,10 @@
       {% if entry.award %}
         {% assign award_text = entry.award | downcase %}
         <div class="award z-depth-0">
-          {%- if award_text contains 'honorable' -%}
-            🎗️
-          {%- elsif award_text contains 'best' -%}
+          {%- if award_text contains 'best' -%}
             🏆
+          {%- elsif award_text contains 'honorable' -%}
+            🎗️
           {%- else -%}
             📜
           {%- endif -%}
@@ -203,65 +203,86 @@
         </div>
       {% endif %}
       {% if entry.abstract %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+        <a class="abstract btn btn-md z-depth-0" role="button"><i class="ti ti-notebook"></i>Abstract</a>
       {% endif %}
       {% if entry.doi %}
-        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-md z-depth-0" role="button" aria-label="DOI">
+          {% include icons/icon-doi.svg %}
+          DOI
+        </a>
       {% endif %}
       {% if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-md z-depth-0" role="button">
+          {% include icons/icon-arxiv.svg %}
+          arXiv
+        </a>
       {% endif %}
       {% if entry.bibtex_show %}
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a class="bibtex btn btn-md z-depth-0" role="button"> <i class="ti ti-tex"></i>Bib</a>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          <a href="{{ entry.html }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-html"></i>HTML</a>
         {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+            ><i class="ti ti-html"></i>HTML</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
-          <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          <a href="{{ entry.pdf }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-pdf"></i>PDF</a>
         {% else %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+            ><i class="ti ti-pdf"></i>PDF</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
-          <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
+          <a href="{{ entry.supp }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-code-plus"></i>Supp</a>
         {% else %}
-          <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
+          <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+            ><i class="ti ti-code-plus"></i>Supp</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.video and site.enable_video_embedding %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Video</a>
+        <a class="abstract btn btn-md z-depth-0" role="button"><i class="ti ti-brand-youtube"></i>Video</a>
       {% elsif entry.video %}
-        <a href="{{ entry.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
+        <a href="{{ entry.video }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-brand-youtube"></i>Video</a>
       {% endif %}
       {% if entry.blog %}
-        <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
+        <a href="{{ entry.blog }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-article"></i>Blog</a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        <a href="{{ entry.code }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-code"></i>Code</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
-          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          <a href="{{ entry.poster }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-crop-portrait"></i>Poster</a>
         {% else %}
-          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+            ><i class="ti ti-crop-portrait"></i>Poster</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
-          <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+          <a href="{{ entry.slides }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-presentation"></i>Slides</a>
         {% else %}
-          <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+          <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+            ><i class="ti ti-presentation"></i>Slides</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+        <a href="{{ entry.website }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-link"></i>Website</a>
+      {% endif %}
+      {% if entry.demo %}
+        {% if entry.demo contains '://' %}
+          <a href="{{ entry.demo }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-device-laptop"></i>Demo</a>
+        {% endif %}
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}

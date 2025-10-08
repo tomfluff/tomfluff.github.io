@@ -240,10 +240,10 @@
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
-          <a href="{{ entry.supp }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-code-plus"></i>Supp</a>
+          <a href="{{ entry.supp }}" class="btn btn-md z-depth-0" role="button"><i class="ti ti-code-plus"></i>Supp (ext.)</a>
         {% else %}
-          <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
-            ><i class="ti ti-code-plus"></i>Supp</a
+          <a href="{{ entry.supp | prepend: '/assets/files/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+            ><i class="ti ti-code-plus"></i>Supp ({{ entry.supp | split: '.' | last }})</a
           >
         {% endif %}
       {% endif %}

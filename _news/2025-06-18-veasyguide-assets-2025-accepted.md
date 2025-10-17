@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work _"VeasyGuide: Personalized Visual Guidance for Low-vision Learners on Instructor Actions in Presentation Videos"_ was accepted to ASSETS 2025! ✨
+Our work _VeasyGuide: Personalized Visual Guidance for Low-vision Learners on Instructor Actions in Presentation Videos_ was accepted to ASSETS 2025! ✨

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work _"SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos"_ was accepted to CHI 2024 as late breaking work. ✨
+Our work _SmartLearn: Visual-Temporal Accessibility for Slide-based e-learning Videos_ was accepted to CHI 2024 as late breaking work. ✨

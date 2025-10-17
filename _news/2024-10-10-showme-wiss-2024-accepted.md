@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work _"ShowMe: 対話的な強調表示と拡大表示によるプレゼンテーションビデオの視覚的アクセシビリティの改善"_ was accepted to WISS 2024! ✨
+Our work _ShowMe: 対話的な強調表示と拡大表示によるプレゼンテーションビデオの視覚的アクセシビリティの改善_ was accepted to WISS 2024! ✨

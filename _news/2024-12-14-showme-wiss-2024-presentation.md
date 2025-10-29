@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented our work _ShowMe_ at WISS 2024 conference. 🗣️
+Presented our work _ShowMe_ at WISS 2024. 🗣️

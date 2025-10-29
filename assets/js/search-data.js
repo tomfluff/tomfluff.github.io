@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-awarded-the-mext-scholarship-for-research-students-monbukagakusho-文部科学省奨学金-to-pursue-my-master-s-in-japan",
+        },{id: "post-helpfeel-award-at-wiss-2023-smart-replay-presented",
+        
+          title: "Helpfeel Award at WISS 2023 — Smart Replay presented",
+        
+        description: "Presented &#39;Smart Replay&#39; at WISS 2023 and received the Helpfeel Award for improving accessibility in e-learning videos.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/wiss-2023-helpfeel-award/";
+          
+        },
+      },{id: "news-awarded-the-mext-scholarship-for-research-students-monbukagakusho-文部科学省奨学金-to-pursue-my-master-s-in-japan",
           title: 'Awarded the MEXT Scholarship for Research Students (Monbukagakusho: 文部科学省奨学金) to pursue my Master’s...',
           description: "",
           section: "News",},{id: "news-started-my-master-s-program-at-the-university-of-tokyo-under-the-supervision-of-prof-takeo-igarashi",
@@ -48,12 +59,10 @@ ninja.data = [{
           section: "News",},{id: "news-presented-our-work-smart-replay-at-wiss-2023-️",
           title: 'Presented our work Smart Replay at WISS 2023. 🗣️',
           description: "",
-          section: "News",},{id: "news-awarded-the-helpfeel-award-for-smart-replay-wiss-2023",
-          title: 'Awarded the Helpfeel award for Smart Replay (WISS 2023) 🎉',
+          section: "News",},{id: "news-awarded-the-helpfeel-award-for-our-paper-smart-replay-at-wiss-2023",
+          title: 'Awarded the Helpfeel award for our paper Smart Replay at WISS 2023! 🎉...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2023-12-01-helpfeel-award-wiss-2023/";
-            },},{id: "news-our-project-mystoryknight-accepted-as-a-demo-to-interaction-2024",
+          section: "News",},{id: "news-our-project-mystoryknight-accepted-as-a-demo-to-interaction-2024",
           title: 'Our project MyStoryKnight accepted as a demo to INTERACTION 2024! ✨',
           description: "",
           section: "News",},{id: "news-our-work-smartlearn-visual-temporal-accessibility-for-slide-based-e-learning-videos-was-accepted-to-chi-2024-as-late-breaking-work",
@@ -80,8 +89,8 @@ ninja.data = [{
           section: "News",},{id: "news-our-work-showme-対話的な強調表示と拡大表示によるプレゼンテーションビデオの視覚的アクセシビリティの改善-was-accepted-to-wiss-2024",
           title: 'Our work ShowMe: 対話的な強調表示と拡大表示によるプレゼンテーションビデオの視覚的アクセシビリティの改善 was accepted to WISS 2024! ✨',
           description: "",
-          section: "News",},{id: "news-presented-our-work-showme-at-wiss-2024-conference-️",
-          title: 'Presented our work ShowMe at WISS 2024 conference. 🗣️',
+          section: "News",},{id: "news-presented-our-work-showme-at-wiss-2024-️",
+          title: 'Presented our work ShowMe at WISS 2024. 🗣️',
           description: "",
           section: "News",},{id: "news-received-the-beyondai-softbank-research-grant-for-supporting-visual-access-of-low-vision-people",
           title: 'Received the BeyondAI SoftBank research grant for supporting visual access of low-vision people!...',
@@ -97,6 +106,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-our-paper-graph-guide-低視力者支援のためのセマンティックfocus-context-グラフ表示-has-been-accepted-to-wiss-2025",
           title: 'Our paper Graph Guide: 低視力者支援のためのセマンティックFocus+Context グラフ表示 has been accepted to WISS 2025! ✨...',
+          description: "",
+          section: "News",},{id: "news-presented-our-work-veasyguide-at-assets-2025-️",
+          title: 'Presented our work VeasyGuide at ASSETS 2025. 🗣️',
           description: "",
           section: "News",},{
         id: 'social-email',

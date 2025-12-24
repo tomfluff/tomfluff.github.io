@@ -2,7 +2,7 @@
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
     <div
-      class="table-responsive"
+      class="table-responsive my-3"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
         style="max-height: 20vw"
       {% endif %}

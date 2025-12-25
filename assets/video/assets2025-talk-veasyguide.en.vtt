@@ -1,1024 +1,728 @@
-WEBVTT FILE
+﻿WEBVTT
 
-1
-00:00:00.640 --> 00:00:02.280
-Hello.
-
-2
-00:00:02.280 --> 00:00:03.000
-Hello, everyone.
-
-3
-00:00:03.000 --> 00:00:04.720
+00:00:00.295 --> 00:00:04.400
+[YOTAM] Hello. Hello, everyone. 
 Very excited to be here.
 
-4
-00:00:04.720 --> 00:00:07.680
+00:00:04.400 --> 00:00:07.320
 And, my name is Yotam
 from the University of Tokyo.
 
-5
-00:00:07.680 --> 00:00:09.680
+00:00:07.320 --> 00:00:11.040
 And on behalf of my coauthors,
-
-6
-00:00:09.840 --> 00:00:11.840
 I'm happy to present VeasyGuide.
 
-7
-00:00:12.520 --> 00:00:15.200
-So online learning is very common
-
-8
-00:00:15.200 --> 00:00:17.200
+00:00:12.240 --> 00:00:17.207
+So, online learning is very common
 these days, especially with videos,
 
-9
-00:00:17.880 --> 00:00:20.880
-in platforms like YouTube, Khan Academy, Coursera,
+00:00:17.232 --> 00:00:20.560
+in platforms like YouTube,
+Khan Academy, Coursera,
 
-10
-00:00:21.160 --> 00:00:23.400
-or even recorded lectures from zoom.
+00:00:20.840 --> 00:00:23.330
+or even recorded
+lectures from Zoom.
 
-11
-00:00:24.560 --> 00:00:26.800
-And many of these videos also contain slides.
+00:00:24.240 --> 00:00:27.002
+And many of these videos
+also contain slides.
 
-12
-00:00:28.560 --> 00:00:30.360
+00:00:27.916 --> 00:00:31.160
 And for learning, communication
-
-13
-00:00:30.360 --> 00:00:33.360
 between instructors
+
+00:00:31.160 --> 00:00:34.160
 and students is very important.
 
-14
-00:00:34.920 --> 00:00:37.160
-And, how do instructors
+00:00:34.600 --> 00:00:38.855
+And, how do instructors communicate
+with student in slide based videos?
 
-15
-00:00:37.160 --> 00:00:39.160
-communicate with student and slide based videos?
-
-16
-00:00:39.200 --> 00:00:43.040
+00:00:38.880 --> 00:00:43.055
 So, a lot of instructors
 use, for example, pointers
 
-17
-00:00:43.400 --> 00:00:45.520
+00:00:43.080 --> 00:00:46.760
 or digital pens to communicate
-
-18
-00:00:45.520 --> 00:00:47.520
 their intent to the students.
 
-19
-00:00:48.200 --> 00:00:49.320
+00:00:47.880 --> 00:00:50.520
 For instance, instructors
+can use pointing actions
 
-20
-00:00:49.320 --> 00:00:51.640
-can use pointing actions to point
+00:00:50.520 --> 00:00:54.942
+to point to different parts of
+the slide, to convey their intent.
 
-21
-00:00:51.640 --> 00:00:53.640
-to different parts of the slide,
+00:00:54.967 --> 00:00:57.095
+Or they can use
 
-22
-00:00:53.920 --> 00:00:57.240
-to convey their intent or they can use
+00:00:57.120 --> 00:01:00.920
+marking actions to emphasize
+certain portions of the slides.
 
-23
-00:00:57.440 --> 00:01:01.240
-marking actions
-to emphasize certain portions of the slides.
-
-24
-00:01:02.600 --> 00:01:04.880
+00:01:02.280 --> 00:01:05.575
 Moreover, they can use sketching to,
 
-25
-00:01:05.920 --> 00:01:06.920
-add additional content
+00:01:05.600 --> 00:01:09.975
+add additional content to the slide and
+explain different concepts to students.
 
-26
-00:01:06.920 --> 00:01:10.320
-to the slide
-and explain different concepts to students.
+00:01:10.000 --> 00:01:14.193
+So using these three methods
+pointing, marking, and sketching,
 
-27
-00:01:10.320 --> 00:01:13.320
-So using these three methods: pointing,
-
-28
-00:01:13.320 --> 00:01:16.720
-marking, and sketching, instructors can communicate
+00:01:14.218 --> 00:01:16.593
+instructors can communicate
 with the students.
 
-29
-00:01:17.320 --> 00:01:19.720
-Let's see an example of that from Khan Academy.
+00:01:17.000 --> 00:01:19.440
+Let's see an example of that
+from Khan Academy.
 
-30
-00:01:19.760 --> 00:01:24.080
+00:01:19.440 --> 00:01:23.760
 Try to pay attention to the pointing,
-marking and sketching actions.
+marking, and sketching actions.
 
-31
-00:01:24.080 --> 00:01:26.080
+00:01:23.760 --> 00:01:25.085
 And this video has sound.
 
-32
-00:01:30.520 --> 00:01:32.520
-This video has sound.
-
-33
-00:01:33.560 --> 00:01:36.000
-Yeah, this video should have sound.
-
-34
-00:01:41.200 --> 00:01:42.320
-This video has sound.
-
-35
-00:01:42.320 --> 00:01:46.240
-All of our elements are listed here
+00:01:25.640 --> 00:01:29.895
+[VIDEO] All of our elements are listed here
 in the periodic table of elements.
 
-36
-00:01:46.560 --> 00:01:48.160
+00:01:29.920 --> 00:01:31.452
 C stands for carbon.
 
-37
-00:01:48.160 --> 00:01:51.160
-I'm just going through
-the ones that are very relevant to humanity.
+00:01:31.477 --> 00:01:34.560
+I'm just going through the ones
+that are very relevant to humanity.
 
-38
-00:01:51.160 --> 00:01:54.000
-But over time, you'll
-probably familiarize yourself with all of these.
+00:01:34.560 --> 00:01:37.560
+But over time you'll probably familiarize
+yourself with all of these.
 
-39
-00:01:54.240 --> 00:01:56.480
-This is oxygen. This is nitrogen.
+00:01:37.600 --> 00:01:38.640
+This is oxygen.
 
-40
-00:01:56.720 --> 00:01:58.200
-This is silicon.
+00:01:38.640 --> 00:01:41.520
+This is nitrogen, this is silicon.
 
-41
-00:01:58.200 --> 00:02:00.600
-This is a U is gold.
+00:01:41.520 --> 00:01:44.160
+This is, Au is gold.
 
-42
-00:02:00.840 --> 00:02:01.800
-This is lead.
+00:01:44.160 --> 00:01:46.960
+This is lead...
 
-43
-00:02:03.960 --> 00:02:04.800
-As you can see,
+00:01:46.960 --> 00:01:50.200
+[YOTAM] As you can see, trying to follow
+along is kind of challenging.
 
-44
-00:02:04.800 --> 00:02:07.200
-trying to follow along is kind of challenging.
-
-45
-00:02:07.200 --> 00:02:10.280
+00:01:50.200 --> 00:01:51.600
 And it's can be very difficult,
-especially for low vision
 
-46
-00:02:10.280 --> 00:02:12.720
-learners who still use the residual vision.
+00:01:51.600 --> 00:01:55.720
+especially for low vision learners
+who still use the residual vision.
 
-47
-00:02:12.720 --> 00:02:15.240
-So for low vision learners, this kind of like
+00:01:55.720 --> 00:01:58.760
+So for low vision learning
+this kind of like problem
 
-48
-00:02:15.240 --> 00:02:18.880
-problem is called the visual search problem,
-which is basically not knowing
+00:01:58.760 --> 00:02:02.880
+is called the visual search problem, which
+is basically not knowing where to look.
 
-49
-00:02:19.000 --> 00:02:21.560
-where to look and what to look for.
+00:02:03.120 --> 00:02:04.840
+And what to look for.
 
-50
-00:02:21.840 --> 00:02:23.880
+00:02:04.840 --> 00:02:08.933
 And this leads to a lot of
-
-51
-00:02:23.880 --> 00:02:25.920
 like frustration, exhaustion
 
-52
-00:02:25.920 --> 00:02:27.920
-and very high cognitive effort,
+00:02:08.958 --> 00:02:14.040
+and very high cognitive effort, which
+makes learning much more difficult.
 
-53
-00:02:27.960 --> 00:02:31.040
-which makes learning a bit much more difficult.
+00:02:14.040 --> 00:02:18.120
+So a lot of people just give up
+on the visuals and only listen,
 
-54
-00:02:31.040 --> 00:02:35.120
-So a lot of people just give up on the visuals
-and only listen,
+00:02:18.120 --> 00:02:21.480
+but they give up on a lot of visual
+information that can be very important.
 
-55
-00:02:35.120 --> 00:02:37.200
-but they give up on a lot of visual information
-
-56
-00:02:37.200 --> 00:02:39.200
-that can be very important.
-
-57
-00:02:39.640 --> 00:02:40.800
+00:02:22.680 --> 00:02:25.080
 So this poses our main
+research question, which is
 
-58
-00:02:40.800 --> 00:02:44.240
-research question,
-which is what can we do to improve this experience
+00:02:25.080 --> 00:02:28.800
+what can we do to improve this
+experience for low vision individuals?
 
-59
-00:02:44.240 --> 00:02:46.240
-for low vision individuals?
+00:02:29.480 --> 00:02:32.160
+And to address this
+we introduce VeasyGuide.
 
-60
-00:02:46.440 --> 00:02:48.760
-And to address this we introduce VeasyGuide.
-
-61
-00:02:49.160 --> 00:02:52.560
+00:02:32.160 --> 00:02:36.935
 So VeasyGuide basically detects activities
-such as that
+such as that, highlights them,
 
-62
-00:02:52.800 --> 00:02:55.800
-highlights them and makes it simple to zoom
-
-63
-00:02:56.040 --> 00:02:58.160
+00:02:36.960 --> 00:02:41.160
+and makes it simple to zoom
 with personalization incorporated.
 
-64
-00:02:58.440 --> 00:03:00.280
-Now I'm going to show the same video as before,
+00:02:41.400 --> 00:02:44.880
+Now I'm going to show the same video as
+before, but with VeasyGuide enabled.
 
-65
-00:03:00.280 --> 00:03:02.280
-but with the VeasyGuide enabled.
-
-66
-00:03:02.440 --> 00:03:05.400
+00:02:45.220 --> 00:02:46.880
 The users can click to zoom,
-or they can pause the video
 
-67
-00:03:05.520 --> 00:03:07.520
+00:02:46.880 --> 00:02:50.579
+or they can pause the video
 to personalize the highlights.
 
-68
-00:03:07.720 --> 00:03:11.720
-All of our elements are listed here
+00:02:50.970 --> 00:02:55.175
+[VIDEO] All of our elements are listed here
 in the periodic table of elements.
 
-69
-00:03:12.040 --> 00:03:13.640
+00:02:55.200 --> 00:02:56.800
 C stands for carbon.
 
-70
-00:03:13.640 --> 00:03:16.040
-I'm just going through
-the ones that are very relevant
+00:02:56.800 --> 00:02:59.840
+I'm just going through the ones
+that are very relevant to humanity,
 
-71
-00:03:16.040 --> 00:03:18.400
-to humanity,
-but over time you'll probably familiarize
+00:02:59.840 --> 00:03:01.780
+but over time you'll
+probably familiarize...
 
-72
-00:03:19.720 --> 00:03:21.720
-and the user can personalize as well.
+00:03:02.460 --> 00:03:04.930
+[YOTAM] And the user
+can personalize as well.
 
-73
-00:03:24.360 --> 00:03:25.840
-As yourself with all of these.
+00:03:07.560 --> 00:03:09.040
+[VIDEO] ...yourself with all of these.
 
-74
-00:03:25.840 --> 00:03:28.080
+00:03:09.040 --> 00:03:11.480
 This is oxygen. This is nitrogen.
 
-75
-00:03:28.320 --> 00:03:30.320
-This is silica.
+00:03:11.480 --> 00:03:12.862
+This is silicon...
 
-76
-00:03:31.560 --> 00:03:33.000
-Or it change the personalization
+00:03:14.600 --> 00:03:16.220
+[YOTAM] Or change the personalization.
 
-77
-00:03:33.000 --> 00:03:36.360
-throughout the video on this is AEW is gold.
+00:03:16.615 --> 00:03:19.428
+[VIDEO] ...this is Au is gold.
 
-78
-00:03:36.520 --> 00:03:38.520
+00:03:19.453 --> 00:03:20.835
 This is led.
 
-79
-00:03:39.040 --> 00:03:39.960
-So using these
+00:03:22.080 --> 00:03:25.640
+[YOTAM] So VeasyGuide was
+created in a co-design process.
 
-80
-00:03:39.960 --> 00:03:43.440
-so VeasyGuide was created
-with an co-design process.
+00:03:26.160 --> 00:03:28.611
+It was a co-design with
+three low vision participants,
 
-81
-00:03:43.920 --> 00:03:46.360
-It was a co-design with three low vision
-participants
-
-82
-00:03:46.360 --> 00:03:49.680
+00:03:28.636 --> 00:03:31.840
 as well as my own experience
-as a as a low vision individual.
+as a low vision individual.
 
-83
-00:03:49.920 --> 00:03:52.720
+00:03:32.213 --> 00:03:35.290
 And we had three main questions
 for the co-design process.
 
-84
-00:03:53.280 --> 00:03:56.280
-The first is how do low vision experience
-visual activities?
+00:03:35.315 --> 00:03:38.480
+The first is how do low vision
+experience visual activities?
 
-85
-00:03:57.080 --> 00:03:59.240
-What challenges these activities introduce,
+00:03:39.240 --> 00:03:41.720
+What challenges these
+activities introduce,
 
-86
-00:03:59.520 --> 00:04:02.960
-and also what makes these activities easier
-to detect?
+00:03:41.720 --> 00:03:45.120
+and also what makes these
+activities easier to detect?
 
-87
-00:04:03.680 --> 00:04:06.200
-For the sake of time,
-I'm going to focus on the third question.
+00:03:45.880 --> 00:03:48.880
+For the sake of time, I'm going
+to focus on the third question.
 
-88
-00:04:07.160 --> 00:04:09.520
-So through the co-design process
-and the iteration,
+00:03:49.320 --> 00:03:51.720
+So through the co-design
+process and the iteration,
 
-89
-00:04:09.520 --> 00:04:13.560
-we created those, design implications
-for VeasyGuide.
+00:03:51.720 --> 00:03:55.720
+we created those, design
+implications for VeasyGuide.
 
-90
-00:04:13.560 --> 00:04:15.560
-And once the VeasyGuide is based on,
+00:03:55.720 --> 00:03:57.960
+And ones the
+VeasyGuide is based on,
 
-91
-00:04:15.760 --> 00:04:18.440
-the first one is, of course,
-providing visual access.
+00:03:57.960 --> 00:04:01.840
+the first one is of course providing
+visual access, with less effort.
 
-92
-00:04:18.920 --> 00:04:19.680
-With less effort.
-
-93
-00:04:19.680 --> 00:04:22.720
+00:04:01.840 --> 00:04:04.920
 And we do that through highlights
 and magnification or zoom.
 
-94
-00:04:23.480 --> 00:04:26.320
-The second one is that visual styles
-should be familiar
+00:04:05.720 --> 00:04:09.160
+The second one is that visual
+styles should be familiar to users.
 
-95
-00:04:26.320 --> 00:04:29.600
-to users and familiarity,
-something that we achieve through
+00:04:09.360 --> 00:04:11.800
+And familiarity is something
+that we achieve through
 
-96
-00:04:29.600 --> 00:04:31.800
+00:04:11.800 --> 00:04:16.520
 consistent styles throughout the video,
-
-97
-00:04:32.120 --> 00:04:34.320
 and also using familiar indicators.
 
-98
-00:04:34.320 --> 00:04:36.320
-So, for instance, in guide
+00:04:16.520 --> 00:04:20.680
+So for instance, in VeasyGuide we
+use mouse pointers of different shapes.
 
-99
-00:04:36.360 --> 00:04:38.520
-we use mouse pointers of different shapes.
+00:04:22.680 --> 00:04:27.280
+One more thing is predictability
+of what, when and where to look.
 
-100
-00:04:40.480 --> 00:04:40.920
-One more
+00:04:27.320 --> 00:04:32.240
+So in VeasyGuide we introduce a
+1.5 seconds pre-activity highlight.
 
-101
-00:04:40.920 --> 00:04:42.920
-thing is predictability of what,
+00:04:32.240 --> 00:04:34.800
+So the highlight shows
+before an activity starts.
 
-102
-00:04:43.320 --> 00:04:45.120
-when and where to look.
+00:04:34.800 --> 00:04:39.573
+And also we implement a box
+shape highlight, which C1 mentioned:
 
-103
-00:04:45.120 --> 00:04:47.160
-So in this guide we introduce
+00:04:39.598 --> 00:04:43.040
+"The box tells me exactly
+where and on what to look at."
 
-104
-00:04:47.160 --> 00:04:50.040
-a 1.5 seconds pre activity highlight.
+00:04:43.040 --> 00:04:46.040
+So the box gives spatial
+information as well.
 
-105
-00:04:50.040 --> 00:04:52.440
-So the highlight shows before an activity starts.
-
-106
-00:04:52.560 --> 00:04:55.320
-And also we implement a box shape highlight
-
-107
-00:04:55.760 --> 00:04:57.600
-which C1 mentioned.
-
-108
-00:04:57.600 --> 00:05:00.840
-The box tells me exactly where and on
-what to look at.
-
-109
-00:05:00.840 --> 00:05:03.480
-So the box gives spatial information as well.
-
-110
-00:05:04.720 --> 00:05:08.040
+00:04:46.920 --> 00:04:50.240
 And finally personalization
 for different visual abilities.
 
-111
-00:05:08.040 --> 00:05:10.200
+00:04:50.240 --> 00:04:52.400
 So different people have different needs.
 
-112
-00:05:10.200 --> 00:05:13.480
+00:04:52.400 --> 00:04:55.968
 And so having personalization
-as part of the design itself
+as part of the design itself,
 
-113
-00:05:13.720 --> 00:05:17.640
-allows this guide to be, usable
-by many more people.
+00:04:55.993 --> 00:05:00.000
+allows VeasyGuide to be,
+usable by many more people.
 
-114
-00:05:19.080 --> 00:05:21.120
+00:05:01.320 --> 00:05:05.071
 So these are the four design implications
+that are the source of VeasyGuide.
 
-115
-00:05:21.120 --> 00:05:23.120
-that are the source of easy guide.
+00:05:05.096 --> 00:05:08.935
+VeasyGuide itself is composed
+of two main components
 
-116
-00:05:23.160 --> 00:05:26.560
-Visio itself is, composed of two main components
+00:05:08.960 --> 00:05:12.575
+and activity recognition pipeline,
+which uses computer vision methods.
 
-117
-00:05:26.760 --> 00:05:30.240
-an activity recognition pipeline,
-which uses computer vision methods,
+00:05:12.600 --> 00:05:16.680
+As well as a graph representation
+of the visual changes,
 
-118
-00:05:30.440 --> 00:05:32.280
-as well as a graph representation
+00:05:16.680 --> 00:05:18.735
+that allows us to detect activities.
 
-119
-00:05:32.280 --> 00:05:34.480
-of the visual changes
+00:05:18.759 --> 00:05:20.400
+And activity visualization,
 
-120
-00:05:34.480 --> 00:05:36.480
-that allows us to detect activities
+00:05:20.400 --> 00:05:23.520
+which is implemented as
+a web based application,
 
-121
-00:05:36.480 --> 00:05:41.320
-and activity visualization,
-which is implemented as a web based application
-
-122
-00:05:41.320 --> 00:05:44.520
+00:05:23.520 --> 00:05:26.720
 so activities can be changed
 and customized on the fly.
 
-123
-00:05:46.400 --> 00:05:46.840
-And this
+00:05:28.600 --> 00:05:30.040
+And this is the base of VeasyGuide.
 
-124
-00:05:46.840 --> 00:05:49.160
-is the base of basically
-this is how visit guide works.
+00:05:30.040 --> 00:05:31.498
+This is how VeasyGuide works.
 
-125
-00:05:49.840 --> 00:05:52.280
-So get back to our research question,
+00:05:32.040 --> 00:05:36.680
+So getting back to our research
+question, of how we improve it.
 
-126
-00:05:53.040 --> 00:05:54.480
-of how we improve it.
+00:05:36.680 --> 00:05:40.520
+So the question is will VeasyGuide improve
+the experience of low vision people?
 
-127
-00:05:54.480 --> 00:05:57.360
-So the question is will VeasyGuide
-improve the experience
+00:05:41.720 --> 00:05:45.428
+So to evaluate VeasyGuide,
+we used real world videos.
 
-128
-00:05:57.360 --> 00:05:59.360
-of low vision people?
+00:05:45.453 --> 00:05:47.920
+From various creators, with various styles.
 
-129
-00:05:59.520 --> 00:06:02.640
-So to evaluate VeasyGuide, we used real world
-
-130
-00:06:02.640 --> 00:06:05.720
-videos from various creators with various styles.
-
-131
-00:06:06.000 --> 00:06:09.360
+00:05:48.240 --> 00:05:52.280
 And we had, recruited eight low
-vision participants
+vision participants to basically
 
-132
-00:06:09.360 --> 00:06:11.520
-to basically try and see if it can
+00:05:52.280 --> 00:05:56.120
+try and see if it can improve low
+vision access to visual activities.
 
-133
-00:06:11.520 --> 00:06:13.920
-improve low vision access to visual activities.
+00:05:56.120 --> 00:06:00.280
+But more than that, we also recruited
+eight sighted participants to see
 
-134
-00:06:13.920 --> 00:06:17.560
-But more than that,
-we also recruited eight sighted participants
+00:06:00.320 --> 00:06:03.560
+what will be the impact of
+VeasyGuide on sighted people.
 
-135
-00:06:17.560 --> 00:06:20.160
-to see what will be the impact on a visit
-
-136
-00:06:20.160 --> 00:06:22.160
-guide on sighted people.
-
-137
-00:06:23.280 --> 00:06:24.880
+00:06:05.520 --> 00:06:07.080
 And we had two main tasks.
 
-138
-00:06:24.880 --> 00:06:26.960
+00:06:07.080 --> 00:06:09.125
 The first is a localization task,
 
-139
-00:06:26.960 --> 00:06:29.040
-which allows us to focus on the visual search
+00:06:09.150 --> 00:06:12.828
+which allows us to focus on the visual
+search problem specifically.
 
-140
-00:06:29.040 --> 00:06:32.600
-problem specifically,
-and the second task is a viewing task
+00:06:12.852 --> 00:06:14.760
+And the second task is a viewing task,
 
-141
-00:06:32.600 --> 00:06:36.320
-which allows us to explore
-the experience of learning with easy guide.
+00:06:14.760 --> 00:06:18.520
+which allows us to explore the
+experience of learning with VeasyGuide.
 
-142
-00:06:37.880 --> 00:06:41.280
-So, in this work we prioritize external validity.
+00:06:20.080 --> 00:06:23.480
+So, in this work we prioritize
+external validity.
 
-143
-00:06:41.280 --> 00:06:44.840
-So we allow participants
-to use any of their assistive tools,
+00:06:23.480 --> 00:06:27.040
+So we allow participants to
+use any of their assistive tools,
 
-144
-00:06:45.000 --> 00:06:47.280
+00:06:27.240 --> 00:06:30.240
 such as magnifier, screen readers, etc.
 
-145
-00:06:48.840 --> 00:06:50.160
-and here are some of the results.
+00:06:31.031 --> 00:06:32.413
+And here are some of the results.
 
-146
-00:06:50.160 --> 00:06:53.280
+00:06:32.438 --> 00:06:34.440
 So, the first thing is that VeasyGuide
-significantly
 
-147
-00:06:53.520 --> 00:06:56.760
-allows low vision people to notice
-more activities.
+00:06:34.440 --> 00:06:38.106
+significantly allows low vision
+people to notice more activities.
 
-148
-00:06:57.200 --> 00:07:00.680
-So from a 16.9% accuracy,
-
-149
-00:07:00.680 --> 00:07:03.280
+00:06:38.131 --> 00:06:44.360
+So from a 60.9% accuracy,
 we go up to 88.2%.
 
-150
-00:07:03.280 --> 00:07:05.200
+00:06:44.360 --> 00:06:46.280
 So this is a significant improvement.
 
-151
-00:07:05.200 --> 00:07:07.840
+00:06:46.280 --> 00:06:48.960
 And they do that with faster times.
 
-152
-00:07:07.840 --> 00:07:12.240
+00:06:48.960 --> 00:06:54.528
 So we have a median of 1.37 seconds
-using the baseline.
+using the baseline, so no VeasyGuide.
 
-153
-00:07:12.240 --> 00:07:15.600
-So no VeasyGuide compared to 1.19
+00:06:54.553 --> 00:06:59.160
+Compared to 1.19 seconds
+with VeasyGuide.
 
-154
-00:07:15.600 --> 00:07:18.080
-seconds with VeasyGuide.
-
-155
-00:07:18.080 --> 00:07:20.240
+00:06:59.160 --> 00:07:01.680
 So we can make it faster as well.
 
-156
-00:07:20.560 --> 00:07:23.400
+00:07:01.680 --> 00:07:04.440
 But more than that, VeasyGuide
 also significantly reduced
 
-157
-00:07:23.400 --> 00:07:25.480
-the cognitive load that is needed for learning.
+00:07:04.440 --> 00:07:06.785
+the cognitive load that
+is needed for learning.
 
-158
-00:07:26.440 --> 00:07:29.040
+00:07:07.520 --> 00:07:11.455
 So when all of the cognitive load metrics
-that we tested
+that we tested effort, frustration,
 
-159
-00:07:29.040 --> 00:07:32.080
-effort, frustration, mental demand,
-physical demand
+00:07:11.480 --> 00:07:14.189
+mental demand, physical
+demand, and temporal demand
 
-160
-00:07:32.080 --> 00:07:34.920
-and temporal demand.
-VeasyGuide reduced significantly
+00:07:14.214 --> 00:07:16.183
+VeasyGuide reduced significantly,
 
-161
-00:07:35.680 --> 00:07:37.760
-the difficulty there and,
+00:07:16.628 --> 00:07:17.862
+The difficulty there.
 
-162
-00:07:38.280 --> 00:07:39.960
-more than that, qualitative findings
+00:07:18.573 --> 00:07:23.160
+And more than that, qualitative
+findings support our results.
 
-163
-00:07:39.960 --> 00:07:42.120
-support our results.
+00:07:23.160 --> 00:07:26.542
+So VeasyGuide makes it easier
+to follow along the instructor.
 
-164
-00:07:42.120 --> 00:07:44.680
-So VeasyGuide makes it easier to follow along.
+00:07:27.378 --> 00:07:28.800
+L2 mentioned,
 
-165
-00:07:44.680 --> 00:07:47.400
-The instructor L2 mentioned,
+00:07:28.825 --> 00:07:31.464
+"I felt as if the
+instructor had control, so
 
-166
-00:07:47.920 --> 00:07:51.880
-I felt as if the instructor had control
-so I can connect with the instructor.
+00:07:31.489 --> 00:07:33.856
+I can connect with
+the instructor's intent."
 
-167
-00:07:51.880 --> 00:07:52.480
-His intent
+00:07:34.760 --> 00:07:38.080
+And L3 mentioned,
+"It helped me stay with the instructor.
 
-168
-00:07:53.640 --> 00:07:54.480
-and L3
+00:07:38.080 --> 00:07:42.040
+I saw that the instructor was drawing
+a boat and I was happy I did not miss it."
 
-169
-00:07:54.480 --> 00:07:57.000
-mentioned it helped me stay with the instructor.
+00:07:42.880 --> 00:07:46.067
+VeasyGuide also improved the
+overall experience of learning.
 
-170
-00:07:57.000 --> 00:07:59.080
-I saw that the instructor was drawing a boat
+00:07:46.433 --> 00:07:47.560
+L1 mentioned,
 
-171
-00:07:59.080 --> 00:08:01.080
-and I was happy I did not miss it.
+00:07:47.560 --> 00:07:50.163
+"One of the biggest
+problems is that I don't know
 
-172
-00:08:01.800 --> 00:08:04.280
-VeasyGuide also improved the overall experience
+00:07:50.188 --> 00:07:52.415
+"what in the video requires my attention.
 
-173
-00:08:04.280 --> 00:08:06.480
-of learning L1 mentioned.
-
-174
-00:08:06.480 --> 00:08:09.040
-One of the biggest problems is that I don't know
-
-175
-00:08:09.040 --> 00:08:11.120
-what in the video requires my attention.
-
-176
-00:08:11.520 --> 00:08:13.520
+00:07:52.440 --> 00:07:56.760
 VeasyGuide offloads this difficulty
+to software, and I strain less."
 
-177
-00:08:13.520 --> 00:08:15.520
-to software and eyestrain less
+00:07:57.720 --> 00:07:59.115
+L5 mentioned,
 
-178
-00:08:16.680 --> 00:08:18.160
-L5 mentioned.
+00:07:59.140 --> 00:08:02.000
+"I felt relaxed listening
+instead of constantly
 
-179
-00:08:18.160 --> 00:08:19.760
-I felt relaxed listening
+00:08:02.000 --> 00:08:04.687
+"worrying about where the
+next thing would show up.
 
-180
-00:08:19.760 --> 00:08:21.920
-instead of constantly worrying about where
+00:08:05.040 --> 00:08:09.782
+I could just sit back, listen and learn,
+and remember why I enjoy learning."
 
-181
-00:08:21.920 --> 00:08:25.240
-the next thing that would show up,
-I could just sit back,
-
-182
-00:08:25.240 --> 00:08:28.560
-listen and learn
-and remember why I enjoy learning.
-
-183
-00:08:29.280 --> 00:08:32.120
+00:08:10.360 --> 00:08:13.555
 But of course, VeasyGuide contains
 some limitations as well.
 
-184
-00:08:32.760 --> 00:08:34.160
+00:08:13.580 --> 00:08:15.240
 First of all, the learning curve.
 
-185
-00:08:34.160 --> 00:08:36.960
-So, VC has some learning curves to it.
+00:08:15.240 --> 00:08:18.040
+So VeasyGuide has
+some learning curve to it.
 
-186
-00:08:36.960 --> 00:08:39.600
-L1 mentioned I would have to get used to it.
+00:08:18.040 --> 00:08:20.960
+L1 mentioned,
+"I would have to get used to it.
 
-187
-00:08:39.880 --> 00:08:41.880
-But getting used to it and figuring out
+00:08:20.960 --> 00:08:25.920
+"But getting used to it and figuring out
+my own workflow would let me,
 
-188
-00:08:41.880 --> 00:08:45.320
-figuring out my own workflow would let me,
-I think,
+00:08:25.920 --> 00:08:29.880
+I think, worry less about the visual part
+and focus more on the content."
 
-189
-00:08:45.320 --> 00:08:48.560
-worry less about the visual part
-and focus more on the content.
+00:08:30.880 --> 00:08:33.720
+And, some users wanted
+more granular control.
 
-190
-00:08:49.760 --> 00:08:52.640
-And, some users wanted more granular control.
-
-191
-00:08:52.640 --> 00:08:55.840
+00:08:33.720 --> 00:08:36.920
 So beyond the personalization,
 some users wanted more control.
 
-192
-00:08:55.840 --> 00:08:59.920
-So L6 mentioned, with a zoom part of the screen
-get cut off.
+00:08:36.920 --> 00:08:41.000
+So L6 mentioned, "With the zoom,
+parts of the screen get cut off.
 
-193
-00:08:59.920 --> 00:09:01.760
-So I might have missed things.
+00:08:41.000 --> 00:08:42.840
+"So I might have missed things.
 
-194
-00:09:01.760 --> 00:09:04.760
-I'm not sure
-if there was a way to move the zoom window,
+00:08:42.840 --> 00:08:45.880
+"I'm not sure if there was a way
+to move the zoom window,
 
-195
-00:09:04.760 --> 00:09:07.480
-but I'd really like the freedom to move it around.
+00:08:45.880 --> 00:08:48.560
+but I'd really like the freedom
+to move it around."
 
-196
-00:09:07.480 --> 00:09:10.360
+00:08:48.560 --> 00:08:51.120
 So beyond what we did with personalization,
 
-197
-00:09:10.360 --> 00:09:12.680
-some participants wanted extra controls as well.
+00:08:51.145 --> 00:08:53.941
+some participants wanted
+extra controls as well.
 
-198
-00:09:13.880 --> 00:09:15.520
-For sighted participants,
+00:08:54.880 --> 00:08:59.278
+For sighted participants, we found that
+VeasyGuide provides some benefits as well.
 
-199
-00:09:15.520 --> 00:09:18.040
-we found that VeasyGuide provides
-some benefits as well.
+00:09:00.085 --> 00:09:03.000
+For example, it helps
+retain and preserve attention.
 
-200
-00:09:18.920 --> 00:09:21.560
-For example,
-it helps retain and preserve attention.
-
-201
-00:09:22.240 --> 00:09:24.240
+00:09:03.381 --> 00:09:05.359
 So S1 mentioned,
 
-202
-00:09:25.400 --> 00:09:28.200
-if I'm bored, the highlights
-help draw my attention
+00:09:06.490 --> 00:09:08.200
+"If I'm bored, the highlights help
 
-203
-00:09:28.200 --> 00:09:30.360
-back to the video and to the right place.
+00:09:08.200 --> 00:09:11.440
+draw my attention back to the video
+and to the right place."
 
-204
-00:09:31.360 --> 00:09:33.440
-It also helps focusing on the learning
+00:09:12.440 --> 00:09:14.520
+It also helps focusing on the learning.
 
-205
-00:09:33.440 --> 00:09:37.080
-with S2 mentioning
-I could just focus on receiving information.
+00:09:14.520 --> 00:09:18.200
+With S2 mentioning, "I could
+just focus on receiving information.
 
-206
-00:09:37.080 --> 00:09:39.280
-It allowed me to focus on the learning part.
+00:09:18.200 --> 00:09:20.371
+It allowed me to focus
+on the learning part."
 
-207
-00:09:39.280 --> 00:09:42.520
-So, beyond, low vision people,
+00:09:20.396 --> 00:09:26.000
+So, beyond low vision people, VeasyGuide
+also has the potential to enhance
 
-208
-00:09:43.000 --> 00:09:46.840
-it also has the potential to enhance
+00:09:26.000 --> 00:09:28.203
 the learning experience for others as well.
 
-209
-00:09:48.640 --> 00:09:49.440
-To conclude, we
+00:09:29.453 --> 00:09:30.336
+To conclude,
 
-210
-00:09:49.440 --> 00:09:52.800
-discussed in the paper on
+00:09:30.361 --> 00:09:33.900
+we discuss in the paper on
 how can we design tools to support
 
-211
-00:09:52.800 --> 00:09:55.920
+00:09:33.925 --> 00:09:37.000
 low vision users in tasks
 that require visual search.
 
-212
-00:09:55.920 --> 00:10:00.480
-So we reflect on our findings from the co-design
-process as well as the user study.
+00:09:37.000 --> 00:09:39.960
+So we reflect on our findings
+from the co-design process
 
-213
-00:10:00.480 --> 00:10:02.480
-And we found, four,
+00:09:39.960 --> 00:09:41.560
+as well as the user study.
 
-214
-00:10:02.600 --> 00:10:04.640
-key concepts as a design framework.
+00:09:41.560 --> 00:09:45.720
+And we found four key
+concepts as a design framework.
 
-215
-00:10:05.080 --> 00:10:07.720
-The first one is familiarity with target visuals.
+00:09:46.090 --> 00:09:48.847
+The first one is familiarity
+with target visuals.
 
-216
-00:10:08.400 --> 00:10:10.080
+00:09:49.269 --> 00:09:53.000
 The second is predictability
+via spatial-temporal context.
 
-217
-00:10:10.080 --> 00:10:12.080
-via spatial temporal context
+00:09:53.280 --> 00:09:56.040
+And personalization for changing needs.
 
-218
-00:10:12.240 --> 00:10:14.760
-and personalization for changing needs.
-
-219
-00:10:14.960 --> 00:10:18.440
+00:09:56.040 --> 00:09:59.520
 So all of these are extended
 beyond the co-design findings.
 
-220
-00:10:18.720 --> 00:10:20.720
+00:09:59.820 --> 00:10:01.672
 And we introduce another one,
 
-221
-00:10:20.880 --> 00:10:23.200
-which is preserving the user agency,
+00:10:01.697 --> 00:10:04.265
+which is preserving user agency,
 
-222
-00:10:23.200 --> 00:10:25.640
-which I want to explain in a little bit
-more detail.
+00:10:04.290 --> 00:10:06.765
+which I want to explain
+in a little bit more detail.
 
-223
-00:10:25.640 --> 00:10:28.320
-So VeasyGuide basically gives low vision learners
+00:10:06.790 --> 00:10:10.320
+So VeasyGuide basically gives
+low vision learners the choice
 
-224
-00:10:28.320 --> 00:10:32.280
-the choice to look, see or follow the instructor.
+00:10:10.320 --> 00:10:13.400
+to look, see, or follow the instructor.
 
-225
-00:10:32.880 --> 00:10:34.920
-And we VeasyGuide, they have the freedom
+00:10:13.756 --> 00:10:18.600
+And with VeasyGuide they have the freedom
+to always find the right place of focus.
 
-226
-00:10:34.920 --> 00:10:39.240
-to always find the right place of focus
-so they can look anywhere else
+00:10:18.600 --> 00:10:22.120
+So they can look anywhere else
+in the slide and decide, actually,
 
-227
-00:10:39.240 --> 00:10:43.160
-in the slide and decide, actually I want to see
-what the instructor is talking about now.
+00:10:22.120 --> 00:10:24.360
+I want to see what the
+instructor is talking about now.
 
-228
-00:10:43.280 --> 00:10:47.240
-So it gave them the option similar
-to some people, to basically see
+00:10:24.360 --> 00:10:28.320
+So it gave them the option, similar
+to sighted people, to basically see
 
-229
-00:10:47.240 --> 00:10:51.160
-whatever they want to see at a time
-and not miss out on, things.
+00:10:28.320 --> 00:10:32.437
+whatever they want to see at the
+time and not miss out on things.
 
-230
-00:10:52.360 --> 00:10:54.040
+00:10:33.440 --> 00:10:35.120
 Thank you so much for listening.
 
-231
-00:10:54.040 --> 00:10:56.440
-I'm very excited to share this, work.
+00:10:35.120 --> 00:10:38.065
+I'm very excited to share this work.
 
-232
-00:10:58.560 --> 00:11:00.720
+00:10:38.089 --> 00:10:39.656
+[AUDIENCE CLAPPING]
+
+00:10:39.680 --> 00:10:41.811
 VeasyGuide is available online right now
 
-233
-00:11:00.720 --> 00:11:03.120
+00:10:41.836 --> 00:10:44.218
 with a few sample videos, but very soon
 
-234
-00:11:03.240 --> 00:11:06.840
+00:10:44.243 --> 00:10:47.984
 you will be able to use your own videos
 and have VeasyGuide work on them.
 
-235
-00:11:07.560 --> 00:11:08.960
+00:10:48.640 --> 00:10:50.040
 So please stay tuned for that.
 
-236
-00:11:08.960 --> 00:11:10.200
+00:10:50.040 --> 00:10:51.273
 And thank you so much.
 
-
+00:10:51.298 --> 00:10:54.976
+[AUDIENCE CLAPPING]

@@ -750,6 +750,30 @@ _styles: >
 <div class="alert alert-info">Info alert</div>
 ```
 
+Or with markdown
+
+```text
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-tip}
+
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-note}
+
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-warning}
+
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-danger}
+```
+
 ### Card Components
 
 ```html

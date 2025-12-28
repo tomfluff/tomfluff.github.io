@@ -24,7 +24,7 @@ This presentation marked an important milestone in my research on making learnin
 In this post I will share my experience at ASSETS, and around Denver during my time there.
 
 > Feel free to jump ahead to see the [full recording of my presentation](#recording).
-{: .block-note}
+> {: .block-note}
 
 I didn't know that VeasyGuide won an award. One morning, all of a sudden, I am getting _"Congradulations!"_ messages from friends. Seems like when they go over the online program they saw it. But I, I was oblivious to it! So it was such a nice surprise to wake up one day and realize that we have gotten an award. But let's get back on track---the conference!
 
@@ -62,7 +62,7 @@ This year the conference was held at the Curtis Hotel in Denver, Colorado. I've 
     </div>
 </div>
 
-I took the opportunity to also visit the library. It is a very pleasant building, with a vintage kind of atmosphere. I sat down to do some work, at some random location, and as I am getting up to leave. I stumbled on a very interesting sign. And by _interesting_ I mean, very relevant to me! 
+I took the opportunity to also visit the library. It is a very pleasant building, with a vintage kind of atmosphere. I sat down to do some work, at some random location, and as I am getting up to leave. I stumbled on a very interesting sign. And by _interesting_ I mean, very relevant to me!
 
 <div class="row justify-content-center">
     <div class="col-md-10">
@@ -98,13 +98,13 @@ I was sitting right next to the **large print area!** What an interesting coicid
     </div>
 </div>
 
-This was my first time attending ASSETS, which has a long history since 1994. the conference is much smaller than CHI (which it sprung out of), and was single track until last year. This year though, it shifted to a dual track structure---split between two rooms. However, the entire conference took place on the same floor of the hotel, which was very comfortable. Since everyone is on the same floor, between both of the rooms, there was plenty of opportunities to chat and connect with other researchers and attendees. 
+This was my first time attending ASSETS, which has a long history since 1994. the conference is much smaller than CHI (which it sprung out of), and was single track until last year. This year though, it shifted to a dual track structure---split between two rooms. However, the entire conference took place on the same floor of the hotel, which was very comfortable. Since everyone is on the same floor, between both of the rooms, there was plenty of opportunities to chat and connect with other researchers and attendees.
 
-It was so inspiring to see so many people interested in accessibility! Everyone is so passionate about their work and the impact they could have through their work; which is something I absolutely share. It was **especially impactful** to me to connect and chat with other researchers with disabilities. 
+It was so inspiring to see so many people interested in accessibility! Everyone is so passionate about their work and the impact they could have through their work; which is something I absolutely share. It was **especially impactful** to me to connect and chat with other researchers with disabilities.
 As a researcher with a disability myself, it was very important to see how many others pursue research despite everything! All throughout my life, almost everything is some kind of a struggle, but to me, this is what makes life so interesting, overcoming these difficulties---and I'm not the only one.
 In a nutshell, to me, ASSETS feels like home.
 
-Another wonderful thing is that I was able to connect with past collegues from The University of Texas at Austin (UT Austin). I spent a summer there as a visiting researcher, and it was such a pleasure to be able to meet again and reunite! Especially, I am glad to see [Prof. Amy Pavel](https://amypavel.com/), who hosted my stay at UT Austin there. Amy co-authored two papers with me for ASSETS 2025, [VeasyGuide](https://veasyguide.github.io/) and [Task Mode](https://dl.acm.org/doi/10.1145/3663547.3746401), which is a project by [Ananya](https://ananyagm.com/), another amazing researcher from UT Austin. 
+Another wonderful thing is that I was able to connect with past collegues from The University of Texas at Austin (UT Austin). I spent a summer there as a visiting researcher, and it was such a pleasure to be able to meet again and reunite! Especially, I am glad to see [Prof. Amy Pavel](https://amypavel.com/), who hosted my stay at UT Austin there. Amy co-authored two papers with me for ASSETS 2025, [VeasyGuide](https://veasyguide.github.io/) and [Task Mode](https://dl.acm.org/doi/10.1145/3663547.3746401), which is a project by [Ananya](https://ananyagm.com/), another amazing researcher from UT Austin.
 
 <div class="row justify-content-center">
     <div class="col-md-8">
@@ -134,7 +134,7 @@ Before I move on to share my presentation experience, it's important to mention 
     </div>
 </div>
 
-Now, *about VeasyGuide!* The presentation and interaction with the listeners was very impactful for me. I got so many wonderful questions during and after the talk! I truly appreciate everyone who watched, asked questions, and provided feedback on this work. Below I put the **video recording** of the talk and the transcriptions of the **Q&A session**. There are so many more things to do to improve online learning accessibility for low-vision learners!
+Now, _about VeasyGuide!_ The presentation and interaction with the listeners was very impactful for me. I got so many wonderful questions during and after the talk! I truly appreciate everyone who watched, asked questions, and provided feedback on this work. Below I put the **video recording** of the talk and the transcriptions of the **Q&A session**. There are so many more things to do to improve online learning accessibility for low-vision learners!
 
 <div id="recording" class="row justify-content-center mt-3">
   <div class="col-12 col-md-8">
@@ -173,6 +173,5 @@ And other users used color inversion, or changed the colors of the highlights an
 
 So we have a section in our paper that we detail how we make VeasyGuide available for live content as well. And there are several ways to do that. But right now, VeasyGuide relies on a processing stage.
 So in our plan, it would be doing the processing on the server side without retaining the video, and then having the processing available on the client side, which should not take too long.
-
 
 I am looking forward to ASSETS 2026 in Portugal! ✨

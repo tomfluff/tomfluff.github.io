@@ -257,6 +257,7 @@ Add custom styled blockquotes with special classes:
         path="https://www.youtube.com/embed/VIDEO_ID"         class="responsive-iframe"
       %}
     </div>
+    <div class="caption">Caption to the video.</div>
   </div>
 </div>
 ```

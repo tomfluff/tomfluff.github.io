@@ -23,8 +23,7 @@ In the beautiful Denver, I had the privilege of presenting our work _"[VeasyGuid
 This presentation marked an important milestone in my research on making learning accessible for low-vision learners. Plus, this was my first time attending ASSETS!
 In this post I will share my experience at ASSETS, and around Denver during my time there.
 
-> Feel free to jump ahead to see the [full recording of my presentation](#recording).
-> {: .block-note}
+> Feel free to jump ahead to see the [full recording of my presentation](#recording). {: .block-note}
 
 I didn't know that VeasyGuide won an award. One morning, all of a sudden, I am getting _"Congradulations!"_ messages from friends. Seems like when they go over the online program they saw it. But I, I was oblivious to it! So it was such a nice surprise to wake up one day and realize that we have gotten an award. But let's get back on track---the conference!
 

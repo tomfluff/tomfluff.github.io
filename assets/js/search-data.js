@@ -30,11 +30,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-helpfeel-award-at-wiss-2023-smart-replay-presented",
+        },{id: "post-veasyguide-at-assets-2025-recap-and-presentation-recording",
         
-          title: "Helpfeel Award at WISS 2023 — Smart Replay presented",
+          title: "VeasyGuide at ASSETS 2025 Recap and Presentation Recording 🎥",
         
-        description: "Presented &#39;Smart Replay&#39; at WISS 2023 and received the Helpfeel Award for improving accessibility in e-learning videos.",
+        description: "Recapping my experience presenting VeasyGuide at ASSETS 2025, which got a best paper honorable mention! Read about the conference and watch the recording of my talk. VeasyGuide is making communication between instructors and students in slide-based presentation videos accessible for low-vision learners.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/veasyguide-assets-2025/";
+          
+        },
+      },{id: "post-smart-replay-at-wiss-2023-recap-and-helpfeel-award",
+        
+          title: "Smart Replay at WISS 2023 Recap and Helpfeel Award 🏆",
+        
+        description: "Recap of my presentation of &#39;Smart Replay&#39; at WISS 2023, which also was my first WISS! A fun surprize was receiving the Helpfeel Award for improving accessibility in e-learning videos.",
         section: "Posts",
         handler: () => {
           

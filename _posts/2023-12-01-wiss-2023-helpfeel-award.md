@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Helpfeel Award at WISS 2023 — Smart Replay presented"
+title: "Smart Replay at WISS 2023 Recap and Helpfeel Award 🏆"
 date: 2023-12-01 10:00:00+0900
-description: "Presented 'Smart Replay' at WISS 2023 and received the Helpfeel Award for improving accessibility in e-learning videos."
-thumbnail: assets/img/news/2023-12-01-a.jpg
+description: "Recap of my presentation of 'Smart Replay' at WISS 2023, which also was my first WISS! A fun surprize was receiving the Helpfeel Award for improving accessibility in e-learning videos."
+thumbnail: assets/img/posts/wiss-23-img-2.jpg
 featured: false
-tags: accessibility e-learning WISS2023 award
+tags: accessibility e-learning WISS award
 categories: conference
 author: Yotam Sechayk
 giscus_comments: false
@@ -21,10 +21,10 @@ To our delight, our project on e-learning accessibility received the **Helpfeel 
     <div class="col-md-10">
         <div class="row mt-3">
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/news/2023-12-01-a.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/wiss-23-img-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             </div>
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/news/2023-12-01-b.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/wiss-23-img-2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
             </div>
         </div>
         <div class="caption">
@@ -40,16 +40,20 @@ WISS itself is a wonderful conference—a local but vibrant gathering of the HCI
 You can catch a glimpse of the area in [this short video](https://www.youtube.com/watch?v=0RsLz1O_5lM):
 
 <div class="row justify-content-center mt-3">
-    <div>
-        {% include video.liquid path="https://www.youtube.com/embed/0RsLz1O_5lM" class="rounded z-depth-1" width="640" height="360" %}
+    <div class="col-12 col-md-8">
+        <div class="video-wrapper-16x9">
+            {% include video.liquid path="https://www.youtube.com/embed/0RsLz1O_5lM" class="responsive-iframe" %}
+        </div>
     </div>
 </div>
 
 For anyone curious, the recording of my talk is available on [YouTube](https://youtu.be/pWNfCc4Sz58?t=8210):
 
 <div class="row justify-content-center mt-3">
-    <div>
-        {% include video.liquid path="https://www.youtube.com/embed/pWNfCc4Sz58?amp;start=8210" class="rounded z-depth-1" width="640" height="360" %}
+    <div class="col-12 col-md-8">
+        <div class="video-wrapper-16x9">
+            {% include video.liquid path="https://www.youtube.com/embed/pWNfCc4Sz58?amp;start=8210" class="responsive-iframe" %}
+        </div>
     </div>
 </div>
 

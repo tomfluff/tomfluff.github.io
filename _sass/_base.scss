@@ -130,6 +130,27 @@ blockquote {
       color: var(--global-danger-block-title);
     }
   }
+
+  &.block-note {
+    border-color: var(--global-note-block);
+    background-color: var(--global-note-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-note-block-text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-note-block-title);
+    }
+  }
 }
 
 // Checklist
@@ -1477,4 +1498,23 @@ figure.cover {
       content: "\2014 \00A0"; /* Em dash and non-breaking space */
     }
   }
+}
+
+/*************************************************
+ * Responsive 16:9 Video Embeds in Posts
+ *************************************************/
+.video-wrapper-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+.video-wrapper-16x9 iframe,
+.video-wrapper-16x9 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
 }

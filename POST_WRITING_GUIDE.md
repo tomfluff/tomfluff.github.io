@@ -246,6 +246,22 @@ Add custom styled blockquotes with special classes:
 
 ### Videos
 
+> Recommended responsive wrapper
+
+```liquid
+<div class="row justify-content-center mt-3">
+  <div class="col-12 col-md-8">
+    <div class="video-wrapper-16x9">
+      {%
+        include video.liquid
+        path="https://www.youtube.com/embed/VIDEO_ID"         class="responsive-iframe"
+      %}
+    </div>
+    <div class="caption">Caption to the video.</div>
+  </div>
+</div>
+```
+
 ```liquid
 # Local video
 {%
@@ -732,6 +748,30 @@ _styles: >
 <div class="alert alert-warning">Warning alert</div>
 <div class="alert alert-danger">Danger alert</div>
 <div class="alert alert-info">Info alert</div>
+```
+
+Or with markdown
+
+```text
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-tip}
+
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-note}
+
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-warning}
+
+> ### TITLE TEXT
+>
+> Text and details.
+{: .block-danger}
 ```
 
 ### Card Components

@@ -5,13 +5,18 @@ date: 2025-11-12 09:00:00-0500
 description: "Recapping my experience presenting VeasyGuide at ASSETS 2025, which got a best paper honorable mention! Read about the conference and watch the recording of my talk. VeasyGuide is making communication between instructors and students in slide-based presentation videos accessible for low-vision learners."
 thumbnail: assets/img/posts/assets-25-thumbnail.jpg
 featured: false
-tags: accessibility ASSETS e-learning low-vision award
+tags: accessibility ASSETS e-learning low-vision ADHD award
 categories: conference
 author: Yotam Sechayk
 giscus_comments: false
 disqus_comments: false
 related_posts: true
+related_publications: true
 ---
+
+<div class="d-none">
+    {% cite sechayk2025veasyguide mohanbabu2025taskmode pimenova2025longitudinal %}
+</div>
 
 In the beautiful Denver, I had the privilege of presenting our work _"[VeasyGuide](https://veasyguide.github.io/): Personalized Visual Guidance for Low-vision Learners on Instructor Actions in Presentation Videos"_ at [ASSETS 2025](https://assets25.sigaccess.org/) (International ACM SIGACCESS Conference on Computers and Accessibility). Even more exciting, VeasyGuide won a 🏆 **best paper honorable mention award!**
 
@@ -67,7 +72,7 @@ I took the opportunity to also visit the library. It is a very pleasant building
             </div>
         </div>
         <div class="caption">
-            The venue of the conference, the Curtis Hotel at Denver.
+            The sign at the library pointing to the "Large Print" books section.
         </div>
     </div>
 </div>
@@ -169,6 +174,5 @@ And other users used color inversion, or changed the colors of the highlights an
 So we have a section in our paper that we detail how we make VeasyGuide available for live content as well. And there are several ways to do that. But right now, VeasyGuide relies on a processing stage.
 So in our plan, it would be doing the processing on the server side without retaining the video, and then having the processing available on the client side, which should not take too long.
 
----
 
 I am looking forward to ASSETS 2026 in Portugal! ✨

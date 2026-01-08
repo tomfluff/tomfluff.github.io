@@ -8,8 +8,7 @@ featured: false
 tags: accessibility e-learning WISS award
 categories: conference
 author: Yotam Sechayk
-giscus_comments: false
-disqus_comments: false
+giscus_comments: true
 related_posts: true
 ---
 

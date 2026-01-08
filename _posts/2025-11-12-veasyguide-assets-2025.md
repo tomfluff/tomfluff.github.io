@@ -8,8 +8,7 @@ featured: false
 tags: accessibility ASSETS e-learning low-vision ADHD award
 categories: conference
 author: Yotam Sechayk
-giscus_comments: false
-disqus_comments: false
+giscus_comments: true
 related_posts: true
 related_publications: true
 ---

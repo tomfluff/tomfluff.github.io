@@ -8,8 +8,7 @@ featured: false
 tags: image-gen AI Gemini diversity
 categories: exploration
 author: Yotam Sechayk
-giscus_comments: false
-disqus_comments: false
+giscus_comments: true
 related_posts: true
 related_publications: false
 ---

@@ -121,6 +121,12 @@ ninja.data = [{
           section: "News",},{id: "news-presented-our-work-veasyguide-at-assets-2025-️",
           title: 'Presented our work VeasyGuide at ASSETS 2025. 🗣️',
           description: "",
+          section: "News",},{id: "news-our-paper-graph-guide-低視力者支援のためのセマンティックfocus-context-グラフ表示-was-presented-at-wiss-2025-and-received-a-best-paper-award",
+          title: 'Our paper Graph Guide: 低視力者支援のためのセマンティックFocus+Context グラフ表示 was presented at WISS 2025 and received...',
+          description: "",
+          section: "News",},{id: "news-our-paper-improving-low-vision-chart-accessibility-via-on-cursor-visual-context-has-been-conditionally-accepted-to-chi-2026",
+          title: 'Our paper Improving Low-Vision Chart Accessibility via On-Cursor Visual Context has been conditionally...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',

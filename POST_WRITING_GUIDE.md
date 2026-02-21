@@ -149,25 +149,40 @@ _Italic text_ or _italic text_
 <a href="https://example.com">HTML link</a>
 ```
 
-### Custom Blockquotes
+### Custom Blockquotes (Callouts)
 
-Add custom styled blockquotes with special classes:
+Add custom styled blockquotes with special classes. **Important:** Wrap callouts with `<!-- prettier-ignore-start -->` and `<!-- prettier-ignore-end -->` comments to preserve formatting:
 
 ```markdown
+<!-- prettier-ignore-start -->
 > ##### TIP
 >
 > This is a helpful tip for readers
 > {: .block-tip }
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 > ##### WARNING
 >
 > This is an important warning
 > {: .block-warning }
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 > ##### DANGER
 >
 > This indicates dangerous operations
 > {: .block-danger }
+<!-- prettier-ignore-end -->
+```
+
+**Example:**
+
+```markdown
+<!-- prettier-ignore-start -->
+> **Fun fact:** the station name roughly translates to Plum Hill.
+> {: .block-note }
+<!-- prettier-ignore-end -->
 ```
 
 ## Images and Media

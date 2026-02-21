@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-veasyguide-at-assets-2025-recap-and-presentation-recording",
+        },{id: "post-travel-japan-plum-blossom-festival-and-blv-accessibility",
+        
+          title: "Travel Japan: Plum Blossom Festival and BLV Accessibility",
+        
+        description: "February in Tokyo means one thing: the plum blossoms are here! Join me on a trip to Hanegi Park’s Ume Festival as I explore the beautiful scenery and find out how accessible a local Japanese festival truly is for the BLV community—from &quot;Braille Blocks&quot; to audio-guidance.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/hanegi-park/";
+          
+        },
+      },{id: "post-veasyguide-at-assets-2025-recap-and-presentation-recording",
         
           title: "VeasyGuide at ASSETS 2025 Recap and Presentation Recording 🎥",
         

@@ -4,7 +4,7 @@ title: "VeasyGuide at ASSETS 2025 Recap and Presentation Recording 🎥"
 date: 2025-11-12 09:00:00-0500
 description: "Recapping my experience presenting VeasyGuide at ASSETS 2025, which got a best paper honorable mention! Read about the conference and watch the recording of my talk. VeasyGuide is making communication between instructors and students in slide-based presentation videos accessible for low-vision learners."
 thumbnail: assets/img/posts/assets-25-thumbnail.jpg
-featured: false
+featured: true
 tags: accessibility ASSETS e-learning low-vision ADHD award
 categories: conference
 author: Yotam Sechayk

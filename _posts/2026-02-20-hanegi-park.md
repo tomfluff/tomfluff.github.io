@@ -9,7 +9,7 @@ categories: travel
 author: Yotam Sechayk
 giscus_comments: true
 related_posts: true
-description: "February in Tokyo means one thing: the plum blossoms are here! Join me on a trip to Hanegi Park’s Ume Festival as I explore the beautiful scenery and find out how accessible a local Japanese festival truly is for the BLV community—from \"Braille Blocks\" to audio-guidance."
+description: 'February in Tokyo means one thing: the plum blossoms are here! Join me on a trip to Hanegi Park’s Ume Festival as I explore the beautiful scenery and find out how accessible a local Japanese festival truly is for the BLV community—from "Braille Blocks" to audio-guidance.'
 ---
 
 Last weekend I visited a local plum festival in Tokyo and explored how accessible it is for blind and low vision (BLV) people.
@@ -77,7 +77,7 @@ After arriving at the station, I was greeted by a few stands selling Japanese di
 </div>
 <div class="caption">The sealed package of pickled plums.</div>
 
-At and around the station (and in most big cities in Japan) there are yellow blocks to guide people. These are called Tenji Burokku (点字ブロック), which translates to “Braille Blocks.” They are primarily used to guide blind people and have different patterns that indicate paths and entrances. As a low-vision person, I sometimes use them as visible guides that will (probably) lead me to where I want to go. 
+At and around the station (and in most big cities in Japan) there are yellow blocks to guide people. These are called Tenji Burokku (点字ブロック), which translates to “Braille Blocks.” They are primarily used to guide blind people and have different patterns that indicate paths and entrances. As a low-vision person, I sometimes use them as visible guides that will (probably) lead me to where I want to go.
 
 <!-- prettier-ignore-start -->
 > I always say, “when in doubt, like Dorothy, follow the yellow brick road.”
@@ -135,7 +135,7 @@ From the station I headed toward Hanegi Park, which is only a few minutes' walk.
 </div>
 
 The walk around the park was very pleasant! The plums were not yet in full bloom because we had a cold spell in Tokyo this winter, but I was able to get some nice pictures. The weather that day was lovely—sunny but not too warm—so I felt very lucky.
- 
+
 <div class="row mt-3">
 	<div class="col-sm mt-3 mt-md-0">
 		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-12.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -172,7 +172,7 @@ In Japan, restaurants and shops usually have pictures—or sometimes even plasti
 
 As I was walking around, I spotted a lovely couple strolling through the festival. One was using a white cane while linking arms with their partner, who narrated the scene and described the different stalls as they explored together.
 
-At festivals in Japan you usually find the same kinds of food: 
+At festivals in Japan you usually find the same kinds of food:
 
 - Yakisoba (stir-fried noodles)
 - Takoyaki (dough balls with pieces of octopus)
@@ -182,7 +182,6 @@ At festivals in Japan you usually find the same kinds of food:
 But instead of eating these, I decided to try some nearby places, so I made my way toward the park exit.
 
 As I was walking, I started hearing a familiar sound—the taiko drum! 🥁 It was a group of primary school children and their teachers performing. I love taiko shows because they **don't require sight at all**. Not only is it musical, but the sound, depth, and vibration of the taiko drums are things I can feel throughout my body—especially in my chest. It feels exciting and energizing, and I feel as if I'm there with them, part of the performance itself. I stayed and watched their show, then wrapped up my visit to Hanegi Park and walked around to find a place for lunch.
-
 
 <div id="recording" class="row justify-content-center mt-3">
   <div class="col-12 col-md-8">
@@ -198,6 +197,6 @@ As I was walking, I started hearing a familiar sound—the taiko drum! 🥁 It w
 {: .block-note }
 <!-- prettier-ignore-end -->
 
-My spontaneous visit to Hanegi Park was great! I saw the beautiful plum trees in bloom, bought some delicious pickled plums, enjoyed local culture, and was thrilled by a taiko drum performance. While accessibility in Japan is still developing, I felt this visit was mostly easy and smooth. Even though some things are still difficult—like the signage at food stalls—other things are already quite good. For example, the 🟨 yellow bricks, the 🔉 audio guidance at the park map, and the 🥁 taiko performances. 
+My spontaneous visit to Hanegi Park was great! I saw the beautiful plum trees in bloom, bought some delicious pickled plums, enjoyed local culture, and was thrilled by a taiko drum performance. While accessibility in Japan is still developing, I felt this visit was mostly easy and smooth. Even though some things are still difficult—like the signage at food stalls—other things are already quite good. For example, the 🟨 yellow bricks, the 🔉 audio guidance at the park map, and the 🥁 taiko performances.
 
 If you have a chance, go see some plum trees, try some plum jam, or even taste the sour Japanese pickled plums (if you feel adventurous). 💮

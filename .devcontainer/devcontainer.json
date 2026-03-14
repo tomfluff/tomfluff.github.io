@@ -2,7 +2,9 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
   "name": "Jekyll",
-  "image": "mcr.microsoft.com/devcontainers/jekyll",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {

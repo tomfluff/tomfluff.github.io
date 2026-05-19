@@ -37,6 +37,43 @@ $black-color: #000000 !default;
 $code-bg-color-light: rgba($purple-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
+// Montserrat local font faces
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Black.ttf");
+  font-weight: 900;
+}
+
 // Font awesome location
 $fa-font-path: "../webfonts";
 

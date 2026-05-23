@@ -1,20 +1,16 @@
 {% assign extension = include.path | split: '.' | last %}
+{% if extension == 'mp4' %}{% assign mime_type = 'video/mp4' %}{% elsif extension == 'webm' %}{% assign mime_type = 'video/webm' %}{% elsif extension == 'ogg' %}{% assign mime_type = 'video/ogg' %}{% endif %}
 
 {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
   <video
-    src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
     {% if include.class %}
       class="{{ include.class }}"
     {% endif %}
     {% if include.width %}
       width="{{ include.width }}"
-    {% else %}
-      width="auto"
     {% endif %}
     {% if include.height %}
       height="{{ include.height }}"
-    {% else %}
-      height="auto"
     {% endif %}
     {% if include['min-width'] %}
       min-width="{{ include.min-width }}"
@@ -47,9 +43,12 @@
       muted
     {% endif %}
     {% if include.poster %}
-      poster="{{ include.poster }}"
+      data-poster="{{ include.poster }}"
     {% endif %}
-  />
+    playsinline
+  >
+    <source src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}" type="{{ mime_type }}" />
+  </video>
 
 {% else %}
   <iframe

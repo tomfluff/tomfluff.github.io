@@ -1518,3 +1518,31 @@ figure.cover {
   margin: 0;
   padding: 0;
 }
+
+/*************************************************
+ * Plyr Video Player
+ *************************************************/
+:root {
+  --plyr-color-main: #{$purple-color};
+}
+
+.plyr {
+  border-radius: var(--bs-border-radius, 0.375rem);
+  overflow: hidden;
+  width: 100%;
+}
+
+.plyr video {
+  height: 100%;
+}
+
+.plyr__menu__container {
+  span {
+    color: var(--plyr-menu-color, #4a5464);
+  }
+
+  .plyr__control:hover span,
+  .plyr__control:focus-visible span {
+    color: #fff;
+  }
+}

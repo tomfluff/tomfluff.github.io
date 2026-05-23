@@ -562,6 +562,14 @@ third_party_libraries:
     url:
       js: "https://cdn.jsdelivr.net/npm/plotly.js@{{version}}/dist/plotly.min.js"
     version: "3.0.1"
+  plyr:
+    integrity:
+      css: "sha256-YDBhtMuUeRFzJ+QG2Za8Z8kV5O6/IjEoJ/6yUIUB9TU="
+      js: "sha256-voE7LKvJguznD4VsFKHfS6g6Yyg4mDR2/gMGcmHg6S8="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/plyr@{{version}}/dist/plyr.min.css"
+      js: "https://cdn.jsdelivr.net/npm/plyr@{{version}}/dist/plyr.min.js"
+    version: "3.8.4"
   polyfill:
     url:
       js: "https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"

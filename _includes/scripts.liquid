@@ -179,6 +179,17 @@
   ></script>
 {% endif %}
 
+{% if page.video and page.video.plyr %}
+  <!-- Plyr Video Player -->
+  <script
+    defer
+    src="{{ site.third_party_libraries.plyr.url.js }}"
+    integrity="{{ site.third_party_libraries.plyr.integrity.js }}"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="{{ '/assets/js/plyr-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 <!-- Load Common JS -->
 <script src="{{ '/assets/js/no_defer.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/common.js' | relative_url | bust_file_cache }}"></script>

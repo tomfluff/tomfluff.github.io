@@ -9,6 +9,8 @@ categories: travel
 author: Yotam Sechayk
 giscus_comments: true
 related_posts: true
+video:
+  plyr: true
 description: 'February in Tokyo means one thing: the plum blossoms are here! Join me on a trip to Hanegi Park’s Ume Festival as I explore the beautiful scenery and find out how accessible a local Japanese festival truly is for the BLV community—from "Braille Blocks" to audio-guidance.'
 ---
 
@@ -118,16 +120,19 @@ In some places in Japan, these blocks also have QR codes embedded in them that p
 
 From the station I headed toward Hanegi Park, which is only a few minutes' walk. Hanegi Park has around 60 plum varieties, with both red/pink and white blossoms. The trees are right by the walking path and the blossoms were easy to spot. At the entrance to the park there was a map (in Japanese) with simple voice guidance for orientation.
 
-<div class="row mt-3">
-	<div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="row">
 		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-05.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 		<div class="caption">The Hanegi Park map at the park entrance.</div>
 	</div>
-	<div class="col-12 col-md-8">
+</div>
+</div>
+<div class="row justify-content-center mt-3">
+	<div class="col-12">
 		{%
 			include video.liquid
 			path="assets/video/posts/hanegi-audio-guidance.mp4"
-			class="img-fluid rounded z-depth-1"
 			controls=true
 		%}
 		<div class="caption">Audio guidance demonstration at Hanegi Park, around the map near the entrance.</div>
@@ -161,13 +166,11 @@ At the center of the park was a wide area with food stands and some stalls from 
 
 In Japan, restaurants and shops usually have pictures—or sometimes even plastic models—of the food or other things they sell. However, at this small local festival these kinds of pictures were not available. So I had to get up close and hope I could either see a sign or catch a glimpse of someone else’s order—hopefully without looking like I was staring. Otherwise, I could always ask people, which was more fun because it let me interact and improve my Japanese. But sometimes I wished for more agency in getting this simple information, which is often the least accessible.
 
-<div id="recording" class="row justify-content-center mt-3">
-  <div class="col-12 col-md-8">
-    <div class="video-wrapper-16x9">
-    {% include video.liquid path="assets/video/posts/hanegi-food-stalls.mp4" class="img-fluid rounded z-depth-1" controls=true %}
-</div>
+<div class="row justify-content-center mt-3">
+  <div class="col-12">
+    {% include video.liquid path="assets/video/posts/hanegi-food-stalls.mp4" controls=true %}
     <div class="caption">The food stalls at the center of the park. It’s hard to identify what they sell without getting close and looking at the small signs.</div>
-</div>
+  </div>
 </div>
 
 As I was walking around, I spotted a lovely couple strolling through the festival. One was using a white cane while linking arms with their partner, who narrated the scene and described the different stalls as they explored together.
@@ -183,13 +186,11 @@ But instead of eating these, I decided to try some nearby places, so I made my w
 
 As I was walking, I started hearing a familiar sound—the taiko drum! 🥁 It was a group of primary school children and their teachers performing. I love taiko shows because they **don't require sight at all**. Not only is it musical, but the sound, depth, and vibration of the taiko drums are things I can feel throughout my body—especially in my chest. It feels exciting and energizing, and I feel as if I'm there with them, part of the performance itself. I stayed and watched their show, then wrapped up my visit to Hanegi Park and walked around to find a place for lunch.
 
-<div id="recording" class="row justify-content-center mt-3">
-  <div class="col-12 col-md-8">
-    <div class="video-wrapper-16x9">
-    {% include video.liquid path="assets/video/posts/hanegi-taiko-drum.mp4" class="img-fluid rounded z-depth-1" controls=true %}
-</div>
+<div class="row justify-content-center mt-3">
+  <div class="col-12">
+    {% include video.liquid path="assets/video/posts/hanegi-taiko-drum.mp4" controls=true %}
     <div class="caption">The taiko drum performance at Hanegi Park.</div>
-</div>
+  </div>
 </div>
 
 <!-- prettier-ignore-start -->

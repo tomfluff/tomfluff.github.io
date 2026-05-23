@@ -39,7 +39,7 @@ WISS itself is a wonderful conference—a local but vibrant gathering of the HCI
 You can catch a glimpse of the area in [this short video](https://www.youtube.com/watch?v=0RsLz1O_5lM):
 
 <div class="row justify-content-center mt-3">
-    <div class="col-12 col-md-8">
+    <div class="col-12">
         <div class="video-wrapper-16x9">
             {% include video.liquid path="https://www.youtube.com/embed/0RsLz1O_5lM" class="responsive-iframe" %}
         </div>
@@ -49,7 +49,7 @@ You can catch a glimpse of the area in [this short video](https://www.youtube.co
 For anyone curious, the recording of my talk is available on [YouTube](https://youtu.be/pWNfCc4Sz58?t=8210):
 
 <div class="row justify-content-center mt-3">
-    <div class="col-12 col-md-8">
+    <div class="col-12">
         <div class="video-wrapper-16x9">
             {% include video.liquid path="https://www.youtube.com/embed/pWNfCc4Sz58?amp;start=8210" class="responsive-iframe" %}
         </div>

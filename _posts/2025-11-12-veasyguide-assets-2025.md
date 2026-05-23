@@ -138,7 +138,7 @@ Before I move on to share my presentation experience, it's important to mention 
 Now, _about VeasyGuide!_ The presentation and interaction with the listeners was very impactful for me. I got so many wonderful questions during and after the talk! I truly appreciate everyone who watched, asked questions, and provided feedback on this work. Below I put the **video recording** of the talk and the transcriptions of the **Q&A session**. There are so many more things to do to improve online learning accessibility for low-vision learners!
 
 <div id="recording" class="row justify-content-center mt-3">
-  <div class="col-12 col-md-8">
+  <div class="col-12">
     <div class="video-wrapper-16x9">
       {% include video.liquid 
          path="https://www.youtube.com/embed/3eD-7JJtlLY" 

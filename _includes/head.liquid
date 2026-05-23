@@ -68,6 +68,17 @@
 {% elsif site.icon != blank %}
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
+{% if page.video and page.video.plyr %}
+  <!-- Plyr Video Player -->
+  <link
+    defer
+    rel="stylesheet"
+    href="{{ site.third_party_libraries.plyr.url.css }}"
+    integrity="{{ site.third_party_libraries.plyr.integrity.css }}"
+    crossorigin="anonymous"
+  >
+{% endif %}
+
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 

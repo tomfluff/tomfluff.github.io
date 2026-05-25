@@ -264,6 +264,11 @@
   <script defer src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
 
+{% if site.enable_custom_cursor %}
+  <!-- Custom Cursor -->
+  <script defer src="{{ '/assets/js/cursor.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 {% if page.images %}
   <!-- Image Layouts -->
   {% if page.images.compare %}

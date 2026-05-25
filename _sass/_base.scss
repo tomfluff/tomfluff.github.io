@@ -1488,8 +1488,8 @@ figure.cover {
 
 .stylish-quote {
   position: relative;
-  margin: 1.5rem 4rem;
-  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  margin: 1.5rem 2rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
   // font-size: 1.1rem;
   // line-height: 1.6;
   border-left: 4px solid var(--global-theme-color);
@@ -1542,6 +1542,7 @@ figure.cover {
  *************************************************/
 :root {
   --plyr-color-main: #{$purple-color};
+  --cursor-radius: 1rem; /* change to taste */
 }
 
 .plyr {
@@ -1562,5 +1563,51 @@ figure.cover {
   .plyr__control:hover span,
   .plyr__control:focus-visible span {
     color: #fff;
+  }
+}
+
+/*************************************************
+ * Custom Cursor
+ *************************************************/
+html:has(#custom-cursor) {
+  cursor: none;
+
+  a,
+  button,
+  label,
+  summary,
+  select,
+  [role="button"],
+  .btn,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    cursor: none;
+  }
+
+  input,
+  textarea,
+  [contenteditable] {
+    cursor: auto;
+  }
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  width: calc(var(--cursor-radius, 6px) * 2);
+  height: calc(var(--cursor-radius, 6px) * 2);
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+  transition:
+    background-color 0.15s ease,
+    opacity 0.15s ease;
+  opacity: 0;
+
+  &.is-hovering {
+    background-color: color-mix(in srgb, var(--cursor-hover-color) 55%, transparent);
   }
 }

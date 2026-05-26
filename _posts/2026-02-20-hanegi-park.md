@@ -47,7 +47,7 @@ To get to Hanegi Park I first took the train to Umegaoka Station on the Odakyu L
 Thankfully Google Maps is very well integrated in Japan, and you can see a lot of details like which train car to board, as well as exact times and durations.
 
 <!-- prettier-ignore-start -->
-> **Tip:** if the train is supposed to arrive at 2:21pm, do not board the train that arrives at 2:19pm.
+> **Tip:** if the train is supposed to arrive at 2:21pm, do not board the 2:19pm train.
 {: .block-tip }
 <!-- prettier-ignore-end -->
 

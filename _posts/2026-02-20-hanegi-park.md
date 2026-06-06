@@ -3,7 +3,7 @@ layout: post
 title: "Travel Japan: Plum Blossom Festival and BLV Accessibility"
 date: 2026-02-21 10:00:00+0900
 thumbnail: assets/img/posts/hanegi-20260221-12.jpg
-featured: true
+featured: false
 tags: accessibility Japan low-vision
 categories: travel
 author: Yotam Sechayk

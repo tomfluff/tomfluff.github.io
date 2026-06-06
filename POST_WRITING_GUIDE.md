@@ -158,21 +158,21 @@ Add custom styled blockquotes with special classes. **Important:** Wrap callouts
 > ##### TIP
 >
 > This is a helpful tip for readers
-> {: .block-tip }
+{: .block-tip }
 <!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
 > ##### WARNING
 >
 > This is an important warning
-> {: .block-warning }
+{: .block-warning }
 <!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
 > ##### DANGER
 >
 > This indicates dangerous operations
-> {: .block-danger }
+{: .block-danger }
 <!-- prettier-ignore-end -->
 ```
 
@@ -181,7 +181,7 @@ Add custom styled blockquotes with special classes. **Important:** Wrap callouts
 ```markdown
 <!-- prettier-ignore-start -->
 > **Fun fact:** the station name roughly translates to Plum Hill.
-> {: .block-note }
+{: .block-note }
 <!-- prettier-ignore-end -->
 ```
 

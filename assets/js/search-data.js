@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-travel-japan-plum-blossom-festival-and-blv-accessibility",
+        },{id: "post-google-changed-their-icons-again-and-they-are-still-not-accessible",
+        
+          title: "Google Changed Their Icons Again... And They are Still Not Accessible",
+        
+        description: "Google recently redesigned their icons, but the new design is still not accessible for low-vision people. In this post, I discuss the new design, its accessibility issues, and my attempt to improve it as a low-vision person!",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/google-icon-redesign/";
+          
+        },
+      },{id: "post-travel-japan-plum-blossom-festival-and-blv-accessibility",
         
           title: "Travel Japan: Plum Blossom Festival and BLV Accessibility",
         

@@ -30,9 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-my-needs-are-not-39-special-39",
+        },{id: "post-my-needs-are-not-quot-special-quot",
         
-          title: "My Needs are Not &#39;Special&#39;",
+          title: "My Needs are Not &quot;Special&quot;",
         
         description: "I don&#39;t like the term &#39;special needs&#39;. For large portions of my life, people have addressed my needs as special. But to me, nothing about what I need is special. Special is &#39;extra&#39;, &#39;more&#39;, &#39;beyond the standard&#39;. But to me? To me, being able to take an exam like all the other kids in my class is not special, it&#39;s fundamental. Recently I&#39;ve been reading some (2025!!) papers that still use the term &#39;special needs&#39;, and I had to express how that makes me feel.",
         section: "Posts",

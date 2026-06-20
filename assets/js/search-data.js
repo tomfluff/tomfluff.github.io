@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-google-changed-their-icons-again-and-they-are-still-not-accessible",
+        },{id: "post-my-needs-are-not-39-special-39",
+        
+          title: "My Needs are Not &#39;Special&#39;",
+        
+        description: "I don&#39;t like the term &#39;special needs&#39;. For large portions of my life, people have addressed my needs as special. But to me, nothing about what I need is special. Special is &#39;extra&#39;, &#39;more&#39;, &#39;beyond the standard&#39;. But to me? To me, being able to take an exam like all the other kids in my class is not special, it&#39;s fundamental. Recently I&#39;ve been reading some (2025!!) papers that still use the term &#39;special needs&#39;, and I had to express how that makes me feel.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/my-needs-are-not-special/";
+          
+        },
+      },{id: "post-google-changed-their-icons-again-and-they-are-still-not-accessible",
         
           title: "Google Changed Their Icons Again... And They are Still Not Accessible",
         

@@ -10,6 +10,7 @@ author: Yotam Sechayk
 giscus_comments: true
 related_posts: true
 related_publications: false
+citation: true
 bibliography: external_refs
 video:
   plyr: true

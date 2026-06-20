@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Needs are Not 'Special'"
+title: My Needs are Not "Special"
 date: 2026-06-19 12:00:00+0900
 thumbnail: /assets/img/posts/special-needs-1.jpg
 featured: true
@@ -10,22 +10,28 @@ author: Yotam Sechayk
 giscus_comments: true
 related_posts: true
 related_publications: true
+citation: true
 description: "I don't like the term 'special needs'. For large portions of my life, people have addressed my needs as special. But to me, nothing about what I need is special. Special is 'extra', 'more', 'beyond the standard'. But to me? To me, being able to take an exam like all the other kids in my class is not special, it's fundamental. Recently I've been reading some (2025!!) papers that still use the term 'special needs', and I had to express how that makes me feel."
 ---
 
-{%
-  include figure.liquid
-  path="assets/img/posts/special-needs-1.jpg"
-  class="img-fluid rounded z-depth-1"
-  alt="The words 'SPECIAL' struck through in gray and 'NEEDS' in bold white on a dark background."
-%}
-
 I don't like the term "special needs."
 
-> I have albinism and low-vision. This is also the lens through which I do my research, as a motivator for the tools I build, and as a reality I navigate every single day. I use screen magnification, high contrast settings, and a carefully positioned monitor. I sit close to screens.<br /><br />
-> I always make adjustments to my environment, to make working easier. But actually, don't we all?
+I have albinism and low-vision. This is also the lens through which I do my research, as a motivator for the tools I build, and as a reality I navigate every single day. I use screen magnification, high contrast settings, and a carefully positioned monitor. I sit close to screens.
 
-For many years, the world has described my situation using this phrase: special needs. As if what I need is somehow rare, exotic, or beyond the reasonable scope of what the world should offer.
+I always make adjustments to my environment, to make working easier. But, don't we all?
+
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    {%
+      include figure.liquid
+      path="assets/img/posts/special-needs-1.jpg"
+      class="img-fluid rounded z-depth-1"
+      alt="The words 'SPECIAL' struck through in gray and 'NEEDS' in bold white on a dark background."
+    %}
+  </div>
+</div>
+
+For many years, the world has described my situation using this phrase: _special needs_. As if what I need is somehow rare, exotic, or beyond the reasonable scope of what the world should offer.
 
 It is not.
 

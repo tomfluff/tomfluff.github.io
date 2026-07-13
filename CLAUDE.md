@@ -16,11 +16,15 @@ This is a guided, collaborative process. Yotam decides *what*; Claude proposes *
 
 ## Local development
 
+**There is no Ruby on this machine — use Docker.** `bundle`/`jekyll` are not on PATH; don't try them.
+
 ```bash
-bundle exec jekyll serve   # http://localhost:4000, rebuilds on save
+docker compose up -d                                                    # serve at http://localhost:8080, rebuilds on save
+docker compose run --rm --no-deps --entrypoint "" jekyll bundle exec jekyll build   # one-shot build, for verifying
+docker compose down                                                     # stop
 ```
 
-Docker alternative: `docker compose up` (see `docker-compose.yml`). Slim variant: `docker-compose-slim.yml`.
+Sass deprecation warnings from `tabler-icons` on every build are pre-existing upstream noise, not something we introduced.
 
 Site config is `_config.yml`. Prettier + pre-commit hooks run on commit; formatting failures are fixable with `npx prettier --write <file>`.
 

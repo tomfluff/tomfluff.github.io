@@ -117,6 +117,19 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          {% if site.cv_pdf %}
+            <!-- CV: opens the PDF directly in a new tab (no CV page) -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% if site.cv_pdf contains '://' %}{{ site.cv_pdf }}{% else %}{{ site.cv_pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CV
+              </a>
+            </li>
+          {% endif %}
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">

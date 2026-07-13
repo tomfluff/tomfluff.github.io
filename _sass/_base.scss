@@ -1202,7 +1202,9 @@ nav[data-toggle="toc"] {
 
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
-  z-index: 999;
+  // must stay above the fixed navbar (bootstrap .fixed-top is z-index 1030),
+  // otherwise the navbar covers the top of a zoomed image
+  z-index: 1040;
 }
 
 #toc-sidebar {

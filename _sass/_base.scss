@@ -353,6 +353,54 @@ html[data-theme="dark"] .highlight .nc {
   color: #8bafe1;
 }
 
+// ---------------------------------------------------------------------------
+// Site identity
+//
+// One repeated element: a short accent rule that sits under section headings
+// and beside the site name. It is the only ornament on the site, so it should
+// stay quiet — 2px, theme colour, no other decoration hung off it.
+// ---------------------------------------------------------------------------
+
+$accent-rule-width: 2.5rem;
+$accent-rule-thickness: 2px;
+
+article h2:not(.no-accent) {
+  margin-bottom: 1.1rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: $accent-rule-width;
+    height: $accent-rule-thickness;
+    margin-top: 0.45rem;
+    border-radius: $accent-rule-thickness;
+    background-color: var(--global-theme-color);
+  }
+}
+
+// The name in the navbar carries the same mark, so the identity reads as one
+// system rather than a heading decoration.
+.navbar-brand.title {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.1rem;
+    width: 1.25rem;
+    height: $accent-rule-thickness;
+    border-radius: $accent-rule-thickness;
+    background-color: var(--global-theme-color);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
 .search-shortcut-hint {
   @media (max-width: 575.98px) {
     display: none;

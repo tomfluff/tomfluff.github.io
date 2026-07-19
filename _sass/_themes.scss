@@ -10,7 +10,8 @@
   --global-bg-color-accent: #{color.adjust($code-bg-color-light, $lightness: -2%)};
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
+  // darker than $grey-color so secondary text clears 4.5:1 on white (WCAG 1.4.3)
+  --global-text-color-light: #{$grey-color-contrast-light};
   --global-theme-color: #{$purple-color};
   --global-hover-color: #{$purple-color};
   --cursor-hover-color: #{$complement-purple-color};
@@ -88,7 +89,8 @@ html[data-theme="dark"] {
   --global-bg-color-accent: #{color.adjust($code-bg-color-dark, $lightness: 2%)};
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
+  // lighter than $grey-color: on the dark background contrast runs the other way
+  --global-text-color-light: #{$grey-color-contrast-dark};
   --global-theme-color: #{$light-purple-color};
   --global-hover-color: #{$light-purple-color};
   --cursor-hover-color: #{$complement-light-purple-color};
@@ -122,7 +124,7 @@ html[data-theme="dark"] {
   --global-danger-block-text: #ffb9b9;
   --global-danger-block-title: #ffe0e0;
   --global-note-block: #0076df;
-  --global-note-block-bg: #003d5c;
+  --global-note-block-bg: #00344e; // darkened so links inside notes clear 4.5:1
   --global-note-block-text: #80d4ff;
   --global-note-block-title: #b3d9ff;
 

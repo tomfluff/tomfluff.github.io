@@ -42,6 +42,11 @@
         {% endfor %}
       </table>
     </div>
+    {% if page.latest_posts.limit and latest_posts_size > page.latest_posts.limit %}
+      <div class="mb-4" style="text-align: right">
+        <a href="{{ '/blog/' | relative_url }}">see all posts &rarr;</a>
+      </div>
+    {% endif %}
   {% else %}
     <p><i>No available posts to display.</i></p>
   {% endif %}

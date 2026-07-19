@@ -17,12 +17,12 @@ social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: # leave blank to include all the news in the `_news` folder
+  scrollable: false # show the items in full; the rest live on the /news/ page
+  limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true # includes a list of latest blog posts
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  scrollable: false # show the items in full; the rest live on the /blog/ page
   limit: 3 # leave blank to include all the blog posts
 ---
 

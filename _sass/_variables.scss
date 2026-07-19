@@ -27,6 +27,9 @@ $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
 $grey-color: #828282 !default;
+// secondary-text greys that reach 4.5:1 against each theme's background
+$grey-color-contrast-light: #767676 !default;
+$grey-color-contrast-dark: #949494 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
 $grey-color-dark: #1c1c1d;
 $grey-900: #212529;

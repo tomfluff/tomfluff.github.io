@@ -53,6 +53,21 @@ table {
   }
 }
 
+// Links in running text carry an underline so they are not signalled by colour
+// alone (WCAG 1.4.1). Scoped to prose so nav items, badges and buttons keep
+// their own styling; image links are excluded so the rule does not draw a line
+// under a figure.
+article p > a:not(:has(img)),
+article li > a:not(:has(img)),
+article blockquote a,
+article .caption a,
+.post-header p.desc a,
+.news td a,
+.card .post-meta a,
+footer a {
+  text-decoration: underline;
+}
+
 a,
 table.table a {
   color: var(--global-theme-color);
@@ -285,8 +300,53 @@ ul.task-list input[type="checkbox"] {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  // translucency lives in the background, not `opacity` — opacity would fade the
+  // nav links too, letting page content show through the expanded mobile menu
+  background-color: color-mix(in srgb, var(--global-bg-color) 95%, transparent);
+
+  // below the navbar-expand-sm breakpoint the menu drops over page content,
+  // where even 5% bleed-through makes the links hard to read
+  @media (max-width: 575.98px) {
+    background-color: var(--global-bg-color);
+  }
+}
+
+// Pinned post cards: the title link covers the whole card so the card stays
+// clickable, while the accessible name stays the post title.
+.card.hoverable {
+  position: relative;
+}
+
+.card-link-stretched::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card .post-meta a {
+  position: relative; // keep the year link above the stretched title link
+  z-index: 1;
+}
+
+// The vendored pygments themes ship an attribute-name teal that misses 4.5:1
+// against the code background in both themes; nudged here rather than editing
+// assets/css/jekyll-pygments-themes-*.css so those stay pristine upstream copies.
+html[data-theme="light"] .highlight .na {
+  color: #007b7c;
+}
+
+html[data-theme="dark"] .highlight .na {
+  color: #00c1c1;
+}
+
+html[data-theme="dark"] .highlight .nc {
+  color: #8bafe1;
+}
+
+.search-shortcut-hint {
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 }
 
 .navbar .dropdown-menu {
@@ -617,6 +677,10 @@ footer.sticky-bottom {
 }
 
 .post-title {
+  // the title is the page's h1 for semantics; keep the size it had as an h3
+  font-size: 1.75rem;
+  font-weight: 600;
+
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
@@ -776,10 +840,20 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
+        // phones: the first page is unreadable at this width and stretching it
+        // full-bleed pushes the rest of the list far down
+        @media (max-width: 575.98px) {
+          display: none;
+        }
       }
 
       .abbr {
         margin-bottom: 0.5rem;
+
+        // keep the venue badge a chip here; the column goes full-width on phones
+        @media (max-width: 575.98px) {
+          max-width: 5.5rem;
+        }
 
         abbr {
           display: inline-block;
@@ -893,7 +967,8 @@ footer.sticky-bottom {
         font-size: 0.875rem;
         max-height: 0px;
         overflow: hidden;
-        text-align: justify;
+        // ragged right: justified text opens uneven word-spacing rivers (WCAG 1.4.8)
+        text-align: left;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
@@ -1169,22 +1244,26 @@ nav[data-toggle="toc"] {
 }
 
 .featured-posts {
-  a {
+  // the link is on the title now (it stretches over the card), so the card's
+  // own colours stay put and hover is driven by the card, not the anchor
+  .card-title a {
     color: var(--global-text-color-light);
     text-decoration: none;
+  }
 
-    .card-text {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  // outranks mdb's `.card .card-body .card-text`, which hardcodes a grey that
+  // misses 4.5:1 on the dark card background
+  .card .card-body .card-text {
+    color: var(--global-text-color-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
-    &:hover {
+  .card:hover {
+    .card-title a,
+    .card-body .card-text {
       color: var(--global-theme-color);
-
-      .card-title {
-        color: var(--global-theme-color);
-      }
     }
   }
 

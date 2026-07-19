@@ -134,7 +134,8 @@
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">Ctrl K <i class="ti ti-search"></i></span>
+                <!-- the shortcut hint is meaningless without a keyboard, so phones get the icon alone -->
+                <span class="nav-link"><span class="search-shortcut-hint">Ctrl K </span><i class="ti ti-search"></i></span>
               </button>
             </li>
           {% endif %}

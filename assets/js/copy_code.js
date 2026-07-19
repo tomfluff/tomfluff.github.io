@@ -43,6 +43,10 @@ codeBlocks.forEach(function (codeBlock) {
       }, waitFor);
     });
 
+    // code blocks scroll horizontally, so they need to be focusable to be
+    // scrollable by keyboard alone (WCAG 2.1.1)
+    codeBlock.setAttribute("tabindex", "0");
+
     // create wrapper div
     var wrapper = document.createElement("div");
     wrapper.className = "code-display-wrapper";

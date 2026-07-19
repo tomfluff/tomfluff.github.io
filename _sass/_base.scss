@@ -401,6 +401,70 @@ article h2:not(.no-accent) {
   }
 }
 
+// Latest posts on the home page: a title, a line of the description and the
+// metadata, so the writing sells itself instead of showing a bare title.
+.latest-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+
+.latest-post {
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.latest-post-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+.latest-post-external {
+  vertical-align: baseline;
+}
+
+.latest-post-excerpt {
+  color: var(--global-text-color-light);
+  margin-bottom: 0.35rem;
+  max-width: 60ch;
+}
+
+.latest-post-meta {
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+
+  .latest-post-tag {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+    margin-right: 0.4rem;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+
+    i {
+      margin-right: 0.15rem;
+    }
+  }
+}
+
 .search-shortcut-hint {
   @media (max-width: 575.98px) {
     display: none;

@@ -14,7 +14,17 @@ h3,
 h4,
 h5,
 h6 {
+  // Montserrat stays on headings and the site identity; body copy is Atkinson
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  line-height: 1.25;
+}
+
+.navbar-brand,
+.navbar .nav-link,
+.post-title,
+.card-title {
+  font-family: "Montserrat", sans-serif;
 }
 
 strong,
@@ -673,6 +683,18 @@ footer.sticky-bottom {
       padding: 1rem 0.5rem;
       color: var(--global-text-color-light);
     }
+  }
+}
+
+// Cap the reading measure on long-form prose only. Comfortable reading runs
+// 45-75 characters a line (WCAG 1.4.8 asks for 80 or fewer); the full column
+// width is left to figures, tables and embeds.
+.post-content {
+  p,
+  ul,
+  ol,
+  blockquote {
+    max-width: 50ch;
   }
 }
 

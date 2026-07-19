@@ -42,6 +42,41 @@ $black-color: #000000 !default;
 $code-bg-color-light: rgba($purple-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
+// Atkinson Hyperlegible local font faces — the Braille Institute's text face,
+// drawn so that easily-confused characters stay distinguishable at low acuity.
+// Used for body copy; Montserrat stays on headings and the site identity.
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible"), url("../fonts/AtkinsonHyperlegible-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible Italic"), url("../fonts/AtkinsonHyperlegible-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible Bold"), url("../fonts/AtkinsonHyperlegible-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible Bold Italic"), url("../fonts/AtkinsonHyperlegible-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 // Montserrat local font faces
 @font-face {
   font-family: Montserrat;

@@ -33,10 +33,10 @@ I didn't know that VeasyGuide won an award. One morning, all of a sudden, I am g
     <div class="col-md-10">
         <div class="row">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-building-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-building-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Looking up at the tall conference hotel tower in downtown Denver from the street corner, with shopfronts and a vertical ALL TOGETHER sign at its base." %}
             </div>
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-building-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-building-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="The conference hotel seen from across the street, with a column of coloured letter tiles spelling ALL TOGETHER and a bright yellow wall at ground level." %}
             </div>
         </div>
         <div class="caption">
@@ -51,10 +51,10 @@ This year the conference was held at the Curtis Hotel in Denver, Colorado. I've 
     <div class="col-md-10">
         <div class="row">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-denver-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-denver-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A downtown Denver alley wall painted with flowing sandstone-coloured stripes, with sculpted rock formations projecting out of the brickwork." %}
             </div>
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-denver-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-denver-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A pink brick wall hung with framed black-and-white portraits of women alongside vintage household objects, arranged as a gallery-style mural." %}
             </div>
         </div>
         <div class="caption">
@@ -69,7 +69,7 @@ I took the opportunity to also visit the library. It is a very pleasant building
     <div class="col-md-10">
         <div class="row">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A library pillar with large dark lettering reading LARGE PRINT and LETRA GRANDE, with shelves of large-print books visible behind it." %}
             </div>
         </div>
         <div class="caption">
@@ -84,13 +84,13 @@ I was sitting right next to the **large print area!** What an interesting coicid
     <div class="col-md-10">
         <div class="row">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="An open book held up in front of a library shelf labelled LARGE TYPE, its pages set in noticeably large text." %}
             </div>
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-3-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-3-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A large-type paperback held open in one hand in front of shelves of hardcover novels." %}
             </div>
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-4-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-library-4-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A large-type hardcover held open, its text set widely across both pages, in front of a shelf of paperbacks." %}
             </div>
         </div>
         <div class="caption">
@@ -111,7 +111,7 @@ Another wonderful thing is that I was able to connect with past collegues from T
     <div class="col-md-8">
         <div class="row mt-3">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-conference-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-conference-1-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Yotam and four fellow researchers standing arm in arm and smiling beside a research poster at ASSETS 2025." %}
             </div>
         </div>
         <div class="caption">
@@ -126,7 +126,7 @@ Before I move on to share my presentation experience, it's important to mention 
     <div class="col-md-8">
         <div class="row mt-3">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-conference-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/assets-25-img-conference-2-Medium-768.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Veronica Pimenova and Yotam standing on either side of their ASSETS 2025 poster on a longitudinal autoethnography of email access." %}
             </div>
         </div>
         <div class="caption">
@@ -143,6 +143,7 @@ Now, _about VeasyGuide!_ The presentation and interaction with the listeners was
       {% include video.liquid 
          path="https://www.youtube.com/embed/3eD-7JJtlLY" 
          class="responsive-iframe" 
+         title="Recording of the VeasyGuide presentation at ASSETS 2025."
          caption="Recording of the VeasyGuide presentation at ASSETS 2025."
       %}
     </div>

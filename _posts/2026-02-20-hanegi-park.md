@@ -30,8 +30,7 @@ I’ll try to answer these questions in this post!
 	path="assets/img/posts/hanegi-20260221-04.jpg"
 	class="img-fluid rounded z-depth-1"
 	zoomable=true
-	loading="eager"
-%}
+	loading="eager" alt="The blue station sign at Umegaoka Station, reading 梅ヶ丘駅 in large white characters with Umegaoka Station beneath it." %}
         </div>
     </div>
 </div>
@@ -53,11 +52,11 @@ Thankfully Google Maps is very well integrated in Japan, and you can see a lot o
 
 <div class="row mt-3">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-10.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-10.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A busy market inside the station concourse, with stalls of ceramic bowls and tableware under a banner for the 47th Setagaya Plum Festival." %}
 		<div class="caption">Station area market with Japanese kitchenware, chopsticks, and cultural items</div>
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-13.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-13.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Shoppers crowding around a wooden stall selling boxed umeboshi in the station concourse, beneath signs for the south and north exits." %}
 		<div class="caption">Station area stall selling pickled Japanese plum</div>
 	</div>
 </div>
@@ -72,8 +71,7 @@ After arriving at the station, I was greeted by a few stands selling Japanese di
 	path="assets/img/posts/hanegi-20260221-09.jpg"
 	class="img-fluid rounded z-depth-1"
 	zoomable=true
-	loading="eager"
-%}
+	loading="eager" alt="A clear plastic tub of umeboshi held up to the camera, its label reading 完熟南高梅 with a red plum blossom illustration." %}
         </div>
     </div>
 </div>
@@ -89,10 +87,10 @@ At and around the station (and in most big cities in Japan) there are yellow blo
     <div class="col-md-8">
         <div class="row">
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-02.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-02.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="The gap between a train door and the platform, with a line of yellow bumpy tactile paving running alongside the platform edge." %}
             </div>
             <div class="col-sm">
-                {% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-08.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+                {% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-08.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Looking down at feet standing on yellow tactile paving, where dotted warning tiles meet ribbed directional tiles against grey stone." %}
             </div>
         </div>
         <div class="caption">
@@ -111,8 +109,7 @@ In some places in Japan, these blocks also have QR codes embedded in them that p
 	path="assets/img/posts/hanegi-20260221-06.jpg"
 	class="img-fluid rounded z-depth-1"
 	zoomable=true
-	loading="eager"
-%}
+	loading="eager" alt="Yellow tactile paving tiles outdoors, each dotted warning tile carrying a printed QR code at its centre, with three pairs of feet standing around them." %}
         </div>
     </div>
 </div>
@@ -123,7 +120,7 @@ From the station I headed toward Hanegi Park, which is only a few minutes' walk.
 <div class="row justify-content-center">
     <div class="col-md-4">
         <div class="row">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-05.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-05.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A large festival signboard under a tree showing a colour map of the Hanegi Park grounds and timetables for the Setagaya Plum Festival." %}
 		<div class="caption">The Hanegi Park map at the park entrance.</div>
 	</div>
 </div>
@@ -143,21 +140,21 @@ The walk around the park was very pleasant! The plums were not yet in full bloom
 
 <div class="row mt-3">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-12.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-12.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Close-up of white plum blossoms with yellow stamens on a dark branch, more blossoming trees blurred behind against blue sky." %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-14.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-14.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Yotam in sunglasses and a black jacket smiling at the camera on a park path, with white and pink plum trees and festival banners behind him." %}
 	</div>
 </div>
 <div class="row mt-3">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-15.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-15.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A broad plum tree in full white bloom spreading its low branches over the park, with visitors on the steps behind." %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-03.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-03.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Close-up of a plum branch where some flowers are open and others have already browned and faded past their peak." %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-01.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+		{% include figure.liquid loading="eager" path="assets/img/posts/hanegi-20260221-01.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="A white-blossoming plum tree with a hanging wooden label reading 白加賀, the cultivar name, tied to its trunk." %}
 	</div>
 </div>
 <div class="caption">The beautiful plum blossoms from different angles and places around Hanegi Park. White petals with a pink center and no leaves around them.</div>

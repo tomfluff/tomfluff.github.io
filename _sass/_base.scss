@@ -441,7 +441,6 @@ article h2:not(.no-accent) {
 .latest-post-excerpt {
   color: var(--global-text-color-light);
   margin-bottom: 0.35rem;
-  max-width: 60ch;
 }
 
 .latest-post-meta {
@@ -798,17 +797,6 @@ footer.sticky-bottom {
   }
 }
 
-// Cap the reading measure on long-form prose only. Comfortable reading runs
-// 45-75 characters a line (WCAG 1.4.8 asks for 80 or fewer); the full column
-// width is left to figures, tables and embeds.
-.post-content {
-  p,
-  ul,
-  ol,
-  blockquote {
-    max-width: 50ch;
-  }
-}
 
 .post-title {
   // the title is the page's h1 for semantics; keep the size it had as an h3

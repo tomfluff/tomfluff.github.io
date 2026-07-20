@@ -7,7 +7,7 @@ Jekyll + [al-folio](https://github.com/alshedivat/al-folio), deployed to GitHub 
 
 ## How we work together
 
-This is a guided, collaborative process. Yotam decides *what*; Claude proposes *how* and executes.
+This is a guided, collaborative process. Yotam decides _what_; Claude proposes _how_ and executes.
 
 - **Ask on anything ambiguous.** Wording, tone, design choices, structure, and anything touching Yotam's voice or research framing are his calls. Present options, don't pick silently. Mechanical fixes (typos, broken links, formatting) — just do them.
 - **Commit when asked. Never push.** Edit the working tree freely; wait for an explicit "commit" before committing, and never `git push` — deploying is always Yotam's call.
@@ -30,18 +30,18 @@ Site config is `_config.yml`. Prettier + pre-commit hooks run on commit; formatt
 
 ## Where things live
 
-| What | Where |
-|---|---|
-| Blog posts | `_posts/YYYY-MM-DD-slug.md` |
-| Drafts | `_drafts/` |
-| News items (about-page blurbs) | `_news/` |
-| Pages (about, cv, publications, …) | `_pages/` |
-| Publications | `_bibliography/papers.bib` (jekyll-scholar) |
-| Projects | `_projects/` |
-| Structured data (CV, socials, repos) | `_data/` |
-| Images | `assets/img/`, post images in `assets/img/posts/` |
-| Styles | `_sass/` |
-| Layouts / partials | `_layouts/`, `_includes/` |
+| What                                 | Where                                             |
+| ------------------------------------ | ------------------------------------------------- |
+| Blog posts                           | `_posts/YYYY-MM-DD-slug.md`                       |
+| Drafts                               | `_drafts/`                                        |
+| News items (about-page blurbs)       | `_news/`                                          |
+| Pages (about, cv, publications, …)   | `_pages/`                                         |
+| Publications                         | `_bibliography/papers.bib` (jekyll-scholar)       |
+| Projects                             | `_projects/`                                      |
+| Structured data (CV, socials, repos) | `_data/`                                          |
+| Images                               | `assets/img/`, post images in `assets/img/posts/` |
+| Styles                               | `_sass/`                                          |
+| Layouts / partials                   | `_layouts/`, `_includes/`                         |
 
 ## Writing posts
 

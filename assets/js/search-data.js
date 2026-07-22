@@ -188,6 +188,9 @@ ninja.data = [{
           section: "News",},{id: "news-gave-a-guest-lecture-second-year-running-on-accessibility-research-and-the-ai-revolution-in-accessibility-in-prof-takeo-igarashi-s-undergraduate-hci-class-at-the-university-of-tokyo-️",
           title: 'Gave a guest lecture (second year running) on accessibility research and the AI...',
           description: "",
+          section: "News",},{id: "news-released-veasyguide-as-open-source-software-anyone-can-now-try-it-right-in-the-browser-at-veasyguide-github-io-app",
+          title: 'Released VeasyGuide as open-source software! Anyone can now try it right in the...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',

@@ -227,13 +227,13 @@ The label is useful infrastructure, but the workflow around it decides what it m
 
 The label is a great addition, but it should not be an excuse to defer accessibility problems to *"some other time"*.
 
-## The question I keep coming back to
+## The label is how we start
 
 GitHub did something accessibility advocates have wanted platforms to do for years. It recognized accessibility barriers as a normal category of software work and put that category in front of every new project.
 
 Now thousands of repositories have to decide what the category means in practice.
 
-A label can make accessibility work visible, but incorporating it into a workflow is what makes accessibility happen in-practice.
+A label can make accessibility work visible, but incorporating it into a workflow is what makes accessibility happen.
 
 ## References
 

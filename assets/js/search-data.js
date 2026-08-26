@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-my-needs-are-not-quot-special-quot",
+        },{id: "post-a-label-is-not-a-priority",
+        
+          title: "A Label Is Not a Priority",
+        
+        description: "I&#39;m very glad to see that GitHub now ships an accessibility label in every new repository. It also made me wonder: what actually happens after somebody applies it? I&#39;ve filed accessibility bugs, and I&#39;ve watched them sit in a backlog until the conversation just stopped. A label makes accessibility visible. Visibility is not the same as priority, and the difference is decided by the workflow around the label, not the label itself.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-label-is-not-a-priority/";
+          
+        },
+      },{id: "post-my-needs-are-not-quot-special-quot",
         
           title: "My Needs are Not &quot;Special&quot;",
         

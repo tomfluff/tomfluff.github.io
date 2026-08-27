@@ -45,7 +45,6 @@ _styles: >
   }
 ---
 
-
 I was very excited when I saw [Maria Lamardo's post](https://lnkd.in/p/ggkGbf7j). GitHub now ships an `accessibility` label in every new repository, described as indicating a barrier affecting people with disabilities. Maria is a Senior Accessibility Program Manager at GitHub and helped lead the initiative.
 
 Then, a few seconds later, a second thought showed up:
@@ -147,7 +146,7 @@ Imagine a project with no accessibility owner, no shared severity rules, and no 
 
 > A dedicated queue that nobody owns is not a workflow, it's a waiting room.
 
-*Forgotten accessibility issues* only require a process where accessibility is visible but disconnected from the ordinary decisions about severity, ownership, and releases.
+_Forgotten accessibility issues_ only require a process where accessibility is visible but disconnected from the ordinary decisions about severity, ownership, and releases.
 
 That environment is common. {% cite alshayban2020accessibility --file external_refs %} found that many developers lacked awareness of accessibility principles and of the tools available to check them. {% cite bi2022practice --file external_refs %} similarly found that accessibility was often treated as a separate concern instead of a first-class consideration throughout development.
 
@@ -225,7 +224,7 @@ The label is useful infrastructure, but the workflow around it decides what it m
 4. **Move accessibility upstream.** A label only sees barriers somebody already found. Pair it with accessible design requirements, a definition of done, pull-request guidance, and appropriate automated and manual checks.
 5. **Measure the workflow, not only the backlog.** Track time to triage, ownership, severity, and resolution. GitHub reports that an [internal, AI-assisted accessibility-feedback workflow](https://github.blog/open-source/building-githubs-next-chapter-in-accessibility/) reduced resolution time by 62%, with 89% of issues closing within 90 days. Those results didn't come from a label alone. They came from combining structured metadata with automation, accountability, and measurement.
 
-The label is a great addition, but it should not be an excuse to defer accessibility problems to *"some other time"*.
+The label is a great addition, but it should not be an excuse to defer accessibility problems to _"some other time"_.
 
 ## The label is how we start
 

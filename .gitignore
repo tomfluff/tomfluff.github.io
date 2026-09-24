@@ -12,3 +12,11 @@ node_modules/
 vendor
 .idea
 .gstack/
+
+# Camera-ready PDFs held back until the ACM DL publishes them (then remove these lines and add the pdf fields)
+assets/pdf/ups-and-downs.pdf
+assets/pdf/see-what-i-mean.pdf
+assets/pdf/preview-vr.pdf
+assets/pdf/visualaccess-ds.pdf
+assets/pdf/landmarklens.pdf
+assets/pdf/cps4all-workshop.pdf

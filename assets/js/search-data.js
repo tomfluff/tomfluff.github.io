@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-a-label-is-not-a-priority",
+        },{id: "post-visual-communication-for-low-vision-information-access",
+        
+          title: "Visual Communication for Low-Vision Information Access",
+        
+        description: "My paper was accepted to the UIST 2026 Doctoral Symposium! Magnification helps me see a detail, but it can hide the context that gives that detail meaning. In this post I share how visual communication between people and their tools connects my research on lecture videos, charts, and AI, and why being in control of what I see still matters.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/uist-2026-doctoral-symposium/";
+          
+        },
+      },{id: "post-a-label-is-not-a-priority",
         
           title: "A Label Is Not a Priority",
         
@@ -196,11 +207,26 @@ ninja.data = [{
           section: "News",},{id: "news-accepted-to-the-2026-smith-kettlewell-summer-institute-from-ideation-to-presentation-ai-as-a-research-assistant-for-blind-and-low-vision-data-science-scholars",
           title: 'Accepted to the 2026 Smith-Kettlewell Summer Institute: From Ideation to Presentation: AI as...',
           description: "",
+          section: "News",},{id: "news-our-work-landmarklens-predicting-and-presenting-effective-landmarks-for-mixed-reality-urban-exploration-from-my-visit-to-the-makeability-lab-was-accepted-to-uist-2026",
+          title: 'Our work LandmarkLens: Predicting and Presenting Effective Landmarks for Mixed-Reality Urban Exploration, from...',
+          description: "",
           section: "News",},{id: "news-gave-a-guest-lecture-second-year-running-on-accessibility-research-and-the-ai-revolution-in-accessibility-in-prof-takeo-igarashi-s-undergraduate-hci-class-at-the-university-of-tokyo-️",
           title: 'Gave a guest lecture (second year running) on accessibility research and the AI...',
           description: "",
+          section: "News",},{id: "news-our-experience-report-ups-and-downs-low-vision-perspective-on-smart-elevators-and-industry-design-practices-led-by-masaki-sawada-from-tsukuba-university-of-technology-was-accepted-to-assets-2026",
+          title: 'Our experience report Ups and Downs: Low-Vision Perspective on Smart Elevators and Industry...',
+          description: "",
           section: "News",},{id: "news-released-veasyguide-as-open-source-software-anyone-can-now-try-it-right-in-the-browser-at-veasyguide-github-io-app",
           title: 'Released VeasyGuide as open-source software! Anyone can now try it right in the...',
+          description: "",
+          section: "News",},{id: "news-my-paper-visual-communication-for-low-vision-information-access-from-personalized-highlights-to-ai-agents-was-accepted-to-the-uist-2026-doctoral-symposium-i-wrote-more-about-it-on-the-blog",
+          title: 'My paper Visual Communication for Low-Vision Information Access: From Personalized Highlights to AI...',
+          description: "",
+          section: "News",},{id: "news-our-poster-see-what-i-mean-a-technology-probe-of-ai-assistants-for-chart-exploration-with-low-vision-was-accepted-to-assets-2026",
+          title: 'Our poster See What I Mean: A Technology Probe of AI Assistants for...',
+          description: "",
+          section: "News",},{id: "news-our-demo-preview-rehearsing-real-routes-in-vr-to-support-independent-navigation-with-low-vision-was-accepted-to-uist-2026",
+          title: 'Our demo PreView: Rehearsing Real Routes in VR to Support Independent Navigation with...',
           description: "",
           section: "News",},{
         id: 'social-email',

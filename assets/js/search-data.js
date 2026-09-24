@@ -228,6 +228,12 @@ ninja.data = [{
           section: "News",},{id: "news-our-demo-preview-rehearsing-real-routes-in-vr-to-support-independent-navigation-with-low-vision-was-accepted-to-uist-2026",
           title: 'Our demo PreView: Rehearsing Real Routes in VR to Support Independent Navigation with...',
           description: "",
+          section: "News",},{id: "news-co-organizing-the-uist-2026-workshop-cyber-physical-systems-for-accessibility-and-ability-augmentation-bridging-diverse-communities-on-november-2-in-detroit-learn-more-at-cps4all-github-io",
+          title: 'Co-organizing the UIST 2026 workshop Cyber-Physical Systems for Accessibility and Ability Augmentation: Bridging...',
+          description: "",
+          section: "News",},{id: "news-released-slidenotes-as-open-source-software-review-slide-decks-right-in-the-browser-mark-regions-write-comments-and-export-a-comment-sheet-for-co-authors-or-ai-agents-nothing-leaves-your-machine-try-it-at-tomfluff-github-io-slidenotes",
+          title: 'Released SlideNotes as open-source software! Review slide decks right in the browser: mark...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',

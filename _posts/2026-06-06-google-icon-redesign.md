@@ -3,7 +3,7 @@ layout: post
 title: "Google Changed Their Icons Again... And They are Still Not Accessible"
 date: 2026-06-06 11:30:00+0900
 thumbnail: assets/img/posts/google icons post image.png
-featured: true
+featured: false
 tags: icons design WCAG low-vision
 categories: opinion
 author: Yotam Sechayk

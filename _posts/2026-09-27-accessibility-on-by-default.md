@@ -4,7 +4,7 @@ title: "Why I Want Accessibility Options On by Default"
 date: 2026-09-27 12:00:00+0900
 thumbnail: assets/img/posts/on-by-default-thumbnail.png
 og_image: /assets/img/posts/on-by-default-social.png
-featured: true
+featured: false
 tags: games settings low-vision
 categories: opinion
 author: Yotam Sechayk

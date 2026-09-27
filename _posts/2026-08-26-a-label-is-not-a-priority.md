@@ -4,7 +4,7 @@ title: "A Label Is Not a Priority"
 date: 2026-08-26 20:00:00+0900
 thumbnail: assets/img/posts/github-a11y-label-docs.jpg
 og_image: /assets/img/posts/github-a11y-label-social.png
-featured: true
+featured: false
 tags: GitHub open-source development
 categories: opinion
 author: Yotam Sechayk

@@ -57,6 +57,7 @@ layout: default
       {% endif %}
     </p>
   </header>
+  {% if page.audio %}{% include audio_player.liquid %}{% endif %}
 
   <article class="post-content">
     {% if page.toc and page.toc.beginning %}

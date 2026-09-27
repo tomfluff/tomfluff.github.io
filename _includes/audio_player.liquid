@@ -1,0 +1,188 @@
+{% comment %}
+  "Listen to this article" player. Rendered by _layouts/post.liquid when a post sets `audio`.
+
+  Front matter:
+    audio:          /assets/audio/posts/<slug>.mp3   (required)
+    audio_peaks:    waveform peaks JSON; defaults to <audio>.peaks.json when that file exists; false disables
+    audio_chapters: chapters JSON; defaults to <audio>.chapters.json when that file exists; false disables
+    audio_note:     short credit line, e.g. "Narrated with a synthetic voice"
+
+  The player's CSS and JS are linked from here, so pages without `audio` load neither.
+  See POST_WRITING_GUIDE.md ("Audio narration") and bin/audio_peaks.py.
+{% endcomment %}
+{%- assign ap_src = page.audio | strip -%}
+{%- assign ap_remote = false -%}
+{%- if ap_src contains '://' -%}{%- assign ap_remote = true -%}{%- endif -%}
+
+{%- assign ap_exists = 'true' -%}
+{%- unless ap_remote -%}
+  {%- capture ap_exists -%}{% file_exists {{ ap_src }} %}{%- endcapture -%}
+{%- endunless -%}
+
+{%- if ap_exists == 'true' -%}
+  {%- assign ap_ext = ap_src | split: '.' | last -%}
+  {%- assign ap_ext_len = ap_ext | size | plus: 1 -%}
+  {%- assign ap_base_len = ap_src | size | minus: ap_ext_len -%}
+  {%- assign ap_base = ap_src | slice: 0, ap_base_len -%}
+  {%- assign ap_type = ap_ext | upcase -%}
+
+  {%- comment -%} Sidecars: explicit path, `false` to turn off, or the default path if that file exists. {%- endcomment -%}
+  {%- assign ap_peaks = '' -%}
+  {%- if page.audio_peaks == false -%}
+  {%- elsif page.audio_peaks -%}
+    {%- assign ap_peaks = page.audio_peaks -%}
+  {%- elsif ap_remote == false -%}
+    {%- assign ap_try = ap_base | append: '.peaks.json' -%}
+    {%- capture ap_found -%}{% file_exists {{ ap_try }} %}{%- endcapture -%}
+    {%- if ap_found == 'true' -%}{%- assign ap_peaks = ap_try -%}{%- endif -%}
+  {%- endif -%}
+
+  {%- assign ap_chapters = '' -%}
+  {%- if page.audio_chapters == false -%}
+  {%- elsif page.audio_chapters -%}
+    {%- assign ap_chapters = page.audio_chapters -%}
+  {%- elsif ap_remote == false -%}
+    {%- assign ap_try = ap_base | append: '.chapters.json' -%}
+    {%- capture ap_found -%}{% file_exists {{ ap_try }} %}{%- endcapture -%}
+    {%- if ap_found == 'true' -%}{%- assign ap_chapters = ap_try -%}{%- endif -%}
+  {%- endif -%}
+
+  {%- assign ap_artwork = page.thumbnail | default: page.og_image -%}
+  {%- capture ap_default_artist -%}{{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
+  {%- assign ap_artist = page.author | default: ap_default_artist -%}
+
+  <link rel="stylesheet" href="{{ '/assets/css/audio-player.css' | relative_url | bust_file_cache }}">
+
+  <section
+    class="audio-player"
+    aria-labelledby="audio-player-label"
+    data-src="{{ ap_src | relative_url }}"
+    {% if ap_peaks != '' %}
+      data-peaks="{{ ap_peaks | relative_url }}"
+    {% endif %}
+    {% if ap_chapters != '' %}
+      data-chapters="{{ ap_chapters | relative_url }}"
+    {% endif %}
+    data-title="{{ page.title | strip_html | escape }}"
+    data-artist="{{ ap_artist | escape }}"
+    {% if ap_artwork %}
+      data-artwork="{{ ap_artwork | relative_url }}"
+    {% endif %}
+    data-key="{{ page.url | escape }}"
+  >
+    <div class="ap-head">
+      <button type="button" class="ap-play ap-js" aria-label="Play narration">
+        <svg class="ap-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.9-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z" />
+        </svg>
+        <svg class="ap-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="6" y="4.5" width="4.25" height="15" rx="1.2" /><rect x="13.75" y="4.5" width="4.25" height="15" rx="1.2" />
+        </svg>
+      </button>
+      <div class="ap-heading">
+        <p class="ap-label" id="audio-player-label">Listen to this article</p>
+        <p class="ap-meta">
+          <span class="ap-length" hidden></span>
+          {%- if page.audio_note -%}
+            <span class="ap-note">{{ page.audio_note | strip_html }}</span>
+          {%- endif -%}
+        </p>
+      </div>
+    </div>
+
+    <p class="ap-error" hidden>The narration could not be loaded.</p>
+
+    <div class="ap-timeline ap-js">
+      <svg class="ap-wave" aria-hidden="true" focusable="false"></svg>
+      <input
+        class="ap-seek"
+        type="range"
+        min="0"
+        max="100"
+        step="5"
+        value="0"
+        aria-label="Seek"
+        aria-valuetext="0 seconds"
+      >
+    </div>
+
+    <div class="ap-controls">
+      <p class="ap-where ap-js">
+        <span class="ap-time"><span class="ap-current">0:00</span><span class="ap-time-sep"> / </span><span class="ap-duration">--:--</span></span>
+        <span class="ap-chapter-now" hidden></span>
+      </p>
+      <div class="ap-buttons">
+        <button type="button" class="ap-btn ap-skip ap-js" data-skip="-15" aria-label="Back 15 seconds">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="ap-stroke" d="M4.75 12a7.25 7.25 0 1 0 2.12-5.13" /><path d="M4.1 3.6v4.8h4.8z" />
+          </svg>
+          <span aria-hidden="true">15</span>
+        </button>
+        <button type="button" class="ap-btn ap-skip ap-js" data-skip="15" aria-label="Forward 15 seconds">
+          <span aria-hidden="true">15</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="ap-stroke" d="M19.25 12a7.25 7.25 0 1 1-2.12-5.13" /><path d="M19.9 3.6v4.8h-4.8z" />
+          </svg>
+        </button>
+        <div class="ap-btn ap-speed ap-js">
+          <label for="audio-player-rate">Speed</label>
+          <select class="ap-rate" id="audio-player-rate">
+            <option value="0.75">0.75×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+            <option value="1.75">1.75×</option>
+            <option value="2">2×</option>
+          </select>
+        </div>
+        <button
+          type="button"
+          class="ap-btn ap-chapters-toggle ap-js"
+          aria-expanded="false"
+          aria-controls="audio-player-chapters"
+          hidden
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="ap-stroke" d="M4 6.5h1.5M9 6.5h11M4 12h1.5M9 12h11M4 17.5h1.5M9 17.5h11" />
+          </svg>
+          <span>Chapters</span>
+        </button>
+        <a class="ap-btn ap-download" href="{{ ap_src | relative_url }}" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="ap-stroke" d="M12 3.75v11M7.25 10.5 12 15.25l4.75-4.75M5 19.75h14" />
+          </svg>
+          <span
+            >Download<span class="ap-sr"> narration ({{ ap_type }})</span></span
+          >
+        </a>
+      </div>
+    </div>
+
+    <div class="ap-chapters" id="audio-player-chapters" hidden>
+      <ol class="ap-chapter-list"></ol>
+    </div>
+
+    <p class="ap-sr ap-status" role="status" aria-live="polite" aria-atomic="true"></p>
+
+    <audio class="ap-audio" preload="metadata" src="{{ ap_src | relative_url }}"></audio>
+
+    <noscript>
+      <style>
+        .audio-player .ap-js {
+          display: none !important;
+        }
+        .audio-player .ap-controls,
+        .audio-player .ap-native {
+          margin-top: 0.75rem;
+        }
+        .audio-player .ap-native {
+          display: block;
+          width: 100%;
+        }
+      </style>
+      <audio class="ap-native" controls preload="none" src="{{ ap_src | relative_url }}"></audio>
+    </noscript>
+  </section>
+
+  <script defer src="{{ '/assets/js/audio-player.js' | relative_url | bust_file_cache }}"></script>
+{%- endif -%}

@@ -320,6 +320,52 @@ Add custom styled blockquotes with special classes. **Important:** Wrap callouts
 %}
 ```
 
+### Audio narration
+
+A post can offer a "Listen to this article" player between the header and the body. Set `audio` in the front matter to turn it on. Posts without `audio` render as before and load none of the player's CSS or JS.
+
+```yaml
+audio: /assets/audio/posts/2026-09-24-uist-2026-doctoral-symposium.mp3 # required: turns the player on
+audio_note: "Narrated with a synthetic voice" # optional: short credit line under "Listen to this article"
+audio_peaks: /assets/audio/posts/other-name.peaks.json # optional: only if not at the default path; false turns the waveform off
+audio_chapters: /assets/audio/posts/other-name.chapters.json # optional: only if not at the default path; false turns chapters off
+```
+
+Keep the narration and its sidecar files together in `assets/audio/posts/`, named after the post file without `.md`:
+
+| File                   | What it is                                  |
+| ---------------------- | ------------------------------------------- |
+| `<slug>.mp3`           | the narration                               |
+| `<slug>.peaks.json`    | waveform peaks (optional)                   |
+| `<slug>.chapters.json` | chapter markers and chapter list (optional) |
+
+The build picks up sidecars at the default paths automatically, so usually only `audio` (and `audio_note`) go in the front matter. Without a peaks file the player shows a plain progress bar; without a chapters file there is no chapter list. If the `audio` file itself is missing at build time, no player renders.
+
+**Waveform peaks.** Generate them with the script in `bin/` (needs `python3` and `ffmpeg`, nothing else):
+
+```bash
+bin/audio_peaks.py assets/audio/posts/<slug>.mp3   # writes <slug>.peaks.json next to it
+bin/audio_peaks.py assets/audio/posts/*.mp3        # all narrations at once
+```
+
+The output is `{"version": 1, "duration": 483.2, "peaks": [0.41, 0.87, ...]}`: the duration in seconds and 800 levels between 0 and 1 (`--count` changes the number). The browser draws the waveform from this file, so it never downloads the whole MP3 just to show it.
+
+**Chapters.** A JSON list of start times in seconds and plain-text titles. The order doesn't matter; the player sorts it:
+
+```json
+[
+  { "t": 0, "title": "Introduction" },
+  { "t": 95.5, "title": "Why magnification hides context" },
+  { "t": 212, "title": "Being in control of what I see" }
+]
+```
+
+Chapters show as markers on the waveform, as a "Chapters" list that jumps to each section, and as previous/next track on lock screens and headphones.
+
+**Making the narration.** Narrations are rendered locally with Pocket TTS: Yotam's own voice reads his text, and a narrator voice reads titles, descriptions and other people's words. The scripts, the pronunciation lexicon and the step-by-step workflow are in `_narration/` (start with `_narration/README.md`).
+
+**Behaviour.** The player remembers the chosen speed across posts and the listening position per post (in `localStorage`). With the timeline focused, the arrow keys move 5 seconds, Page Up/Down 30 seconds, Home/End jump to the start/end, and Space plays or pauses. Nothing is bound at page level, so screen reader keys are untouched.
+
 ## Code and Syntax Highlighting
 
 ### Basic Code Blocks

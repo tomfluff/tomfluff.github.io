@@ -7,6 +7,8 @@ featured: true
 tags: accessibility low-vision design WCAG
 categories: technology
 author: Yotam Sechayk
+audio: /assets/audio/posts/2026-06-06-google-icon-redesign.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 related_publications: false

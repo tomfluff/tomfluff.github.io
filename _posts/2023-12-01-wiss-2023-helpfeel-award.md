@@ -8,6 +8,8 @@ featured: false
 tags: accessibility e-learning WISS award
 categories: conference
 author: Yotam Sechayk
+audio: /assets/audio/posts/2023-12-01-wiss-2023-helpfeel-award.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 ---

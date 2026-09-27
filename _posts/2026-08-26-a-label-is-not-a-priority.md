@@ -8,6 +8,8 @@ featured: true
 tags: accessibility open-source github development
 categories: technology
 author: Yotam Sechayk
+audio: /assets/audio/posts/2026-08-26-a-label-is-not-a-priority.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 related_publications: false

@@ -7,6 +7,8 @@ featured: true
 tags: inclusion needs low-vision
 categories: accessibility
 author: Yotam Sechayk
+audio: /assets/audio/posts/2026-06-20-my-needs-are-not-special.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 related_publications: true

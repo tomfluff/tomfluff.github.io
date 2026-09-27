@@ -7,6 +7,8 @@ featured: false
 tags: accessibility Japan low-vision
 categories: travel
 author: Yotam Sechayk
+audio: /assets/audio/posts/2026-02-20-hanegi-park.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 video:

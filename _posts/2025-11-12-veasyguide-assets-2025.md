@@ -8,6 +8,8 @@ featured: false
 tags: ASSETS low-vision award
 categories: conference
 author: Yotam Sechayk
+audio: /assets/audio/posts/2025-11-12-veasyguide-assets-2025.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 related_publications: true

@@ -8,6 +8,8 @@ featured: true
 tags: UIST low-vision dissertation AI
 categories: conference
 author: Yotam Sechayk
+audio: /assets/audio/posts/2026-09-24-uist-2026-doctoral-symposium.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 related_publications: true

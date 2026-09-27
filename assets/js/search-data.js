@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-visual-communication-for-low-vision-information-access",
+        },{id: "post-why-i-want-accessibility-options-on-by-default",
+        
+          title: "Why I Want Accessibility Options On by Default",
+        
+        description: "I think accessibility and assist features should usually be on when you first start a game, with a way to turn them off. Many of us do not know whether a feature would help until we try it. Marvel&#39;s Wolverine shows both why I value that approach and why the ability to adjust a feature matters just as much as the default.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/accessibility-on-by-default/";
+          
+        },
+      },{id: "post-visual-communication-for-low-vision-information-access",
         
           title: "Visual Communication for Low-Vision Information Access",
         

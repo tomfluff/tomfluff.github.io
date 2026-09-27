@@ -11,7 +11,7 @@
     <ul class="latest-posts-list">
       {% for item in latest_posts limit: latest_posts_limit %}
         {% if item.external_source == blank %}
-          {% assign read_time = item.content | number_of_words | divided_by: 180 | plus: 1 %}
+          {% assign read_time = item.content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
         {% else %}
           {% assign read_time = item.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
         {% endif %}

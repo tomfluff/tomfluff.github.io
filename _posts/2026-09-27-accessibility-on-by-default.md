@@ -8,6 +8,8 @@ featured: true
 tags: accessibility games low-vision design
 categories: accessibility
 author: Yotam Sechayk
+audio: /assets/audio/posts/2026-09-27-accessibility-on-by-default.mp3
+audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true
 related_publications: true

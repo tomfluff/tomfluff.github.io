@@ -4,8 +4,8 @@ title: My Needs are Not "Special"
 date: 2026-06-19 12:00:00+0900
 thumbnail: /assets/img/posts/special-needs-1.jpg
 featured: true
-tags: inclusion needs low-vision
-categories: accessibility
+tags: language inclusion low-vision
+categories: opinion
 author: Yotam Sechayk
 audio: /assets/audio/posts/2026-06-20-my-needs-are-not-special.mp3
 audio_note: "Synthetic narration"

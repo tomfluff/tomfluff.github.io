@@ -5,8 +5,8 @@ date: 2026-09-24 12:00:00+0900
 thumbnail: assets/img/posts/uist26-ds-thumbnail.png
 og_image: /assets/img/posts/uist26-ds-social.png
 featured: true
-tags: UIST low-vision dissertation AI
-categories: conference
+tags: UIST dissertation low-vision AI
+categories: research
 author: Yotam Sechayk
 audio: /assets/audio/posts/2026-09-24-uist-2026-doctoral-symposium.mp3
 audio_note: "Synthetic narration"

@@ -4,8 +4,8 @@ title: "AT and me: An interview with Yotam Sechayk"
 description: "<a href='https://www.perkins.org/resource/paths-to-technology-interview-veroniiiica/' target='_blank'>Veronica Lewis</a> interviews Yotam Sechayk, a University of Tokyo PhD candidate with albinism who studies low-vision accessibility. The discussion covers his assistive tech projects—such as <a href='https://veasyguide.github.io/' target='_blank'>VeasyGuide</a> for lecture videos—and how his personal experiences shape his research, and his passion for solo travel."
 date: 2025-08-26 09:00:00-0500
 thumbnail: assets/img/posts/p2t-logo.png
-categories: external
-tags: interview assistive-technology accessibility
+categories: media
+tags: assistive-technology low-vision text-to-speech
 redirect: https://www.perkins.org/resource/at-and-me-an-interview-with-yotam-sechayk/
 ---
 

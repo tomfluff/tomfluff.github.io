@@ -5,8 +5,8 @@ date: 2026-08-26 20:00:00+0900
 thumbnail: assets/img/posts/github-a11y-label-docs.jpg
 og_image: /assets/img/posts/github-a11y-label-social.png
 featured: true
-tags: accessibility open-source github development
-categories: technology
+tags: GitHub open-source development
+categories: opinion
 author: Yotam Sechayk
 audio: /assets/audio/posts/2026-08-26-a-label-is-not-a-priority.mp3
 audio_note: "Synthetic narration"

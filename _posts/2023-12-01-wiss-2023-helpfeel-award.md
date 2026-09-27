@@ -5,7 +5,7 @@ date: 2023-12-01 10:00:00+0900
 description: "Recap of my presentation of 'Smart Replay' at WISS 2023, which also was my first WISS! A fun surprize was receiving the Helpfeel Award for improving accessibility in e-learning videos."
 thumbnail: assets/img/posts/wiss-23-img-2.jpg
 featured: false
-tags: accessibility e-learning WISS award
+tags: WISS e-learning award
 categories: conference
 author: Yotam Sechayk
 audio: /assets/audio/posts/2023-12-01-wiss-2023-helpfeel-award.mp3

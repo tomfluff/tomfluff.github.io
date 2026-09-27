@@ -4,8 +4,8 @@ title: "Google Changed Their Icons Again... And They are Still Not Accessible"
 date: 2026-06-06 11:30:00+0900
 thumbnail: assets/img/posts/google icons post image.png
 featured: true
-tags: accessibility low-vision design WCAG
-categories: technology
+tags: icons design WCAG low-vision
+categories: opinion
 author: Yotam Sechayk
 audio: /assets/audio/posts/2026-06-06-google-icon-redesign.mp3
 audio_note: "Synthetic narration"

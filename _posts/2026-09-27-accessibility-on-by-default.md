@@ -5,8 +5,8 @@ date: 2026-09-27 12:00:00+0900
 thumbnail: assets/img/posts/on-by-default-thumbnail.png
 og_image: /assets/img/posts/on-by-default-social.png
 featured: true
-tags: accessibility games low-vision design
-categories: accessibility
+tags: games settings low-vision
+categories: opinion
 author: Yotam Sechayk
 audio: /assets/audio/posts/2026-09-27-accessibility-on-by-default.mp3
 audio_note: "Synthetic narration"

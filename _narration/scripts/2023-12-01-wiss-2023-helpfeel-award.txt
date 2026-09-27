@@ -1,0 +1,45 @@
+# Introduction
+
+[title] Smart Replay at WISS twenty twenty-three Recap and Helpfeel Award.
+
+By Yotam Sechayk. December 1, 2023.
+
+<pause 1.2>
+
+[body] On a backdrop of the end of 2023, surrounded by snowy mountain ranges, I had the opportunity to present our work "Smart Replay", with a Japanese subtitle meaning "Improving visual and temporal accessibility in e-learning videos", at WISS twenty twenty-three (Workshop on Interactive Systems and Software). This was my very first oral presentation of a paper at a conference, a memorable milestone in my research journey.
+
+<pause 1.5>
+
+# The Helpfeel Award
+
+[body] To our delight, our project on e-learning accessibility received the Helpfeel Award, recognizing both the technical contribution and the broader vision of making video learning more inclusive for people with disabilities.
+
+[describe] Two photos. Photo one: Yotam and a Helpfeel representative on stage, holding the award certificate, with the award slide on the screen behind. Photo two: a close-up of the two of them holding the certificate. Caption: Receiving the Helpfeel award at WISS twenty twenty-three.
+
+[body] The reviewers and award committee emphasized how the work not only tackled practical issues learners face when using video platforms, but also reflected a broader commitment to accessibility and user experience. Their comments encouraged us to keep pushing toward real-world deployment and impact. Read more on this Helpfeel blog post.
+
+<pause 1.5>
+
+# WISS in Kobuchizawa
+
+[body] WISS itself is a wonderful conference, a local but vibrant gathering of the HCI community in Japan. It was held this year in Kobuchizawa at the Royal Hotel Yatsugatake, surrounded by mountains and stunning scenery. The atmosphere was inspiring, both academically and personally.
+
+You can catch a glimpse of the area in this short video:
+
+[describe] Video: a short video of the Kobuchizawa area around the WISS twenty twenty-three venue. You can watch it on the article page.
+
+<pause 1.5>
+
+# The talk recording
+
+[body] For anyone curious, the recording of my talk is available on YouTube:
+
+[describe] Video: the recording of the Smart Replay talk at WISS twenty twenty-three. You can watch it on the article page.
+
+[body] If you’d like to dive deeper, you can read comments by conference attendees on the Scrapbox page or check out all awardees on the official WISS website.
+
+Overall, it was a deeply rewarding experience, presenting in Japan, connecting with the local HCI community, and seeing our work recognized with an award. It gives me a lot of motivation for the next steps in this project.
+
+<pause 1.2>
+
+[title] End of article.

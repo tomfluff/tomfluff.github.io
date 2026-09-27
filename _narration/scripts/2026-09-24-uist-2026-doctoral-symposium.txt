@@ -1,0 +1,129 @@
+# Introduction
+
+[title] Visual Communication for Low-Vision Information Access.
+
+By Yotam Sechayk. September 24, 2026.
+
+<pause 1.2>
+
+[body] When I magnify a chart enough to read one bar, the axis and legend can disappear from my view. I can see the bar, but I lose what it means.
+
+I have albinism and low vision, and I use screen magnification every day. That gap between detail and context connects my research. Writing my doctoral symposium paper meant putting the connection into words.
+
+My paper "Visual Communication for Low-Vision Information Access: From Personalized Highlights to AI Agents" was accepted to the UIST twenty twenty-six Doctoral Symposium. In November, I'll present it in Detroit to a panel of senior researchers.
+
+What is a doctoral symposium? PhD students present their dissertation plans to senior researchers and get feedback while there is still time to change them. Think of it as a friendly stress test for the research.
+
+<pause 1.5>
+
+# Seeing a fragment at a time
+
+[title] Seeing a fragment at a time.
+
+[body] Magnification makes things bigger by showing only part of the screen at a time. That tradeoff matters when information is spread across a page.
+
+In a lecture video, an instructor can mark a sentence outside my magnified view. In a chart, I can see the bar under my pointer while its axes and legend sit elsewhere. Sometimes I don't even know what I missed.
+
+[describe] Figure: Magnification shows only a fragment of the page. The whole page, with text, a chart, and a legend, sits next to the magnified view, which shows only the middle of one sentence, with the words cut off at both edges. Caption: Magnification makes what I'm reading big and clear, but only a piece of the sentence fits in view at once. The heading, chart, and legend around it are out of sight.
+
+<pause 1.5>
+
+# Using the vision we have
+
+[title] Using the vision we have.
+
+[body] Many people with low vision prefer to use the vision they have. Speech, sound, and touch can also make visual information accessible, but they don't directly support that way of seeing.
+
+So what if we build on the vision people already use?
+
+My research follows ability-based design: start with what a person can do, then shape the tool around their abilities. For me, that means working alongside tools such as magnification, allowing people to adjust the visual support, and designing with people with low vision. Their needs and strategies differ, and their vision can change with the situation.
+
+<pause 1.5>
+
+# Visual communication, in two directions
+
+[title] Visual communication, in two directions.
+
+[body] The thread that ties my projects together is visual communication in two directions. A tool can show me where to look with a highlight or bring missing context into my view. I can show a tool what I'm looking at by sharing my magnified view and where I point. What happens when both directions work together?
+
+[describe] Figure: A four-column timeline of my research, read left to right: VeasyGuide, On-Cursor Visual Context, Visual Context for AI, which is ongoing, and Visual Communication with AI Agents, in the future. Caption: My research trajectory. It starts with tools that communicate visually to low-vision users, moves to low-vision users who communicate visually with AI, and heads toward visual communication in both directions.
+
+<pause 1.5>
+
+# From tools that show to tools that see
+
+[title] From tools that show to tools that see.
+
+[body] My dissertation follows this idea step by step. Each project taught me something, and each lesson shaped the next one.
+
+# VeasyGuide: a highlight is a message
+
+[title] VeasyGuide: a highlight is a message.
+
+[body] In a lecture video, an instructor may point to a part of a slide without naming it. VeasyGuide makes that action easier to find with a highlight that can appear before the action and with magnification that can follow it. My co-design partners helped decide how the highlight should look and behave. You can read how we designed VeasyGuide or try it in your browser.
+
+[describe] Figure: Three panels of VeasyGuide: the player highlights the phrase an instructor is marking on a lecture slide, a zoomed-in view magnifies it, and personalization panels adjust how the highlight looks. Caption: VeasyGuide marks an instructor's action with a personalized highlight and pointer icon (panel a), can zoom in to follow the action (panel b), and lets each learner tune how the highlight looks (panel c).
+
+[body] Takeaway: a highlight has to be findable, predictable, and adjustable to communicate anything. It should also leave the learner free to decide whether to follow it.
+
+But a chart poses a different problem: the context I need is spread across axes, legends, and data points.
+
+# On-Cursor Visual Context: bring context into view
+
+[title] On-Cursor Visual Context: bring context into view.
+
+[body] On-Cursor Visual Context explores two ways to keep chart context available under magnification. Dynamic Context brings axes and legend information near the pointer, with a crosshair to help trace values. Mini-map keeps a small overview of the chart in view.
+
+The crosshair came from a participant's workaround: they used the edge of their docked magnifier as a ruler because the chart's grid lines were too faint.
+
+[describe] Figure: Top, a person leaning close to a monitor to read an annotated bar chart, with its overview, legend, grid lines, and axes labeled. Bottom, two monitors under screen magnification, showing Dynamic Context and Mini-map. Caption: The context a chart reader needs (top), and two ways to bring it into the magnified view (bottom): Dynamic Context gathers the axes, legend, and a crosshair around the pointer, and Mini-map keeps an overview of the whole chart in view.
+
+[body] Takeaway: context can move into the magnified view, and people's workarounds can show us how. But a fixed display can't answer the next question a reader has about the chart.
+
+# Visual context for AI: let the tool see what I see
+
+[title] Visual context for AI: let the tool see what I see.
+
+[body] What if an AI assistant could see where I'm looking in a chart? In my ongoing work, I'm exploring an assistant that receives the user's magnified view and pointer location as context. That lets a person point and ask without first describing exactly where they are in the chart.
+
+The next question: can the assistant answer in a way I can see? The user can show the assistant their visual context, but the assistant answers in words. It can tell me where to look, but it can't show me. That brings me back to the problem VeasyGuide started with.
+
+# Next: both directions
+
+[title] Next: both directions.
+
+[body] I want to study an assistant that can also answer visually: highlight a region, guide my attention along a path, or adjust the view. Then the person and the tool could each show the other what they mean. I also want to explore this beyond charts, starting with information seeking on web pages and eventually extending to documents and the physical world.
+
+Put together, the projects form one arc. VeasyGuide and On-Cursor Visual Context show that tools can communicate visually with people with low vision. The AI work turns this around, so people can communicate visually with their tools. The next step closes the loop.
+
+<pause 1.5>
+
+# Who decides where to look?
+
+[title] Who decides where to look?
+
+[body] Should the tool move my view, highlight something and let me look, or just answer? The right response may depend on the person and the task.
+
+[describe] Figure: Four kinds of help, and the person chooses between them. Four cards, Tell, Highlight, Guide, and Adjust view, surround a circle that reads I choose. Caption: Tell, highlight, guide, or adjust the view. These are different kinds of help, not a ranking, and the right one depends on the person and the moment.
+
+[body] More assistance is not always more access. Being able to look for myself is part of what I value. I don't want a tool that sees for me. I want one that helps me see.
+
+My dissertation asks how people with low vision and their tools can show each other what they mean, extending the sight we already use rather than replacing it. Through all of it, the person stays in control of what they see.
+
+<pause 1.5>
+
+# See you in Detroit
+
+[title] See you in Detroit.
+
+[body] At the symposium, I want feedback on how to measure visual access and agency, and how to bring these projects together into one framework. I'm also looking forward to the panel's advice on building a research career as a disabled researcher.
+
+If you're at UIST twenty twenty-six, come say hi!
+
+If you want to read more about why I care so much about designing with the vision we have, check out my post on why my needs are not "special".
+
+I'm grateful to my advisors, Takeo Igarashi and Ariel Shamir, and to everyone who shared their experiences in these studies.
+
+<pause 1.2>
+
+[title] End of article.

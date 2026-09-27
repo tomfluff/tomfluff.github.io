@@ -20,3 +20,6 @@ assets/pdf/preview-vr.pdf
 assets/pdf/visualaccess-ds.pdf
 assets/pdf/landmarklens.pdf
 assets/pdf/cps4all-workshop.pdf
+
+# Narration build output (block timings and logs from bin/narrate_posts.sh)
+_narration/.work/

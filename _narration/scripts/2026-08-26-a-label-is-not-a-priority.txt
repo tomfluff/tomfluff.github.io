@@ -1,0 +1,111 @@
+# GitHub's new label
+
+[title] A Label Is Not a Priority.
+
+By Yotam Sechayk. August 26, 2026.
+
+<pause 1.2>
+
+[body] I was very excited when I saw Maria Lamardo's post. GitHub now ships an accessibility label in every new repository, described as indicating a barrier affecting people with disabilities. Maria is a Senior Accessibility Program Manager at GitHub and helped lead the initiative.
+
+Then, a few seconds later, a second thought showed up:
+
+Wait... what happens after somebody applies it?
+
+For some context, I have albinism and low-vision, and I research accessibility for people with low vision. I also file accessibility bugs and contributions, and I have watched some of them sit quietly in a backlog. Nobody argued with me. Nobody closed the issue either. It simply stopped moving.
+
+So I'm genuinely happy GitHub made this change. I'm also very interested in the process waiting on the other side of the label.
+
+The label makes accessibility visible. Visibility is not the same as priority.
+
+[describe] Screenshot: the About default labels section of GitHub Docs. A table lists accessibility first, circled in red, followed by the bug and documentation labels. Caption: GitHub now includes accessibility in the default label set for every new repository. Source: GitHub Docs.
+
+<pause 1.5>
+
+# Why the label is genuinely useful
+
+[title] Why the label is genuinely useful.
+
+[body] GitHub has always let projects create custom labels. Some repositories already used accessibility or a11y. Others relied on words in the issue title, or filed the barrier as a bug, an enhancement, or whatever else felt close enough. What was missing was a shared default that tells every new project: this is a category of software problem you should expect to run into.
+
+That gap is measurable. Bi et al. (2021) searched 1,000 popular GitHub projects for accessibility-related issue text and tags, manually checked the results, and collected 11,820 relevant issues. Developers were discussing accessibility. Those discussions just weren't represented consistently across projects. A default label gives that work a common name.
+
+A common name makes barriers easier to filter, route, and count. It can connect an issue with somebody who actually has the relevant accessibility knowledge. Because it's a default, it shows up in projects that would never have created it themselves. This has a secondary effect of raising awareness to the importance of accessibility.
+
+Defaults can shape how people construct workflows. For instance, GitHub's good first issue label now populates a repository's contribute page. Tan et al. (2020) found that projects increasingly adopted the label over the preceding decade, although many labeled issues still did not lead to a newcomer contribution. The label didn't guarantee an outcome, but it changed which work became visible to newcomers.
+
+The new accessibility label can do the same thing for accessibility work.
+
+<pause 1.5>
+
+# So, what's the risk?
+
+[title] So, what's the risk?
+
+[body] A label is a routing mechanism, and routing can lead to very different places.
+
+[describe] Diagram: one accessibility label leads to two possible workflows. The owned path adds an owner, a severity, and a release blocker, and ends in Fixed, while the unowned path has none of these and ends in Still open. Caption: the same label can support either workflow. Ownership, severity, and release criteria decide which path the issue follows.
+
+[body] Imagine a project with no accessibility owner, no shared severity rules, and no release criterion for accessibility barriers. Before the new default, an accessibility issue might have landed in the general bug queue. Now the team can separate it immediately. The issue gets easier to find, and it also gets easier to leave in a dedicated queue that just gets forgotten, since nothing else depends on it.
+
+A dedicated queue that nobody owns is not a workflow, it's a waiting room.
+
+Forgotten accessibility issues only require a process where accessibility is visible but disconnected from the ordinary decisions about severity, ownership, and releases.
+
+That environment is common. Alshayban et al. (2020) found that many developers lacked awareness of accessibility principles and of the tools available to check them. Bi et al. (2022) similarly found that accessibility was often treated as a separate concern instead of a first-class consideration throughout development.
+
+In that environment, a label can organize the work without giving anybody a reason to act on it.
+
+<pause 1.5>
+
+# "Later" is not a schedule
+
+[title] "Later" is not a schedule.
+
+[body] Postponing accessibility isn't a neutral scheduling choice.
+
+The W3C's business case for digital accessibility recommends integrating accessibility from the beginning, because retrofitting an inaccessible product later is generally harder and more expensive. The reason is structural. A missing alt attribute can be a small, local change. A custom component built without semantics or focus management may need a redesign. And if navigation, dialogs, and forms already depend on that component, the team also has to inspect and update every place where it's used.
+
+[describe] Diagram: finding a component barrier later expands the scope of the fix. Found during design, the change stays in one component, but found after release, the navigation, dialogs, and forms that depend on it must also be inspected. Caption: deferral expands the scope of the work. This dependency example is illustrative, not a measured cost comparison.
+
+[body] And this work moves downstream easily. Indika et al. (2026) surveyed 110 mobile developers across 43 countries. Most of them considered accessibility important, yet accessibility testing typically happened late in development. The study also identified technical and organizational constraints that made implementation difficult.
+
+That's the gap that worries me.
+
+Accessibility debt compounds like technical debt, except somebody is locked out while the interest accumulates.
+
+<pause 1.5>
+
+# What turns a label into a commitment?
+
+[title] What turns a label into a commitment?
+
+[body] The label is useful infrastructure, but the workflow around it decides what it means. Here are five things I would want in any repository that adopts it:
+
+First, give the label an owner and a response target. Name who triages these issues and how quickly the first review should happen.
+
+Second, use accessibility alongside severity, not instead of it. A barrier should carry accessibility and the same priority vocabulary as any other bug. The label describes the type of problem, not its importance.
+
+Third, add it to existing repositories. The default only applies to new repositories. Older projects can add the label in their settings, and they're often the projects with the deepest accessibility debt.
+
+Fourth, move accessibility upstream. A label only sees barriers somebody already found. Pair it with accessible design requirements, a definition of done, pull-request guidance, and appropriate automated and manual checks.
+
+Fifth, measure the workflow, not only the backlog. Track time to triage, ownership, severity, and resolution. GitHub reports that an internal, AI-assisted accessibility-feedback workflow reduced resolution time by 62 percent, with 89 percent of issues closing within 90 days. Those results didn't come from a label alone. They came from combining structured metadata with automation, accountability, and measurement.
+
+The label is a great addition, but it should not be an excuse to defer accessibility problems to "some other time".
+
+<pause 1.5>
+
+# The label is how we start
+
+[title] The label is how we start.
+
+[body] GitHub did something accessibility advocates have wanted platforms to do for years. It recognized accessibility barriers as a normal category of software work and put that category in front of every new project.
+
+Now thousands of repositories have to decide what the category means in practice.
+
+A label can make accessibility work visible, but incorporating it into a workflow is what makes accessibility happen.
+
+<pause 1.2>
+
+[title] End of article.

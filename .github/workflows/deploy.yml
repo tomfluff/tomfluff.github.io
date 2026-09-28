@@ -60,6 +60,10 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+  # Rebuild daily so future-dated posts publish on their date (Jekyll skips posts dated in the future).
+  # 14:15 UTC = 09:15 in Detroit (EST) = 23:15 in Tokyo.
+  schedule:
+    - cron: "15 14 * * *"
 
 permissions:
   contents: write

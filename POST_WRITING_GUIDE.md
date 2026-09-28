@@ -95,6 +95,19 @@ bibliography: filename.bib           # Bibliography file
 ---
 ```
 
+### Scheduling a post
+
+To publish a post later, give it a future `date` and push it as usual. Jekyll skips posts dated in the future, so it stays off the site, the blog list, the feed, and the pinned posts until then. The deploy workflow rebuilds the site every day at 14:15 UTC (09:15 in Detroit in winter, 23:15 in Tokyo), so the post goes live at the first daily rebuild after its date and time. Name the file after the new date too, for example `_posts/2026-11-01-uist-2026-doctoral-symposium.md`. The URL comes from the year and the slug, so it doesn't change.
+
+Anything that links to a scheduled post breaks until the post is live, and the link check on GitHub will fail. Make such links conditional, as in `_news/2026-08-08-uist-2026-doctoral-symposium-accepted.md`:
+
+```liquid
+{% assign ds_post = site.posts | where: 'slug', 'uist-2026-doctoral-symposium' | first %}
+{% if ds_post %} I wrote more about it [on the blog]({{ ds_post.url | relative_url }}).{% endif %}
+```
+
+To preview a scheduled post locally, add `--future` to the build command.
+
 ## Basic Formatting
 
 ### Text Formatting
@@ -325,7 +338,7 @@ Add custom styled blockquotes with special classes. **Important:** Wrap callouts
 A post can offer a "Listen to this article" player between the header and the body. Set `audio` in the front matter to turn it on. Posts without `audio` render as before and load none of the player's CSS or JS.
 
 ```yaml
-audio: /assets/audio/posts/2026-09-24-uist-2026-doctoral-symposium.mp3 # required: turns the player on
+audio: /assets/audio/posts/2026-11-01-uist-2026-doctoral-symposium.mp3 # required: turns the player on
 audio_note: "Narrated with a synthetic voice" # optional: short credit line under "Listen to this article"
 audio_peaks: /assets/audio/posts/other-name.peaks.json # optional: only if not at the default path; false turns the waveform off
 audio_chapters: /assets/audio/posts/other-name.chapters.json # optional: only if not at the default path; false turns chapters off

@@ -34,17 +34,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/accessibility-on-by-default/";
           
         },
-      },{id: "post-visual-communication-for-low-vision-information-access",
-        
-          title: "Visual Communication for Low-Vision Information Access",
-        
-        description: "My paper was accepted to the UIST 2026 Doctoral Symposium! Magnification helps me see a detail, but it can hide the context that gives that detail meaning. In this post I share how visual communication between people and their tools connects my research on lecture videos, charts, and AI, and why being in control of what I see still matters.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/uist-2026-doctoral-symposium/";
-          
-        },
       },{id: "post-a-label-is-not-a-priority",
         
           title: "A Label Is Not a Priority",
@@ -230,7 +219,7 @@ ninja.data = [{
           section: "News",},{id: "news-released-veasyguide-as-open-source-software-anyone-can-now-try-it-right-in-the-browser-at-veasyguide-github-io-app",
           title: 'Released VeasyGuide as open-source software! Anyone can now try it right in the...',
           description: "",
-          section: "News",},{id: "news-my-paper-visual-communication-for-low-vision-information-access-from-personalized-highlights-to-ai-agents-was-accepted-to-the-uist-2026-doctoral-symposium-i-wrote-more-about-it-on-the-blog",
+          section: "News",},{id: "news-my-paper-visual-communication-for-low-vision-information-access-from-personalized-highlights-to-ai-agents-was-accepted-to-the-uist-2026-doctoral-symposium",
           title: 'My paper Visual Communication for Low-Vision Information Access: From Personalized Highlights to AI...',
           description: "",
           section: "News",},{id: "news-our-poster-see-what-i-mean-a-technology-probe-of-ai-assistants-for-chart-exploration-with-low-vision-was-accepted-to-assets-2026",

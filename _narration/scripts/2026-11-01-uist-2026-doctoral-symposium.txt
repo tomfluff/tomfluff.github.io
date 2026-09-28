@@ -2,7 +2,7 @@
 
 [title] Visual Communication for Low-Vision Information Access.
 
-By Yotam Sechayk. September 24, 2026.
+By Yotam Sechayk. November 1, 2026.
 
 <pause 1.2>
 

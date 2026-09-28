@@ -1,6 +1,6 @@
-# Notes: 2026-09-24-uist-2026-doctoral-symposium
+# Notes: 2026-11-01-uist-2026-doctoral-symposium
 
-Script: `2026-09-24-uist-2026-doctoral-symposium.txt`. About 1,390 spoken words, 11 chapters.
+Script: `2026-11-01-uist-2026-doctoral-symposium.txt`. About 1,390 spoken words, 11 chapters.
 
 Chapters: Introduction · Seeing a fragment at a time · Using the vision we have · Visual communication, in two directions · From tools that show to tools that see · VeasyGuide: a highlight is a message · On-Cursor Visual Context: bring context into view · Visual context for AI: let the tool see what I see · Next: both directions · Who decides where to look? · See you in Detroit.
 

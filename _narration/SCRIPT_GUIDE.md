@@ -108,4 +108,4 @@ Tags must be exactly `[title]`, `[body]`, `[describe]`, or `[quote]`, at the sta
 
 ## Example
 
-See the finished scripts in `scripts/`. `2025-11-12-veasyguide-assets-2025.txt` has photo groups, a video and a Q&A. `2026-09-24-uist-2026-doctoral-symposium.txt` has headings, subsections and figures.
+See the finished scripts in `scripts/`. `2025-11-12-veasyguide-assets-2025.txt` has photo groups, a video and a Q&A. `2026-11-01-uist-2026-doctoral-symposium.txt` has headings, subsections and figures.

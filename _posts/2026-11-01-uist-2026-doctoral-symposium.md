@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Visual Communication for Low-Vision Information Access"
-date: 2026-09-24 12:00:00+0900
+date: 2026-11-01 09:00:00-0500
 thumbnail: assets/img/posts/uist26-ds-thumbnail.png
 og_image: /assets/img/posts/uist26-ds-social.png
 featured: true
 tags: UIST dissertation low-vision AI
 categories: research
 author: Yotam Sechayk
-audio: /assets/audio/posts/2026-09-24-uist-2026-doctoral-symposium.mp3
+audio: /assets/audio/posts/2026-11-01-uist-2026-doctoral-symposium.mp3
 audio_note: "Synthetic narration"
 giscus_comments: true
 related_posts: true

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper _Visual Communication for Low-Vision Information Access: From Personalized Highlights to AI Agents_ was accepted to the **UIST 2026 Doctoral Symposium**! 🎓 I wrote more about it [on the blog](/blog/2026/uist-2026-doctoral-symposium/).
+My paper _Visual Communication for Low-Vision Information Access: From Personalized Highlights to AI Agents_ was accepted to the **UIST 2026 Doctoral Symposium**! 🎓{% comment %}The blog post is scheduled; this sentence appears once it is published.{% endcomment %}{% assign ds_post = site.posts | where: 'slug', 'uist-2026-doctoral-symposium' | first %}{% if ds_post %} I wrote more about it [on the blog]({{ ds_post.url | relative_url }}).{% endif %}

@@ -46,7 +46,7 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: false
-cv_pdf: cv-2025.pdf # navbar CV link opens this file from assets/pdf/ in a new tab (or a full https:// URL)
+cv_pdf: cv-2026.pdf # navbar CV link opens this file from assets/pdf/ in a new tab (or a full https:// URL)
 search_enabled: true
 socials_in_search: true
 posts_in_search: true

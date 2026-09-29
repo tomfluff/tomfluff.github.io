@@ -39,9 +39,9 @@ Since 2026-09-29 the narrations use [Kokoro](https://huggingface.co/hexgrad/Koko
    This writes `assets/audio/posts/<post>.mp3`, `.chapters.json` and `.peaks.json`.
 4. **Check it:**
    ```bash
-   ~/sandbox/voicebox/backend/venv/bin/python bin/narration_check.py <post>
+   ~/sandbox/whisper/.venv/bin/python bin/narration_check.py <post>
    ```
-   This transcribes every block and lists the ones that don't match the script. Expect names to show up in the list. Look for missing sentences.
+   This transcribes every block with the local Whisper large-v3-turbo in `~/sandbox/whisper` (see its README), and lists the blocks that don't match the script. Expect names and numbers to show up in the list, because Whisper writes numbers as digits. Look for missing sentences.
 5. **Turn on the player** by adding two lines to the post's front matter:
    ```yaml
    audio: /assets/audio/posts/<post>.mp3

@@ -375,7 +375,7 @@ The output is `{"version": 1, "duration": 483.2, "peaks": [0.41, 0.87, ...]}`: t
 
 Chapters show as markers on the waveform, as a "Chapters" list that jumps to each section, and as previous/next track on lock screens and headphones.
 
-**Making the narration.** Narrations are rendered locally with Pocket TTS: Yotam's own voice reads his text, and a narrator voice reads titles, descriptions and other people's words. The scripts, the pronunciation lexicon and the step-by-step workflow are in `_narration/` (start with `_narration/README.md`).
+**Making the narration.** Narrations are rendered locally with Kokoro: one voice reads Yotam's text, and a second narrator voice reads titles, descriptions and other people's words. The scripts, the pronunciation lexicon and the step-by-step workflow are in `_narration/` (start with `_narration/README.md`).
 
 **Behaviour.** The player remembers the chosen speed across posts and the listening position per post (in `localStorage`). With the timeline focused, the arrow keys move 5 seconds, Page Up/Down 30 seconds, Home/End jump to the start/end, and Space plays or pauses. Nothing is bound at page level, so screen reader keys are untouched.
 

@@ -8,22 +8,25 @@
 # plus block timings and a log in _narration/.work/ (not committed).
 #
 # Settings (environment variables):
-#   POCKET_TTS_PYTHON  Python with pocket_tts installed (default: ~/sandbox/pocket-tts/.venv/bin/python)
-#   YOTAM_VOICE        Yotam's voice for his own text (default: his "conversational" emotion recording)
-#   NARRATOR_VOICE     voice for titles, descriptions and other people's words (default: george)
+#   BODY_VOICE         voice for Yotam's own text (default: kokoro:am_fenrir)
+#   NARRATOR_VOICE     voice for titles, descriptions and other people's words (default: kokoro:af_heart)
+#   NARRATION_PYTHON   Python with the engines in use installed (default: the Voicebox virtualenv, which has
+#                      kokoro; for Pocket TTS voices use ~/sandbox/pocket-tts/.venv/bin/python)
+# A voice is kokoro:<name>, or a Pocket TTS built-in name or .wav/.safetensors path.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-export POCKET_TTS_PYTHON="${POCKET_TTS_PYTHON:-$HOME/sandbox/pocket-tts/.venv/bin/python}"
-export YOTAM_VOICE="${YOTAM_VOICE:-$HOME/sandbox/pocket-tts/voice-profiles/self/emotions/conversational.safetensors}"
-export NARRATOR_VOICE="${NARRATOR_VOICE:-george}"
+export BODY_VOICE="${BODY_VOICE:-kokoro:am_fenrir}"
+export NARRATOR_VOICE="${NARRATOR_VOICE:-kokoro:af_heart}"
+export NARRATION_PYTHON="${NARRATION_PYTHON:-$HOME/sandbox/voicebox/backend/venv/bin/python}"
 mkdir -p _narration/.work assets/audio/posts
 
 render() {
   local name="$1"
-  OMP_NUM_THREADS=4 "$POCKET_TTS_PYTHON" bin/narrate.py "_narration/scripts/$name.txt" "assets/audio/posts/$name" \
-    --lexicon _narration/lexicon.tsv --steps 5 --timings "_narration/.work/$name.timings.json" \
-    --voice body="$YOTAM_VOICE" --voice title="$NARRATOR_VOICE" \
+  OMP_NUM_THREADS=4 "$NARRATION_PYTHON" bin/narrate.py "_narration/scripts/$name.txt" "assets/audio/posts/$name" \
+    --lexicon _narration/lexicon.tsv --kokoro-lexicon _narration/lexicon-kokoro.tsv --steps 5 \
+    --timings "_narration/.work/$name.timings.json" \
+    --voice body="$BODY_VOICE" --voice title="$NARRATOR_VOICE" \
     --voice describe="$NARRATOR_VOICE" --voice quote="$NARRATOR_VOICE" \
     > "_narration/.work/$name.log" 2>&1 \
     && grep Wrote "_narration/.work/$name.log" \

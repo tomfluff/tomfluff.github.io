@@ -4,8 +4,8 @@ These are audiobook-style narrations of Yotam Sechayk's blog posts (tomfluff.git
 
 Two voices, set by a role tag:
 
-- `[body]` is **Yotam's own voice**. Use it only for Yotam's own words from the post.
-- `[title]`, `[describe]` and `[quote]` are **George**, the narrator. Use them for everything added for listening, and for other people's words.
+- `[body]` is **the main voice** (currently Kokoro's Fenrir). Use it only for Yotam's own words from the post.
+- `[title]`, `[describe]` and `[quote]` are **the narrator** (currently Kokoro's Heart). Use them for everything added for listening, and for other people's words.
 
 ## File format (read by bin/narrate.py)
 

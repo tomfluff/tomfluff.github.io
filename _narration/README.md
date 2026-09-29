@@ -8,6 +8,7 @@ Audiobook-style narrations of the blog posts, played by the "Listen to this arti
 | ------------------------- | -------------------------------------------------------------------------- |
 | `SCRIPT_GUIDE.md`         | How to turn a post into a narration script: roles, chapters, descriptions  |
 | `lexicon.tsv`             | Pronunciations, applied at render time (`written<TAB>spoken`, whole words) |
+| `lexicon-kokoro.tsv`      | Extra pronunciations for Kokoro voices only, written in IPA                |
 | `scripts/<post>.txt`      | One script per post, named after the post file without `.md`               |
 | `scripts/<post>.notes.md` | What the script changed or skipped, and names to double-check              |
 | `scripts/skipped/`        | Scripts not published. The P2T interview page redirects to Perkins         |
@@ -15,19 +16,22 @@ Audiobook-style narrations of the blog posts, played by the "Listen to this arti
 
 ## Voices and settings
 
-- **Yotam's voice** (`[body]`): his "conversational" recording in Pocket TTS, `~/sandbox/pocket-tts/voice-profiles/self/emotions/conversational.safetensors`. The voice files stay on this machine and are never committed.
-- **Narrator** (`[title]`, `[describe]`, `[quote]`): Pocket TTS's built-in `george` voice.
-- **Quality:** 5 decode steps. Rendering on the CPU runs at about 0.6 to 0.9 times real time, so a 10-minute post takes 6 to 9 minutes. A GPU was only about 20% faster.
+Since 2026-09-29 the narrations use [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), run from the Voicebox virtualenv on the GPU. Yotam picked the voices by rating samples.
+
+- **Main voice** (`[body]`): Kokoro `am_fenrir`.
+- **Narrator** (`[title]`, `[describe]`, `[quote]`): Kokoro `af_heart`.
+- **Speed:** all eight posts render in about 2 minutes.
+- **Earlier setup:** Pocket TTS, with Yotam's own recorded voice (`~/sandbox/pocket-tts/voice-profiles/self/emotions/conversational.safetensors`) for `[body]` and the built-in `george` for the narrator, at 5 decode steps. To go back, set `BODY_VOICE`, `NARRATOR_VOICE` and `NARRATION_PYTHON` for `bin/narrate_posts.sh` (see the comments at its top). Voice files stay on this machine and are never committed.
 - **Pronunciations:** chosen by Yotam, by ear:
   - "ASSETS 2025" is read as "Assets twenty twenty-five".
   - VeasyGuide is "VizzyGuide", as one word. Spaces or dashes make the voice split it.
   - UIST is "Wist", and CHI is "Kai".
-  - "Sechayk" is read as written. Many spellings for the Hebrew ח were tried, and none sounded right.
+  - "Sechayk" with the Hebrew ח, `/sɛxːˈajɪk/`, and "Yotam" as the Hebrew "yo-TAHM", `/jOtˈɑm/`. Only Kokoro can take IPA, so these live in `lexicon-kokoro.tsv`. Kokoro writes the "ai" in "Sechayk" as `aj` and the "o" in "Yotam" as `O`, in its own phoneme alphabet (misaki).
 
 ## Adding a narration for a new post
 
 1. **Write the script.** Follow `SCRIPT_GUIDE.md` and save `scripts/<post>.txt`, plus a short `scripts/<post>.notes.md`.
-2. **Add new pronunciations** to `lexicon.tsv`, such as acronyms or a conference name with a year.
+2. **Add new pronunciations** to `lexicon.tsv`, such as acronyms or a conference name with a year. Names that need exact sounds go in `lexicon-kokoro.tsv` as `[Word](/IPA/)`.
 3. **Render it:**
    ```bash
    bin/narrate_posts.sh <post>

@@ -8,9 +8,11 @@ Scripts live in _narration/scripts/ (see _narration/README.md). Script format, b
     Paragraph text           continues with the previous block's role
     <pause 1.2>              inserts silence, in seconds
 
-Roles map to Pocket TTS voices through --voice role=voice, where a voice is a built-in name
-(such as george) or a .wav/.safetensors path. Run it with the Pocket TTS virtualenv, which has
-pocket_tts installed. bin/narrate_posts.sh wraps this with the voices and settings we use.
+Roles map to voices through --voice role=voice. A voice is either a Kokoro voice written as
+kokoro:<name> (such as kokoro:am_fenrir), or a Pocket TTS built-in name (such as george) or
+.wav/.safetensors path. Run it with a Python that has the engines in use installed: kokoro for
+Kokoro voices, pocket_tts for Pocket TTS voices. bin/narrate_posts.sh wraps this with the voices
+and settings we use.
 """
 
 import argparse
@@ -107,6 +109,41 @@ def level(audio: np.ndarray) -> np.ndarray:
     return audio * min(TARGET_RMS / rms, 0.89 / peak)
 
 
+KOKORO = "kokoro:"
+
+
+def load_voices(voices, args):
+    """Return {role: text -> audio array} and the shared sample rate (24 kHz for both engines)."""
+    synthesize, rate = {}, 24000
+    pocket = {role: voice for role, voice in voices.items() if not voice.startswith(KOKORO)}
+    kokoro = {role: voice[len(KOKORO):] for role, voice in voices.items() if voice.startswith(KOKORO)}
+    if pocket:
+        from pocket_tts import TTSModel
+
+        model = TTSModel.load_model(temp=args.temp, lsd_decode_steps=args.steps)
+        model.to(args.device)
+        rate = model.sample_rate
+        for role, voice in pocket.items():
+            state = model.get_state_for_audio_prompt(voice)
+            synthesize[role] = lambda text, state=state: model.generate_audio(state, text).cpu().numpy()
+    if kokoro:
+        import torch
+        from kokoro import KModel, KPipeline
+
+        if rate != 24000:
+            raise SystemExit("Pocket TTS and Kokoro voices must share a 24 kHz sample rate")
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        kmodel = KModel().to(device).eval()
+        pipelines = {}
+        for role, voice in kokoro.items():
+            # The first letter of a Kokoro voice name is its accent: a = American, b = British.
+            pipeline = pipelines.setdefault(voice[0], KPipeline(lang_code=voice[0], model=kmodel))
+            synthesize[role] = lambda text, pipeline=pipeline, voice=voice: np.concatenate(
+                [audio.cpu().numpy() for _, _, audio in pipeline(text, voice=voice)]
+            )
+    return synthesize, rate
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("script")
@@ -116,11 +153,13 @@ def main():
     parser.add_argument("--steps", type=int, default=5, help="LSD decode steps (quality)")
     parser.add_argument("--temp", type=float, default=None, help="Sampling temperature")
     parser.add_argument("--lexicon", default=None, help="TSV of written<TAB>spoken replacements")
+    parser.add_argument("--kokoro-lexicon", default=None, help="Extra replacements for Kokoro voices only (may use IPA)")
     parser.add_argument("--timings", default=None, help="Write each block's start and end time here (JSON)")
     args = parser.parse_args()
 
     voices = dict(item.split("=", 1) for item in args.voice)
     lexicon = load_lexicon(args.lexicon)
+    kokoro_lexicon = load_lexicon(args.kokoro_lexicon)
     items = list(parse(Path(args.script).read_text()))
     unknown = {item[1] for item in items if item[0] == "speak"} - set(voices)
     if unknown:
@@ -130,12 +169,8 @@ def main():
         raise SystemExit(f"Markup left in text: {stray}")
 
     import scipy.io.wavfile
-    from pocket_tts import TTSModel
 
-    model = TTSModel.load_model(temp=args.temp, lsd_decode_steps=args.steps)
-    model.to(args.device)
-    rate = model.sample_rate
-    states = {role: model.get_state_for_audio_prompt(voice) for role, voice in voices.items()}
+    synthesize, rate = load_voices(voices, args)
 
     started = time.time()
     pieces, chapters, blocks, cursor, previous_role = [], [], [], 0.0, None
@@ -157,11 +192,13 @@ def main():
         else:
             _, role, text = item
             text = speakable(text, lexicon)
+            if voices[role].startswith(KOKORO):
+                text = speakable(text, kokoro_lexicon)
             if pieces:
                 gap = GAP_SAME_ROLE if role == previous_role else GAP_ROLE_CHANGE
                 add_silence(max(gap, pending_pause or 0.0))
             pending_pause = None
-            audio = model.generate_audio(states[role], text).cpu().numpy().astype(np.float32)
+            audio = synthesize[role](text).astype(np.float32)
             audio = level(clean_edges(audio, rate))
             pieces.append(audio)
             blocks.append({"start": round(cursor, 2), "end": round(cursor + len(audio) / rate, 2), "role": role, "text": text})

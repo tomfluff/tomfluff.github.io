@@ -1,0 +1,7 @@
+# Kokoro-only pronunciations, applied after lexicon.tsv. Kokoro reads [word](/IPA/) as the given phonemes.
+# Sechayk: version D, chosen by ear on 2026-09-29 (harder Hebrew ח, lengthened).
+Sechayk	[Sechayk](/sɛxːˈajɪk/)
+# VeasyGuide (after lexicon.tsv turns it into VizzyGuide): "VIZ-ee guide", as one name
+VizzyGuide	[VizzyGuide](/vˈɪzi ɡˌId/)
+# Yotam: Hebrew "yo-TAHM"
+Yotam	[Yotam](/jOtˈɑm/)

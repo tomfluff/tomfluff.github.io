@@ -1,0 +1,639 @@
+/*******************************************************************************
+ * Site customizations, layered over al_folio_core's styles.
+ *
+ * Loaded last from assets/css/main.scss, so these rules win over the gem's
+ * partials without editing them. Theme tokens (colours, fonts) live in the
+ * _variables.scss and _themes.scss overrides; this file holds everything else.
+ ******************************************************************************/
+
+@use "site_tokens" as t;
+
+// ---------------------------------------------------------------------------
+// Fonts
+// ---------------------------------------------------------------------------
+
+// Atkinson Hyperlegible local font faces — the Braille Institute's text face,
+// drawn so that easily-confused characters stay distinguishable at low acuity.
+// Used for body copy; Montserrat stays on headings and the site identity.
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible"), url("../fonts/AtkinsonHyperlegible-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible Italic"), url("../fonts/AtkinsonHyperlegible-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible Bold"), url("../fonts/AtkinsonHyperlegible-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: local("Atkinson Hyperlegible Bold Italic"), url("../fonts/AtkinsonHyperlegible-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Montserrat local font faces
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Black.ttf");
+  font-weight: 900;
+}
+
+// ---------------------------------------------------------------------------
+// Typography
+// ---------------------------------------------------------------------------
+
+body {
+  font-family:
+    "Atkinson Hyperlegible",
+    Verdana,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  // Atkinson runs a little smaller than Montserrat at the same size, and long-form
+  // posts benefit from the extra leading
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // Montserrat stays on headings and the site identity; body copy is Atkinson
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.navbar-brand,
+.navbar .nav-link,
+.post-title,
+.card-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+// Links in running text carry an underline so they are not signalled by colour
+// alone (WCAG 1.4.1). Scoped to prose so nav items, badges and buttons keep
+// their own styling; image links are excluded so the rule does not draw a line
+// under a figure.
+article p > a:not(:has(img)),
+article li > a:not(:has(img)),
+article blockquote a,
+article .caption a,
+.post-header p.desc a,
+.news td a,
+.card .post-meta a,
+footer a {
+  text-decoration: underline;
+}
+
+blockquote {
+  font-size: 1rem;
+
+  &.block-note {
+    border-color: var(--global-note-block);
+    background-color: var(--global-note-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-note-block-text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-note-block-title);
+    }
+  }
+}
+
+.post-title {
+  // the title is the page's h1 for semantics; keep the size it had as an h3
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+// ---------------------------------------------------------------------------
+// Layout
+// ---------------------------------------------------------------------------
+
+.container {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+// Bootstrap grid classes used by the site's own pages that al_folio_core's
+// Tailwind build does not include: the pinned-post row on the blog index, and
+// one figure column in a post.
+@media (min-width: 576px) {
+  .row-cols-sm-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row-cols-sm-3 > * {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-7 {
+    flex: 0 0 58.3333%;
+    max-width: 58.3333%;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Navbar
+// ---------------------------------------------------------------------------
+
+.navbar {
+  // translucency lives in the background, not `opacity`; opacity would fade the
+  // nav links too, letting page content show through the expanded mobile menu
+  background-color: color-mix(in srgb, var(--global-bg-color) 95%, transparent);
+  opacity: 1;
+
+  // below the navbar-expand-sm breakpoint the menu drops over page content,
+  // where even 5% bleed-through makes the links hard to read
+  @media (max-width: 575.98px) {
+    background-color: var(--global-bg-color);
+  }
+}
+
+.search-shortcut-hint {
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Pinned post cards: the title link covers the whole card so the card stays
+// clickable, while the accessible name stays the post title.
+// ---------------------------------------------------------------------------
+
+.card.hoverable {
+  position: relative;
+}
+
+.card-link-stretched::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card .post-meta a {
+  position: relative; // keep the year link above the stretched title link
+  z-index: 1;
+}
+
+.featured-posts {
+  // the link is on the title (it stretches over the card), so the card's own
+  // colours stay put and hover is driven by the card, not the anchor
+  .card-title a {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+  }
+
+  // outranks mdb's `.card .card-body .card-text`, which hardcodes a grey that
+  // misses 4.5:1 on the dark card background
+  .card .card-body .card-text {
+    color: var(--global-text-color-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card:hover {
+    .card-title a,
+    .card-body .card-text {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Code
+// ---------------------------------------------------------------------------
+
+// The vendored pygments themes ship an attribute-name teal that misses 4.5:1
+// against the code background in both themes; nudged here rather than editing
+// the gem's jekyll-pygments-themes-*.css.
+html[data-theme="light"] .highlight .na {
+  color: #007b7c;
+}
+
+html[data-theme="dark"] .highlight .na {
+  color: #00c1c1;
+}
+
+html[data-theme="dark"] .highlight .nc {
+  color: #8bafe1;
+}
+
+// ---------------------------------------------------------------------------
+// Site identity
+//
+// One repeated element: a short accent rule that sits under section headings
+// and beside the site name. It is the only ornament on the site, so it should
+// stay quiet: 2px, theme colour, no other decoration hung off it.
+// ---------------------------------------------------------------------------
+
+$accent-rule-width: 2.5rem;
+$accent-rule-thickness: 2px;
+
+article h2:not(.no-accent) {
+  margin-bottom: 1.1rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: $accent-rule-width;
+    height: $accent-rule-thickness;
+    margin-top: 0.45rem;
+    border-radius: $accent-rule-thickness;
+    background-color: var(--global-theme-color);
+  }
+}
+
+// The name in the navbar carries the same mark, so the identity reads as one
+// system rather than a heading decoration.
+.navbar-brand.title {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.1rem;
+    width: 1.25rem;
+    height: $accent-rule-thickness;
+    border-radius: $accent-rule-thickness;
+    background-color: var(--global-theme-color);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Latest posts on the home page: a title, a line of the description and the
+// metadata, so the writing sells itself instead of showing a bare title.
+// ---------------------------------------------------------------------------
+
+.latest-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+
+.latest-post {
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.latest-post-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+.latest-post-external {
+  vertical-align: baseline;
+}
+
+.latest-post-excerpt {
+  color: var(--global-text-color-light);
+  margin-bottom: 0.35rem;
+}
+
+.latest-post-meta {
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+
+  .latest-post-tag {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+    margin-right: 0.4rem;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+
+    i {
+      margin-right: 0.15rem;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Publications
+// ---------------------------------------------------------------------------
+
+.publications {
+  h2.bibliography {
+    font-weight: 500;
+  }
+
+  ol.bibliography li {
+    .preview {
+      // phones: the first page is unreadable at this width and stretching it
+      // full-bleed pushes the rest of the list far down
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+    }
+
+    .abbr {
+      // keep the venue badge a chip here; the column goes full-width on phones
+      @media (max-width: 575.98px) {
+        max-width: 5.5rem;
+      }
+
+      abbr div {
+        color: white;
+      }
+    }
+
+    .title {
+      font-size: 1.1rem;
+    }
+
+    .author > em {
+      border-bottom: 0;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    .links {
+      a.btn {
+        border: 0;
+        background-color: var(--global-bg-color-accent);
+        border-radius: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      a.btn i {
+        margin-right: 0.25rem;
+      }
+
+      // inline SVG icons match the surrounding text size and align with it
+      a.btn svg {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 0.25rem;
+        margin-bottom: 0.1rem;
+        fill: currentColor;
+      }
+
+      .award-text {
+        margin-left: 0.1rem;
+        font-weight: normal;
+        font-style: oblique !important;
+      }
+    }
+
+    div.abstract.hidden {
+      // ragged right: justified text opens uneven word-spacing rivers (WCAG 1.4.8)
+      text-align: left;
+      border: 2px solid var(--global-bg-color);
+      border-radius: 1rem;
+    }
+
+    div.abstract.hidden.open {
+      border-color: var(--global-bg-color-accent);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Images
+// ---------------------------------------------------------------------------
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  // must stay above the fixed navbar (.fixed-top is z-index 1030), otherwise
+  // the navbar covers the top of a zoomed image
+  z-index: 1040;
+}
+
+// ---------------------------------------------------------------------------
+// Quote on the about page
+// ---------------------------------------------------------------------------
+
+.stylish-quote {
+  position: relative;
+  margin: 1.5rem 2rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-left: 4px solid var(--global-theme-color);
+  background-color: var(--global-bg-color-accent);
+  border-radius: 8px;
+
+  &::before {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--global-theme-color);
+    position: absolute;
+    content: "\201C";
+    top: -0.5rem;
+    left: 0.5rem;
+  }
+
+  cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: oblique;
+    text-align: right;
+
+    &::before {
+      content: "\2014 \00A0"; // em dash and non-breaking space
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Responsive 16:9 video embeds in posts
+// ---------------------------------------------------------------------------
+
+.video-wrapper-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video-wrapper-16x9 iframe,
+.video-wrapper-16x9 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+// ---------------------------------------------------------------------------
+// Plyr video player
+// ---------------------------------------------------------------------------
+
+:root {
+  --plyr-color-main: #{t.$purple-color};
+  --cursor-radius: 1rem;
+}
+
+.plyr {
+  border-radius: var(--bs-border-radius, 0.375rem);
+  overflow: hidden;
+  width: 100%;
+}
+
+.plyr video {
+  height: 100%;
+}
+
+.plyr__menu__container {
+  span {
+    color: var(--plyr-menu-color, #4a5464);
+  }
+
+  .plyr__control:hover span,
+  .plyr__control:focus-visible span {
+    color: #fff;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Custom cursor (off unless enable_custom_cursor is set)
+// ---------------------------------------------------------------------------
+
+html:has(#custom-cursor) {
+  cursor: none;
+
+  a,
+  button,
+  label,
+  summary,
+  select,
+  [role="button"],
+  .btn,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    cursor: none;
+  }
+
+  input,
+  textarea,
+  [contenteditable] {
+    cursor: auto;
+  }
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  width: calc(var(--cursor-radius, 6px) * 2);
+  height: calc(var(--cursor-radius, 6px) * 2);
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+  transition:
+    background-color 0.15s ease,
+    opacity 0.15s ease;
+  opacity: 0;
+
+  &.is-hovering {
+    background-color: color-mix(in srgb, var(--cursor-hover-color) 55%, transparent);
+  }
+}

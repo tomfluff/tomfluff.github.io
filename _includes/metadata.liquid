@@ -59,15 +59,18 @@
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
-    {% assign og_image = page.og_image | default: page.thumbnail | default: site.og_image %}
+    {% assign og_image_source = page.og_image | default: page.thumbnail | default: site.og_image %}
     {% comment %}
       Social platforms fetch this URL from their own servers, so a site-relative
-      path never resolves — absolutize anything that is not already a full URL.
+      path never resolves. Absolutize anything that is not already a full URL.
+      absolute_url also handles paths without a leading slash, such as post thumbnails.
     {% endcomment %}
-    {% unless og_image contains '://' %}
-      {% assign og_image = og_image | absolute_url %}
-    {% endunless %}
-    <meta property="og:image" content="{{ og_image }}">
+    {% if og_image_source contains '://' %}
+      {% assign og_image_url = og_image_source %}
+    {% else %}
+      {% assign og_image_url = og_image_source | absolute_url %}
+    {% endif %}
+    <meta property="og:image" content="{{ og_image_url }}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
@@ -76,7 +79,7 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{{ og_image }}">
+    <meta name="twitter:image" content="{{ og_image_url }}">
   {% endif %}
   {% if site.x_username %}
     <meta name="twitter:site" content="@{{ site.x_username }}">
@@ -92,6 +95,9 @@
     {% case social[0] %}
       {% when 'acm_id' %}
         {% capture link %}https://dl.acm.org/profile/{{ social[1] }}/{% endcapture %}
+        {% assign sameaslinks = sameaslinks | push: link %}
+      {% when 'arxiv_id' %}
+        {% capture link %}https://arxiv.org/a/{{ social[1] }}.html{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'blogger_url' %}
         {% capture link %}{{ social[1] }}{% endcapture %}

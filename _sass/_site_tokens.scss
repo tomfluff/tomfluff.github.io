@@ -1,0 +1,21 @@
+/*******************************************************************************
+ * Site colour tokens.
+ *
+ * Kept apart from al_folio_core's _variables.scss on purpose: a local copy of
+ * that file would load as a second module, and the gem's own partials (and the
+ * max_width setting) would keep reading the gem's copy. Used by the
+ * _themes.scss override and by _site.scss.
+ ******************************************************************************/
+
+@use "sass:color";
+
+$purple-color: #72099f;
+$light-purple-color: color.adjust($purple-color, $lightness: 40%);
+$complement-purple-color: color.adjust($purple-color, $hue: 180deg);
+$complement-light-purple-color: color.adjust($light-purple-color, $hue: 180deg);
+
+// secondary-text greys that reach 4.5:1 against each theme's background
+$grey-color-contrast-light: #767676;
+$grey-color-contrast-dark: #949494;
+
+$code-bg-color-light: rgba($purple-color, 0.05);

@@ -24,8 +24,6 @@ docker compose run --rm --no-deps --entrypoint "" jekyll bundle exec jekyll buil
 docker compose down                                                     # stop
 ```
 
-Sass deprecation warnings from `tabler-icons` on every build are pre-existing upstream noise, not something we introduced.
-
 Site config is `_config.yml`. Prettier + pre-commit hooks run on commit; formatting failures are fixable with `npx prettier --write <file>`.
 
 ## Where things live
@@ -40,8 +38,18 @@ Site config is `_config.yml`. Prettier + pre-commit hooks run on commit; formatt
 | Projects                             | `_projects/`                                      |
 | Structured data (CV, socials, repos) | `_data/`                                          |
 | Images                               | `assets/img/`, post images in `assets/img/posts/` |
-| Styles                               | `_sass/`                                          |
+| Styles                               | `_sass/_site.scss` (see Theme below)              |
 | Layouts / partials                   | `_layouts/`, `_includes/`                         |
+
+## Theme (al-folio v1)
+
+Since October 2026 the site runs on al-folio v1.2: a thin starter whose layouts, includes, Sass and scripts come from versioned gems (`al_folio_core` and friends, pinned in `Gemfile`). Most theme files no longer exist in this repo.
+
+- **Our own styles** go in `_sass/_site.scss`, loaded last from `assets/css/main.scss`. Colour tokens live in `_sass/_themes.scss` and `_sass/_site_tokens.scss`.
+- **Never add a local `_sass/_variables.scss`.** It loads as a second module: the gem's partials and the `max_width` setting keep reading the gem's copy.
+- **Local overrides** of gem files (`_includes/*.liquid`, `_layouts/*.liquid`, `_sass/_themes.scss`, `assets/css/main.scss`, `assets/js/copy_code.js`) are tracked in `.al-folio-overrides.yml`. After editing one, run `bundle exec al-folio upgrade overrides accept <path>` in Docker, and run `... overrides audit` after any gem update.
+- **Bootstrap compatibility mode is off.** The core's Tailwind build covers the grid and image classes posts use; see the note in `POST_WRITING_GUIDE.md`.
+- Upstream reference docs are in `docs/` (not built).
 
 ## Writing posts
 

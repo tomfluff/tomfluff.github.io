@@ -19,7 +19,8 @@ layout: default
     <p class="post-meta">
       Created on {{ page.date | date: '%B %d, %Y' }}
       {% if page.author %}by {{ page.author }}{% endif %}
-      {% if page.last_updated %}, last updated on {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
+      {% assign last_date = page.last_modified_at | default: page.last_updated %}
+      {% if last_date %}, last updated on {{ last_date | date: '%B %d, %Y' }}{% endif %}
       {% if page.meta %}• {{ page.meta }}{% endif %}
     </p>
     <p class="post-tags">
@@ -88,10 +89,7 @@ layout: default
     {% endif %}
   {% endif %}
 
-  {% if site.disqus_shortname and page.disqus_comments %}
-    {% include disqus.liquid %}
-  {% endif %}
-  {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
+  {% if site.plugins contains 'al_comments' %}
+    {% include plugins/al_comments.liquid %}
   {% endif %}
 </div>

@@ -415,7 +415,6 @@ For code blocks in lists, indent by **(3 × bullet_indent_level)** spaces:
 ````
 
 2. Nested list with code:
-
    1. Nested item:
 
       ```python
@@ -720,6 +719,8 @@ _styles: >
 ```
 
 ## Bootstrap Classes Reference
+
+> **Since the al-folio v1 migration (October 2026) the site does not load Bootstrap.** al_folio_core's Tailwind build keeps the common grid, spacing, image and flex classes below, and `_sass/_site.scss` adds `row-cols-sm-*` and `col-md-7`. These classes from the examples below no longer exist and render unstyled: `alert*`, `bg-dark`, `bg-light`, `bg-primary`, `border-top`, `border-bottom`, `border-primary`, `btn-lg`, `btn-primary`, `btn-success`, `card-header`, `card-footer`, `col-lg-*`, `d-inline`, `font-italic`, `img-thumbnail`, `text-primary`, `text-secondary`, `z-depth-2`. Check a class against the built `assets/css/tailwind.css` before relying on it.
 
 ### Grid System
 

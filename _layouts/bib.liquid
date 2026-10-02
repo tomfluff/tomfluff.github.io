@@ -3,28 +3,6 @@
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
-      {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
-      {% endif %}
       {% if entry.preview %}
         {%- comment -%}
           A preview may be a video file rather than an image. Rendering one through the
@@ -59,13 +37,40 @@
           %}
         {% endif %}
       {% endif %}
+      {% if entry.award %}
+        <span class="pub-award-corner" aria-hidden="true"><i class="fa-solid fa-award"></i></span>
+      {% endif %}
     </div>
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+  <div id="{{ entry.key }}" class="pub-body {% if site.enable_publication_thumbnails %}col-sm-10{% else %}col-sm-12{% endif %}">
+    <!-- Title: a real heading, so screen-reader users can move from paper to paper -->
+    <h3 class="title">{{ entry.title }}</h3>
+    {%- comment -%}
+      Venue chip ("CHI 2026") in the venue's colour, with the kind of paper from the bib
+      `note` field. It comes after the title in the code and is shown above it.
+    {%- endcomment -%}
+    {% if entry.abbr %}
+      {% assign venue = site.data.venues[entry.abbr] %}
+      <p class="pub-venue-row">
+        {% capture venue_style %}{% if venue.light %}--venue-light: {{ venue.light }}; --venue-dark: {{ venue.dark }};{% endif %}{% endcapture %}
+        {% if venue.url %}
+          <a class="pub-venue" href="{{ venue.url }}" style="{{ venue_style }}">
+            {{- entry.abbr }}
+            {{ entry.year -}}
+          </a>
+        {% else %}
+          <span class="pub-venue" style="{{ venue_style }}">
+            {{- entry.abbr }}
+            {{ entry.year -}}
+          </span>
+        {% endif %}
+        {% if entry.note %}
+          <span class="pub-type">{{ entry.note | strip | capitalize }}</span>
+        {% endif %}
+      </p>
+    {% endif %}
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -200,27 +205,15 @@
     <div class="periodical">
       {{ periodical | strip }}
     </div>
-    {% if entry.note %}
-      <div class="periodical">
-        <small>Note: {{ entry.note | strip | downcase }}</small>
-      </div>
+
+    {% if entry.award %}
+      <p class="pub-award">
+        <span class="pub-award-pill"><i class="fa-solid fa-award" aria-hidden="true"></i> {{ entry.award }}</span>
+      </p>
     {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
-      {% if entry.award %}
-        {% assign award_text = entry.award | downcase %}
-        <div class="award z-depth-0">
-          {%- if award_text contains 'best' -%}
-            🏆
-          {%- elsif award_text contains 'honorable' -%}
-            🎗️
-          {%- else -%}
-            📜
-          {%- endif -%}
-          <span class="award-text">{{ entry.award }}</span>
-        </div>
-      {% endif %}
       {% if entry.abstract %}
         <button type="button" class="abstract btn btn-md z-depth-0" aria-expanded="false">
           <i class="fa-regular fa-file-lines" aria-hidden="true"></i>Abstract

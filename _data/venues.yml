@@ -1,23 +1,44 @@
+# Venue chips on the publications page (_layouts/bib.liquid).
+# color: the venue's hue. light / dark: the chip fill in each theme, shifted from that hue
+# until the chip text (white in light mode, #1c1c1d in dark mode) reaches 7:1.
+# Add url: to make a chip link to the venue's website.
+
 "ASSETS":
   color: "#1f77b4"
+  light: "#185d8e"
+  dark: "#62aee4"
 
 "CHI":
   color: "#d62728"
+  light: "#ac2020"
+  dark: "#ea8d8d"
 
 "WISS":
   color: "#8f60ba"
+  light: "#70449a"
+  dark: "#b99cd3"
 
 "INTERACTION":
   color: "#c73c9c"
+  light: "#982c76"
+  dark: "#de8cc4"
 
 "ROMAN":
   color: "#b95b07"
+  light: "#8c4405"
+  dark: "#f78b2b"
 
 "SIGGRAPH":
   color: "#8c564b"
+  light: "#7c4c43"
+  dark: "#c69d95"
 
 "DIS":
   color: "#0f818d"
+  light: "#0b616a"
+  dark: "#15b7c9"
 
 "UIST":
   color: "#1e7b34"
+  light: "#18652a"
+  dark: "#2ebf50"

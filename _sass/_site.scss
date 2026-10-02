@@ -1122,32 +1122,133 @@ article h2:not(.no-accent) {
 // ---------------------------------------------------------------------------
 
 .publications {
+  // Year headings: left-aligned in the text colour, with a rule running to the edge
   h2.bibliography {
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 2.25rem 0 1.25rem;
+    padding-top: 0;
+    border-top: 0;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: var(--global-divider-color);
+    }
   }
 
   ol.bibliography li {
-    .preview {
-      // phones: the first page is unreadable at this width and stretching it
-      // full-bleed pushes the rest of the list far down
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    > .row {
+      display: grid;
+      grid-template-columns: 128px minmax(0, 1fr);
+      gap: 0 1.4rem;
+      margin: 0;
+
+      > [class*="col"] {
+        width: auto;
+        max-width: none;
+        padding: 0;
+      }
+
       @media (max-width: 575.98px) {
-        display: none;
+        grid-template-columns: minmax(0, 1fr);
+
+        // the first page is unreadable at phone width
+        > .abbr {
+          display: none;
+        }
       }
     }
 
     .abbr {
-      // keep the venue badge a chip here; the column goes full-width on phones
-      @media (max-width: 575.98px) {
-        max-width: 5.5rem;
-      }
+      position: relative;
+      align-self: start;
 
-      abbr div {
-        color: white;
+      .preview {
+        width: 128px;
+        border-radius: 4px;
+        border: 1px solid var(--global-divider-color);
       }
     }
 
+    .pub-award-corner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      border-top-right-radius: 4px;
+      background-color: var(--pub-gold);
+
+      i {
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        color: #1c1c1d;
+        font-size: 0.95rem;
+      }
+    }
+
+    .pub-body {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
     .title {
-      font-size: 1.1rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin: 0 0 0.35rem;
+    }
+
+    // shown above the title, though it follows it in the code
+    .pub-venue-row {
+      order: -1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.25rem 0.65rem;
+      margin: 0 0 0.5rem;
+      font-size: 0.9375rem;
+    }
+
+    .pub-venue {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0.1rem 0.6rem;
+      border-radius: 6px;
+      background-color: var(--venue-light, var(--global-theme-color));
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    a.pub-venue:hover {
+      text-decoration: underline;
+    }
+
+    .pub-type {
+      color: var(--global-text-color-light);
     }
 
     .author > em {
@@ -1156,18 +1257,61 @@ article h2:not(.no-accent) {
       font-weight: bold;
     }
 
+    .periodical {
+      margin-bottom: 0.65rem;
+    }
+
+    .pub-award {
+      margin: 0 0 0.75rem;
+    }
+
+    .pub-award-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.2rem 0.85rem 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--pub-gold-line);
+      background-color: var(--pub-gold);
+      color: #1c1c1d;
+      font-size: 0.9375rem;
+      font-weight: bold;
+    }
+
+    // link buttons: 14px, sentence case, outlined
     .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+
       a.btn,
       button.btn {
-        border: 0;
-        background-color: var(--global-bg-color-accent);
-        border-radius: 1rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        min-height: 36px;
+        margin: 0;
+        padding: 0 0.75rem;
+        border: 1px solid var(--global-divider-color);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--global-text-color);
+        font-size: 0.875rem;
+        text-transform: none;
+
+        &:hover {
+          border-color: var(--global-theme-color);
+          color: var(--global-theme-color);
+        }
+
+        &[aria-expanded="true"] {
+          border-color: var(--global-theme-color);
+          background-color: var(--global-bg-color-accent);
+        }
       }
 
       .btn i {
-        margin-right: 0.25rem;
+        margin-right: 0;
       }
 
       // inline SVG icons match the surrounding text size and align with it
@@ -1175,16 +1319,7 @@ article h2:not(.no-accent) {
         width: 1em;
         height: 1em;
         display: inline-block;
-        vertical-align: text-bottom;
-        margin-right: 0.25rem;
-        margin-bottom: 0.1rem;
         fill: currentColor;
-      }
-
-      .award-text {
-        margin-left: 0.1rem;
-        font-weight: normal;
-        font-style: oblique !important;
       }
     }
 
@@ -1197,6 +1332,27 @@ article h2:not(.no-accent) {
 
     div.abstract.hidden.open {
       border-color: var(--global-bg-color-accent);
+    }
+  }
+}
+
+// Award gold: #1c1c1d text on #f0b13a is 8.96:1 in both themes
+:root {
+  --pub-gold: #f0b13a;
+  --pub-gold-line: #a86f00;
+}
+
+html[data-theme="dark"] {
+  --pub-gold-line: #f0b13a;
+
+  .publications ol.bibliography li {
+    .pub-venue {
+      background-color: var(--venue-dark, var(--global-theme-color));
+      color: #1c1c1d;
+    }
+
+    .abbr .preview {
+      filter: brightness(0.85);
     }
   }
 }

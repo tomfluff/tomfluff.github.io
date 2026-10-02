@@ -2,16 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle: 🎓 PhD Candidate @ <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a>.
-
 profile:
-  align: right
   image: prof_pic_color.jpg
   image_circular: true # crops the image to make it circular
   image_alt: Yotam Sechayk smiling, outdoors, with autumn leaves behind him
-  more_info: >
-    <p style="font-weight: bold;">HCI, Accessibility, AI</p>
-    <i>ysechayk (at) acm (dot) org</i>
+  # the profile band at the top of the page: research line, then role
+  tagline: I make visual communication visually accessible.
+  affiliation: PhD candidate, <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a> · HCI, accessibility, AI
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

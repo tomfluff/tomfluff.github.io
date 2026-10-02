@@ -215,6 +215,120 @@ blockquote {
 }
 
 // ---------------------------------------------------------------------------
+// Home page profile band: photo, name, research line, role, labelled links
+// ---------------------------------------------------------------------------
+
+.profile-band {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  figure {
+    flex: none;
+    width: 152px;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .profile-band-name {
+    font-size: clamp(2.1rem, 1.5rem + 1.8vw, 2.75rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.6rem;
+  }
+
+  .profile-band-tagline {
+    font-size: 1.25rem;
+    line-height: 1.45;
+    margin: 0 0 0.4rem;
+  }
+
+  .profile-band-affiliation {
+    color: var(--global-text-color-light);
+    margin: 0 0 1rem;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 0 1rem;
+
+    figure {
+      width: 76px;
+    }
+
+    .profile-band-text {
+      display: contents;
+    }
+
+    .profile-band-name {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      margin: 0;
+      font-size: 1.85rem;
+    }
+
+    .profile-band-tagline,
+    .profile-band-affiliation,
+    .profile-links {
+      grid-column: 1 / -1;
+    }
+
+    .profile-band-tagline {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 40px;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    text-decoration: none;
+    font-size: 0.9375rem;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    i {
+      color: var(--global-theme-color);
+    }
+
+    small {
+      color: var(--global-text-color-light);
+      font-size: 0.8125rem;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Navbar
 // ---------------------------------------------------------------------------
 

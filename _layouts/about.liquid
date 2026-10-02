@@ -2,43 +2,102 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+  {%- comment -%}
+    Local change: with `profile.tagline` set, the page opens with a profile band (photo,
+    name, research line, role, labelled links) instead of the name, subtitle and a
+    floated photo. Without it, the original layout below is used.
+  {%- endcomment -%}
+  {% if page.profile.tagline %}
+    {% capture profile_name_alt %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
+    {% assign profile_image_alt = page.profile.image_alt | default: profile_name_alt %}
+    <header class="profile-band">
+      {% if page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class="img-fluid z-depth-1 rounded-circle" sizes="160px" alt=profile_image_alt
+          cache_bust=true
+        %}
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+      <div class="profile-band-text">
+        <h1 class="post-title profile-band-name">
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.last_name }}
+        </h1>
+        <p class="profile-band-tagline">{{ page.profile.tagline }}</p>
+        {% if page.profile.affiliation %}
+          <p class="profile-band-affiliation">{{ page.profile.affiliation }}</p>
+        {% endif %}
+        <ul class="profile-links" aria-label="Links">
+          {% if site.cv_pdf %}
+            <li>
+              <a
+                href="{% if site.cv_pdf contains '://' %}{{ site.cv_pdf }}{% else %}{{ site.cv_pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-regular fa-file-lines" aria-hidden="true"></i>CV <small>PDF</small><span class="sr-only"> (opens in a new tab)</span></a
+              >
+            </li>
+          {% endif %}
+          {% if site.data.socials.email %}
+            <li>
+              <a href="mailto:{{ site.data.socials.email | encode_email }}"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Email</a>
+            </li>
+          {% endif %}
+          {% if site.data.socials.scholar_userid %}
+            <li>
+              <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+                ><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a
+              >
+            </li>
+          {% endif %}
+          {% if site.data.socials.github_username %}
+            <li>
+              <a href="https://github.com/{{ site.data.socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </header>
+  {% else %}
+    <header class="post-header">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      <p class="desc">{{ page.subtitle }}</p>
+    </header>
+  {% endif %}
 
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% capture profile_name_alt %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
-          {% assign profile_image_alt = page.profile.image_alt | default: profile_name_alt %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
+    {% unless page.profile.tagline %}
+      {% if page.profile %}
+        <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% capture profile_name_alt %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
+            {% assign profile_image_alt = page.profile.image_alt | default: profile_name_alt %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+            {% endif %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
+              cache_bust=true
+            %}
+          {% endif %}
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endunless %}
 
     <div class="clearfix">{{ content }}</div>
 

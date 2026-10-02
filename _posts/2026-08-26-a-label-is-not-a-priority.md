@@ -15,7 +15,7 @@ related_posts: true
 related_publications: false
 citation: true
 bibliography: external_refs
-description: "I'm very glad to see that GitHub now ships an accessibility label in every new repository. It also made me wonder: what actually happens after somebody applies it? I've filed accessibility bugs, and I've watched them sit in a backlog until the conversation just stopped. A label makes accessibility visible. Visibility is not the same as priority, and the difference is decided by the workflow around the label, not the label itself."
+description: 'GitHub''s new default label makes accessibility issues easier to find, but it does not decide who fixes them or when. It can also result in accessibility issues more easily deferred for "later". I look at research on how accessibility work gets deferred and suggest five practices, like naming an owner and pairing the label with severity.'
 _styles: >
   .post-figure {
     margin: 2.5rem 0;

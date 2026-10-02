@@ -13,7 +13,7 @@ giscus_comments: true
 related_posts: true
 video:
   plyr: true
-description: 'February in Tokyo means one thing: the plum blossoms are here! Join me on a trip to Hanegi Park’s Ume Festival as I explore the beautiful scenery and find out how accessible a local Japanese festival truly is for the BLV community—from "Braille Blocks" to audio-guidance.'
+description: "I describe my experience at Hanegi Park's plum festival and accessibility in Japan. The yellow braille blocks in Japan and audio orientation guidance around landmarks are helpful, while the small and distant signs at food stalls were difficult to read. I also describe a taiko performance that is fun both visually and non-visually."
 ---
 
 Last weekend I visited a local plum festival in Tokyo and explored how accessible it is for blind and low vision (BLV) people.

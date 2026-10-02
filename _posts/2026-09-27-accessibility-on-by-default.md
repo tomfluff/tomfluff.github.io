@@ -14,7 +14,7 @@ giscus_comments: true
 related_posts: true
 related_publications: true
 citation: true
-description: "I think accessibility and assist features should usually be on when you first start a game, with a way to turn them off. Many of us do not know whether a feature would help until we try it. Marvel's Wolverine shows both why I value that approach and why the ability to adjust a feature matters just as much as the default."
+description: 'I reflect on the sentiment towards the "Navigation Assist" and visual guides in the recently released Marvel''s Wolverine to show how on-by-defaults affect whether players discover useful assistive options. Drawing on my own experience with text-to-speech, I suggest live previews, searchable settings, and notes from disabled playtesters, as improvements to game setting menus.'
 ---
 
 I think accessibility and assist features should usually be on when you first start a game, with a way to turn them off. People can then try them and decide what works. I care about that because I know how much effort it can take to find a tool you didn't know was there.

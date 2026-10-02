@@ -16,7 +16,7 @@ citation: true
 bibliography: external_refs
 video:
   plyr: true
-description: "Google recently redesigned their icons, but the new design is still not accessible for low-vision people. In this post, I discuss the new design, its accessibility issues, and my attempt to improve it as a low-vision person!"
+description: "Google's new icons almost certainly meet WCAG contrast requirements, but Calendar and Docs still look alike to me at a glance. I explain why glanceability matters with low vision, redesign both icons to be more glanceable in Google's style, and suggest involving low-vision people in design from the start."
 ---
 
 > Is this Docs or something else? I have to lean in and check the label... Oh It's actually Calendar. Wow, this is confusing.

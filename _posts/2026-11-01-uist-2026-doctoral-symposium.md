@@ -14,7 +14,7 @@ giscus_comments: true
 related_posts: true
 related_publications: true
 citation: false
-description: "My paper was accepted to the UIST 2026 Doctoral Symposium! Magnification helps me see a detail, but it can hide the context that gives that detail meaning. In this post I share how visual communication between people and their tools connects my research on lecture videos, charts, and AI, and why being in control of what I see still matters."
+description: "For my UIST 2026 Doctoral Symposium paper, I connect my work on lecture videos, charts, and AI through visual communication between low-vision people and their tools. I walk through what each project taught me, how visual access to communication supports low-vision people, and why people should stay in control of what they see."
 _styles: >
   .post-figure {
     margin: 2.5rem 0;

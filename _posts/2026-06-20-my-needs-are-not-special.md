@@ -13,7 +13,7 @@ giscus_comments: true
 related_posts: true
 related_publications: true
 citation: true
-description: "I don't like the term 'special needs'. For large portions of my life, people have addressed my needs as special. But to me, nothing about what I need is special. Special is 'extra', 'more', 'beyond the standard'. But to me? To me, being able to take an exam like all the other kids in my class is not special, it's fundamental. Recently I've been reading some (2025!!) papers that still use the term 'special needs', and I had to express how that makes me feel."
+description: 'Using my needs as examples, like figures that stay sharp when I zoom and caption sizes I can adjust, I explain why none of them are extras. I also look at how the "special needs" framing leads institutions to treat accessibility as an optional add-on.'
 ---
 
 I don't like the term "special needs."

@@ -2,7 +2,7 @@
 layout: post
 title: "VeasyGuide at ASSETS 2025 Recap and Presentation Recording 🎥"
 date: 2025-11-12 09:00:00-0500
-description: "Recapping my experience presenting VeasyGuide at ASSETS 2025, which got a best paper honorable mention! Read about the conference and watch the recording of my talk. VeasyGuide is making communication between instructors and students in slide-based presentation videos accessible for low-vision learners."
+description: "I share the recording and Q&A from my VeasyGuide talk. VeasyGuide detects instructor actions and gives low-vision learners personalized visual guidance in slide-based videos. I also reflect on meeting disabled researchers at my first ASSETS and a pleasant surprise finding large-print books in Denver."
 thumbnail: assets/img/posts/assets-25-thumbnail.jpg
 featured: false
 tags: ASSETS VeasyGuide e-learning award

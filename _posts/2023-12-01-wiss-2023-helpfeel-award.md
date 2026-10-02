@@ -2,7 +2,7 @@
 layout: post
 title: "Smart Replay at WISS 2023 Recap and Helpfeel Award 🏆"
 date: 2023-12-01 10:00:00+0900
-description: "Recap of my presentation of 'Smart Replay' at WISS 2023, which also was my first WISS! A fun surprize was receiving the Helpfeel Award for improving accessibility in e-learning videos."
+description: "I introduce the WISS conference, and share a short video of the Kobuchizawa area and the recording of my first conference talk. I also explain what the Helpfeel Award committee valued in Smart Replay, and our work on visual and temporal accessibility in e-learning videos."
 thumbnail: assets/img/posts/wiss-23-img-2.jpg
 featured: false
 tags: WISS e-learning award

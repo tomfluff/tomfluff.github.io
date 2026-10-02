@@ -12,12 +12,17 @@
 // Fonts
 // ---------------------------------------------------------------------------
 
+// Fonts are WOFF2 files cut down to Latin and Latin Extended (punctuation, arrows and
+// maths signs included); head.liquid preloads the faces most pages use first.
+//
 // Atkinson Hyperlegible local font faces — the Braille Institute's text face,
 // drawn so that easily-confused characters stay distinguishable at low acuity.
 // Used for body copy; Montserrat stays on headings and the site identity.
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: local("Atkinson Hyperlegible"), url("../fonts/AtkinsonHyperlegible-Regular.ttf");
+  src:
+    local("Atkinson Hyperlegible"),
+    url("../fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,7 +30,9 @@
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: local("Atkinson Hyperlegible Italic"), url("../fonts/AtkinsonHyperlegible-Italic.ttf");
+  src:
+    local("Atkinson Hyperlegible Italic"),
+    url("../fonts/AtkinsonHyperlegible-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -33,7 +40,9 @@
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: local("Atkinson Hyperlegible Bold"), url("../fonts/AtkinsonHyperlegible-Bold.ttf");
+  src:
+    local("Atkinson Hyperlegible Bold"),
+    url("../fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -41,7 +50,9 @@
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: local("Atkinson Hyperlegible Bold Italic"), url("../fonts/AtkinsonHyperlegible-BoldItalic.ttf");
+  src:
+    local("Atkinson Hyperlegible Bold Italic"),
+    url("../fonts/AtkinsonHyperlegible-BoldItalic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -50,38 +61,59 @@
 // Montserrat local font faces
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-Regular.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-Italic.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-Italic.woff2") format("woff2");
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-Light.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-Light.woff2") format("woff2");
   font-weight: 300;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-SemiBold.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-Bold.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-ExtraBold.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
   font-weight: 800;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: local("Montserrat"), url("../fonts/Montserrat-Black.ttf");
+  src:
+    local("Montserrat"),
+    url("../fonts/Montserrat-Black.woff2") format("woff2");
   font-weight: 900;
+  font-display: swap;
 }
 
 // ---------------------------------------------------------------------------
@@ -1646,7 +1678,8 @@ a.see-all {
   align-items: center;
   gap: 0.75rem 1rem;
 
-  &[hidden] {
+  // the filters need JavaScript (head.liquid adds the js class)
+  html:not(.js) & {
     display: none;
   }
 }

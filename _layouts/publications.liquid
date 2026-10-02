@@ -4,26 +4,104 @@ layout: default
 {%- comment -%}
   Publications page (_pages/publications.md). The title row carries the filter field; under
   it, a year menu and venue chips narrow the list. The summary line, the year menu and the
-  venue chips are filled in from the rendered list by assets/js/site.js, so their counts
-  stay correct as papers are added. Without JavaScript the page shows its description and
-  the full list.
+  venue chips are built here from the rendered list (the data-* attributes that
+  _layouts/bib.liquid puts on each entry), so their counts stay correct as papers are added
+  and they are in the page from the first paint. assets/js/site.js only makes them work.
+  Without JavaScript the controls stay hidden and the page shows the full list.
 {%- endcomment -%}
+{%- assign pub_total = content | split: 'data-year="' | size | minus: 1 -%}
+{%- assign pub_awards = content | split: 'data-award' | size | minus: 1 -%}
+{%- assign pub_parts = content | split: 'data-year="' -%}
+{%- assign pub_years = '' | split: '' -%}
+{%- for part in pub_parts offset: 1 -%}
+  {%- assign pub_year = part | split: '"' | first -%}
+  {%- if pub_year != '' -%}
+    {%- assign pub_years = pub_years | push: pub_year -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign pub_years = pub_years | uniq | sort -%}
+{%- comment -%} Venues with two or more papers get their own chip, by count and then by name; the rest share "Other venues" {%- endcomment -%}
+{%- assign pub_venue_keys = '' | split: '' -%}
+{%- assign pub_main_total = 0 -%}
+{%- assign pub_venues = '' | split: '' -%}
+{%- assign pub_parts = content | split: 'data-venue="' -%}
+{%- for part in pub_parts offset: 1 -%}
+  {%- assign pub_venue = part | split: '"' | first -%}
+  {%- if pub_venue != '' -%}
+    {%- assign pub_venues = pub_venues | push: pub_venue -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign pub_venues = pub_venues | uniq -%}
+{%- for pub_venue in pub_venues -%}
+  {%- capture pub_needle %}data-venue="{{ pub_venue }}"{% endcapture -%}
+  {%- assign pub_count = content | split: pub_needle | size | minus: 1 -%}
+  {%- if pub_count > 1 -%}
+    {%- assign pub_key = 10000 | minus: pub_count | append: '|' | append: pub_venue -%}
+    {%- assign pub_venue_keys = pub_venue_keys | push: pub_key -%}
+    {%- assign pub_main_total = pub_main_total | plus: pub_count -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign pub_other_total = pub_total | minus: pub_main_total -%}
+{%- assign pub_venue_keys = pub_venue_keys | sort -%}
 <div class="post publications-page">
   <header class="pubs-header">
     <div class="pubs-title-row">
       <div class="pubs-title">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p class="pubs-summary" data-pubs-summary>{{ page.description }}</p>
+        <p class="pubs-summary">
+          {%- if pub_total > 0 and pub_years.size > 0 -%}
+            {{ pub_total }} papers since {{ pub_years | first }}
+            {%- if pub_awards > 0 %}, {{ pub_awards }} of them with awards.{% else %}.{% endif -%}
+          {%- else -%}
+            {{ page.description }}
+          {%- endif -%}
+        </p>
       </div>
       {% include bib_search.liquid %}
     </div>
-    <div class="pubs-controls" data-pubs-controls hidden>
+    <div class="pubs-controls" data-pubs-controls>
       <label class="sr-only" for="pubs-year">Year</label>
       <select id="pubs-year" class="pubs-year">
         <option value="">All years</option>
+        {%- for pub_year in pub_years reversed %}
+          {%- capture pub_needle %}data-year="{{ pub_year }}"{% endcapture -%}
+          {%- assign pub_count = content | split: pub_needle | size | minus: 1 %}
+          <option value="{{ pub_year }}">{{ pub_year }} ({{ pub_count }})</option>
+        {%- endfor %}
       </select>
       <span class="pubs-divider" aria-hidden="true"></span>
-      <div class="pubs-venues" role="group" aria-label="Venue"></div>
+      <div class="pubs-venues" role="group" aria-label="Venue">
+        <button type="button" class="pubs-venue" data-venue="" aria-pressed="true">
+          All <span>{{ pub_total }}</span>
+        </button>
+        {%- for pub_key in pub_venue_keys %}
+          {%- assign pub_venue = pub_key | split: '|' | last -%}
+          {%- assign pub_count = pub_key | split: '|' | first | minus: 10000 | abs -%}
+          {%- assign venue = site.data.venues[pub_venue] %}
+          {% if venue.light -%}
+            <button
+              type="button"
+              class="pubs-venue pubs-venue-coloured"
+              data-venue="{{ pub_venue }}"
+              aria-pressed="false"
+              style="--venue-light: {{ venue.light }}; --venue-dark: {{ venue.dark }};"
+            >
+              {{- pub_venue }}
+              <span>{{ pub_count }}</span>
+            </button>
+          {%- else -%}
+            <button type="button" class="pubs-venue" data-venue="{{ pub_venue }}" aria-pressed="false">
+              {{ pub_venue }}
+              <span>{{ pub_count }}</span>
+            </button>
+          {%- endif %}
+        {%- endfor %}
+        {%- if pub_other_total > 0 %}
+          <button type="button" class="pubs-venue" data-venue="other" aria-pressed="false">
+            Other venues <span>{{ pub_other_total }}</span>
+          </button>
+        {%- endif %}
+      </div>
     </div>
     <p id="bibsearch-status" class="bibsearch-status" role="status" aria-live="polite"></p>
     <button type="button" class="bibsearch-clear" hidden>Clear filters</button>

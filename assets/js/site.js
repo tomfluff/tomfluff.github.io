@@ -117,64 +117,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Publications page: a text filter (bibsearch.js marks non-matching entries "unloaded"),
-  // plus a year menu and venue chips built from the list itself. An entry shows only when
-  // it passes all three; a year heading hides when none of its entries show.
+  // plus a year menu and venue chips that _layouts/publications.liquid builds from the list.
+  // An entry shows only when it passes all three; a year heading hides when none of its
+  // entries show.
   const input = document.getElementById("bibsearch");
   const status = document.getElementById("bibsearch-status");
   const clear = document.querySelector(".bibsearch-clear");
   const list = document.querySelector(".publications-page .publications");
-  if (input && status && clear && list) {
+  const yearSelect = document.getElementById("pubs-year");
+  const venueBox = document.querySelector(".pubs-venues");
+  if (input && status && clear && list && yearSelect && venueBox) {
     const entries = Array.from(list.querySelectorAll("ol.bibliography > li"));
     const rowOf = (li) => li.querySelector(":scope > .row");
     const yearOf = (li) => rowOf(li)?.dataset.year || "";
     const venueOf = (li) => rowOf(li)?.dataset.venue || "";
     const total = entries.length;
-
-    // Summary line: number of papers, first year, and awards
-    const years = entries.map(yearOf).filter(Boolean);
-    const awards = entries.filter((li) => rowOf(li)?.hasAttribute("data-award")).length;
-    const summary = document.querySelector("[data-pubs-summary]");
-    if (summary && total && years.length) {
-      const first = Math.min(...years.map(Number));
-      summary.textContent = `${total} papers since ${first}` + (awards ? `, ${awards} of them with awards.` : ".");
-    }
-
-    // Year menu
-    const yearSelect = document.getElementById("pubs-year");
-    const yearCounts = {};
-    years.forEach((y) => (yearCounts[y] = (yearCounts[y] || 0) + 1));
-    Object.keys(yearCounts)
-      .sort((a, b) => b - a)
-      .forEach((y) => yearSelect.add(new Option(`${y} (${yearCounts[y]})`, y)));
-
-    // Venue chips: venues with two or more papers get their own chip, the rest share one
-    const venueCounts = {};
-    entries.forEach((li) => {
-      const v = venueOf(li);
-      if (v) venueCounts[v] = (venueCounts[v] || 0) + 1;
-    });
-    const mainVenues = Object.keys(venueCounts)
-      .filter((v) => venueCounts[v] > 1)
-      .sort((a, b) => venueCounts[b] - venueCounts[a] || a.localeCompare(b));
-    const otherCount = entries.length - mainVenues.reduce((n, v) => n + venueCounts[v], 0);
-    const venueBox = document.querySelector(".pubs-venues");
-    const chip = (value, label, count, style) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "pubs-venue" + (style ? " pubs-venue-coloured" : "");
-      button.dataset.venue = value;
-      button.setAttribute("aria-pressed", String(value === ""));
-      if (style) button.setAttribute("style", style);
-      button.innerHTML = `${label} <span>${count}</span>`;
-      venueBox.appendChild(button);
-    };
-    chip("", "All", total);
-    mainVenues.forEach((v) => {
-      const sample = entries.find((li) => venueOf(li) === v)?.querySelector(".pub-venue");
-      chip(v, v, venueCounts[v], sample?.getAttribute("style") || "");
-    });
-    if (otherCount > 0) chip("other", "Other venues", otherCount);
-    document.querySelector("[data-pubs-controls]").hidden = false;
+    // venues with their own chip; every other venue falls under "Other venues"
+    const mainVenues = Array.from(venueBox.querySelectorAll(".pubs-venue"))
+      .map((b) => b.dataset.venue)
+      .filter((v) => v && v !== "other");
 
     let venue = "";
     const venueMatches = (li) => !venue || (venue === "other" ? !mainVenues.includes(venueOf(li)) : venueOf(li) === venue);

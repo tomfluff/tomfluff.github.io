@@ -132,11 +132,15 @@
   {% endif %}
   <link rel="apple-touch-icon" href="{{ apple_touch_icon_url }}">
 {% endif %}
-<!-- Display settings: apply before first paint so pages do not flash at the default size -->
+<!--
+  Display settings: apply before first paint so pages do not flash at the default size.
+  The js class lets CSS hide controls that only work with JavaScript.
+-->
 <script>
   (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
     try {
-      var root = document.documentElement;
       ['text-size', 'line-spacing', 'contrast'].forEach(function (key) {
         var value = localStorage.getItem('display-' + key);
         if (value && value !== 'default') root.setAttribute('data-' + key, value);
@@ -145,6 +149,16 @@
   })();
 </script>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+<!--
+  Fetch the fonts most pages use (body text with its bold and italic, navigation, site name,
+  headings) together with the CSS, so text does not reflow when they arrive
+-->
+{% assign preload_fonts = 'AtkinsonHyperlegible-Regular,AtkinsonHyperlegible-Bold,AtkinsonHyperlegible-Italic,Montserrat-Regular,Montserrat-SemiBold,Montserrat-Bold'
+  | split: ','
+%}
+{% for font in preload_fonts %}
+  <link rel="preload" href="{{ font | prepend: '/assets/fonts/' | append: '.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+{% endfor %}
 {% if page.layout == 'cv' and site.plugins contains 'al_folio_cv' and site.al_folio.features.cv.enabled != false %}
   <link rel="stylesheet" href="{{ '/assets/css/al-folio-cv.css' | relative_url | bust_file_cache }}">
 {% endif %}

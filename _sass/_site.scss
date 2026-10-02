@@ -177,10 +177,83 @@ blockquote {
   }
 }
 
+// Type scale: the page title is the largest text, then section headings,
+// then subheadings
 .post-title {
-  // the title is the page's h1 for semantics; keep the size it had as an h3
-  font-size: 1.75rem;
+  font-size: clamp(2rem, 1.4rem + 1.6vw, 2.5rem);
   font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+article h2 {
+  font-size: 1.5rem;
+}
+
+article h3 {
+  font-size: 1.25rem;
+}
+
+// Post header: summary, one line of details, tags
+.post-header {
+  margin-bottom: 1.5rem;
+
+  .post-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .post-summary {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.6rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9375rem;
+    margin-bottom: 0.6rem;
+
+    a.post-category {
+      color: var(--global-text-color);
+      text-decoration: underline;
+      text-decoration-color: var(--global-divider-color);
+      text-underline-offset: 0.2em;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+}
+
+.post-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    display: inline-block;
+    padding: 0.15rem 0.7rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    font-size: 0.875rem;
+    text-decoration: none;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+  }
 }
 
 // ---------------------------------------------------------------------------

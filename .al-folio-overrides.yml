@@ -97,7 +97,7 @@ overrides:
     gem_version: 1.0.15
     upstream_path: _layouts/post.liquid
     upstream_sha256: b70376c20e97692e319650efd8db6e224439f4ea3257bc32a04b3299d54ad94b
-    local_sha256: 7f304abb8475566364254b3687f4ffd6b834291a8e6950df77d434444d515010
+    local_sha256: 19b161b502a3ff9e00752a966e9c38ee66ce9b286d027605a09c6b23ee2e963c
     acknowledged_at: '2026-10-02'
   _sass/_themes.scss:
     owner: al_folio_core

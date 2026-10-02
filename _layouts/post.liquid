@@ -14,49 +14,50 @@ layout: default
 {% endif %}
 
 <div class="post">
+  {%- comment -%}
+    Local change: the title is the largest text on the page, the post's description
+    follows as a summary, and date, reading time and category share one line, with tags
+    as small links underneath.
+  {%- endcomment -%}
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description and url_beginning == '/blog/' %}
+      <p class="post-summary">{{ page.description }}</p>
+    {% endif %}
+    {% assign read_time = content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+    {% assign last_date = page.last_modified_at | default: page.last_updated %}
     <p class="post-meta">
-      Created on {{ page.date | date: '%B %d, %Y' }}
-      {% if page.author %}by {{ page.author }}{% endif %}
-      {% assign last_date = page.last_modified_at | default: page.last_updated %}
-      {% if last_date %}, last updated on {{ last_date | date: '%B %d, %Y' }}{% endif %}
-      {% if page.meta %}• {{ page.meta }}{% endif %}
-    </p>
-    <p class="post-tags">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+      {% if last_date %}
+        <span aria-hidden="true">&middot;</span> updated
+        <time datetime="{{ last_date | date_to_xmlschema }}">{{ last_date | date: '%B %-d, %Y' }}</time>
+      {% endif %}
       {% if url_beginning == '/blog/' %}
-        <a href="{{ year | prepend: '/blog/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-      {% else %}
-        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+        <span aria-hidden="true">&middot;</span> {{ read_time }} min read
       {% endif %}
-      {% if tags != '' %}
-        &nbsp; &middot; &nbsp;
-        {% for tag in page.tags %}
-          {% if url_beginning == '/blog/' %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-          {% else %}
-            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
-          {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
-        {% endfor %}
-      {% endif %}
-
       {% if categories != '' %}
-        &nbsp; &middot; &nbsp;
         {% for category in page.categories %}
+          <span aria-hidden="true">&middot;</span>
           {% if url_beginning == '/blog/' %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}</a>
+            <a class="post-category" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category | capitalize }}</a>
           {% else %}
-            <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
+            {{ category | capitalize }}
           {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
         {% endfor %}
       {% endif %}
+      {% if page.meta -%}
+        <span aria-hidden="true">&middot;</span> {{ page.meta -}}
+      {%- endif %}
     </p>
+    {% if tags != '' and url_beginning == '/blog/' %}
+      <ul class="post-tag-list" aria-label="Tags">
+        {% for tag in page.tags %}
+          <li>
+            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">#{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </header>
   {% if page.audio %}{% include audio_player.liquid %}{% endif %}
 

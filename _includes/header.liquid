@@ -141,12 +141,61 @@
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
-            <li class="toggle-container">
-              <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
-                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+            {%- comment -%}
+              Local change: a labelled "Display" button opens a panel with text size, line
+              spacing, line length, theme and contrast (assets/js/site.js; styles in
+              _sass/_site.scss). It replaces the unlabelled theme icon. theme.js still binds a
+              click handler to #light-toggle, so an inert element keeps that id.
+            {%- endcomment -%}
+            <li class="nav-item display-settings">
+              <button id="display-toggle" type="button" class="nav-link" aria-expanded="false" aria-controls="display-panel">
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i> Display
               </button>
+              <div id="display-panel" class="display-panel" role="group" aria-labelledby="display-panel-title" hidden>
+                <p id="display-panel-title" class="display-panel-title">Display</p>
+                <fieldset>
+                  <legend>Text size</legend>
+                  <div class="display-segments">
+                    <button type="button" data-display-setting="text-size" data-value="default" aria-pressed="false">Default</button>
+                    <button type="button" data-display-setting="text-size" data-value="large" aria-pressed="false">Large</button>
+                    <button type="button" data-display-setting="text-size" data-value="larger" aria-pressed="false">Larger</button>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Line spacing</legend>
+                  <div class="display-segments">
+                    <button type="button" data-display-setting="line-spacing" data-value="default" aria-pressed="false">Default</button>
+                    <button type="button" data-display-setting="line-spacing" data-value="relaxed" aria-pressed="false">Relaxed</button>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Line length</legend>
+                  <div class="display-segments">
+                    <button type="button" data-display-setting="line-length" data-value="default" aria-pressed="false">Full</button>
+                    <button type="button" data-display-setting="line-length" data-value="narrow" aria-pressed="false">Narrow</button>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Theme</legend>
+                  <div class="display-segments">
+                    <button type="button" data-display-setting="theme" data-value="system" aria-pressed="false">System</button>
+                    <button type="button" data-display-setting="theme" data-value="light" aria-pressed="false">Light</button>
+                    <button type="button" data-display-setting="theme" data-value="dark" aria-pressed="false">Dark</button>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Contrast</legend>
+                  <div class="display-segments">
+                    <button type="button" data-display-setting="contrast" data-value="default" aria-pressed="false">Standard</button>
+                    <button type="button" data-display-setting="contrast" data-value="high" aria-pressed="false">High</button>
+                  </div>
+                </fieldset>
+                <div class="display-panel-footer">
+                  <span>Saved on this device. Browser zoom works too.</span>
+                  <button type="button" class="display-reset">Reset</button>
+                </div>
+              </div>
+              <span id="light-toggle" hidden></span>
             </li>
           {% endif %}
         </ul>

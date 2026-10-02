@@ -32,6 +32,71 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Display panel: text size, line spacing, line length, theme and contrast. Settings
+  // are attributes on <html> (an inline script in the head applies them before first
+  // paint) and are saved in localStorage. Theme goes through theme.js's setThemeSetting.
+  const displayToggle = document.getElementById("display-toggle");
+  const displayPanel = document.getElementById("display-panel");
+  if (displayToggle && displayPanel) {
+    const root = document.documentElement;
+    const read = (key) => {
+      try {
+        return localStorage.getItem(key);
+      } catch (e) {
+        return null;
+      }
+    };
+    const write = (key, value) => {
+      try {
+        localStorage.setItem(key, value);
+      } catch (e) {}
+    };
+    const current = (key) => (key === "theme" ? read("theme") || "system" : read(`display-${key}`) || "default");
+    const markPressed = () => {
+      displayPanel.querySelectorAll("[data-display-setting]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(current(button.dataset.displaySetting) === button.dataset.value));
+      });
+    };
+    const apply = (key, value) => {
+      if (key === "theme") {
+        if (typeof setThemeSetting === "function") setThemeSetting(value);
+        else write("theme", value);
+      } else {
+        write(`display-${key}`, value);
+        if (value === "default") root.removeAttribute(`data-${key}`);
+        else root.setAttribute(`data-${key}`, value);
+      }
+      markPressed();
+    };
+    const setOpen = (open) => {
+      displayPanel.hidden = !open;
+      displayToggle.setAttribute("aria-expanded", String(open));
+      if (open) {
+        markPressed();
+        displayPanel.querySelector("[aria-pressed='true']")?.focus();
+      }
+    };
+
+    displayToggle.addEventListener("click", () => setOpen(displayPanel.hidden));
+    displayPanel.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-display-setting]");
+      if (button) apply(button.dataset.displaySetting, button.dataset.value);
+      if (event.target.closest(".display-reset")) {
+        ["text-size", "line-spacing", "line-length", "contrast"].forEach((key) => apply(key, "default"));
+        apply("theme", "system");
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !displayPanel.hidden) {
+        setOpen(false);
+        displayToggle.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (!displayPanel.hidden && !event.target.closest(".display-settings")) setOpen(false);
+    });
+  }
+
   // Comments: the giscus embed waits in a <template> until the panel is first opened.
   // Scripts copied out of a template do not run, so each one is recreated.
   const comments = document.querySelector("details.post-comments");

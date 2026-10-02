@@ -14,3 +14,5 @@ https://www.reddit.com/
 README.md
 docs/SEO.md
 docs/SHOWCASE.md
+# skip-link target on every page; CI's assets remap rewrites it to /assets/ on the /blog/tag/assets/ archive
+index\.html#main-content$

@@ -1,1 +1,1 @@
-document.addEventListener("readystatechange",(()=>{"complete"===document.readyState&&Plyr.setup("video")}));
+document.addEventListener("readystatechange",()=>{"complete"===document.readyState&&Plyr.setup("video")});

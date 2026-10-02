@@ -1,2 +1,449 @@
-.audio-player{--ap-fg:var(--global-text-color);--ap-muted:var(--global-text-color-light);--ap-accent:var(--global-theme-color);--ap-on-accent:var(--global-bg-color);--ap-bg:var(--global-bg-color);--ap-line:var(--global-divider-color);--ap-hover:var(--global-bg-color-accent);--ap-played:var(--global-theme-color);--ap-unplayed:var(--global-divider-color);--ap-playhead:var(--global-text-color);--ap-marker:var(--global-text-color);margin:0 0 2rem;padding:1rem 1.25rem 1.125rem;border:1px solid var(--ap-line);border-radius:.75rem;background-color:var(--ap-bg);color:var(--ap-fg);line-height:1.4}.audio-player [hidden]{display:none!important}.audio-player p{margin:0}.audio-player .ap-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.audio-player svg{flex:none}.audio-player .ap-stroke,.audio-player .ap-download path,.audio-player .ap-chapters-toggle path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.audio-player .ap-skip path:not(.ap-stroke){fill:currentColor}.audio-player :focus:not(:focus-visible){outline:0}.audio-player :focus-visible,.audio-player .ap-speed:focus-within,.audio-player .ap-timeline:focus-within{outline:3px solid var(--ap-accent);outline-offset:2px}@supports selector(:has(*)){.audio-player .ap-speed:focus-within,.audio-player .ap-timeline:focus-within{outline:0}.audio-player .ap-speed:has(:focus-visible),.audio-player .ap-timeline:has(:focus-visible){outline:3px solid var(--ap-accent);outline-offset:2px}}.audio-player .ap-head{display:flex;align-items:center;gap:.875rem}.audio-player .ap-play{display:inline-flex;flex:none;align-items:center;justify-content:center;width:3.25rem;height:3.25rem;padding:0;border:0;border-radius:50%;background-color:var(--ap-accent);color:var(--ap-on-accent);cursor:pointer}.audio-player .ap-play svg{width:1.625rem;height:1.625rem;fill:currentColor}.audio-player .ap-play:hover{filter:brightness(1.12)}.audio-player .ap-icon-pause,.audio-player.is-playing .ap-icon-play{display:none}.audio-player.is-playing .ap-icon-pause{display:block}.audio-player .ap-heading{min-width:0}.audio-player .ap-label{font-weight:700;font-size:1.0625rem}.audio-player .ap-meta{color:var(--ap-muted);font-size:.9375rem}.audio-player .ap-length:not([hidden])+.ap-note::before{content:" · "}.audio-player .ap-error{margin-top:.75rem;font-weight:700}.audio-player .ap-timeline{position:relative;height:3rem;margin:1rem 0 .5rem;border-radius:.25rem;cursor:pointer;touch-action:pan-y;-webkit-user-select:none;user-select:none}.audio-player .ap-wave{position:absolute;top:0;left:0;width:100%;height:100%;overflow:visible;forced-color-adjust:none}.audio-player .ap-wave .ap-unplayed{fill:var(--ap-unplayed)}.audio-player .ap-wave .ap-played{fill:var(--ap-played)}.audio-player .ap-wave .ap-mark{fill:var(--ap-marker)}.audio-player .ap-wave .ap-playhead{fill:var(--ap-playhead)}.audio-player .ap-wave .ap-knob{fill:var(--ap-playhead);stroke:var(--ap-bg);stroke-width:2}.audio-player .ap-seek{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;padding:0;opacity:0;pointer-events:none}.audio-player .ap-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem}.audio-player .ap-where{flex:1 1 9rem;min-width:0}.audio-player .ap-time{font-variant-numeric:tabular-nums;white-space:nowrap}.audio-player .ap-time-sep,.audio-player .ap-duration{color:var(--ap-muted)}.audio-player .ap-chapter-now{display:block;color:var(--ap-muted);font-size:.9375rem;overflow-wrap:anywhere}.audio-player .ap-buttons{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}.audio-player .ap-btn{display:inline-flex;align-items:center;justify-content:center;gap:.375rem;min-width:2.75rem;min-height:2.75rem;margin:0;padding:0 .625rem;border:1px solid var(--ap-line);border-radius:.5rem;background-color:transparent;color:var(--ap-fg);font:inherit;font-size:.9375rem;line-height:1.2;text-decoration:none;cursor:pointer}.audio-player .ap-btn svg{width:1.25rem;height:1.25rem}.audio-player .ap-btn:hover,.audio-player .ap-chapters-toggle[aria-expanded="true"]{background-color:var(--ap-hover);color:var(--ap-fg);text-decoration:none}.audio-player .ap-skip{padding:0 .5rem;font-variant-numeric:tabular-nums;font-weight:700}.audio-player .ap-speed{position:relative;gap:0;padding:0;cursor:default}.audio-player .ap-speed label{margin:0;padding:0 .25rem 0 .5rem;cursor:pointer}.audio-player .ap-speed select{-webkit-appearance:none;appearance:none;min-height:2.75rem;margin:0;padding:0 1.625rem 0 .25rem;border:0;border-radius:.5rem;background:transparent;color:inherit;font:inherit;font-weight:700;font-variant-numeric:tabular-nums;cursor:pointer}.audio-player .ap-speed select option{background-color:var(--ap-bg);color:var(--ap-fg)}.audio-player .ap-speed::after{content:"";position:absolute;top:50%;right:.75rem;width:.4375rem;height:.4375rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-70%) rotate(45deg);pointer-events:none}
-.audio-player .ap-chapters{margin-top:.75rem;padding-top:.5rem;border-top:1px solid var(--ap-line)}.audio-player .ap-chapter-list{margin:0;padding:0;list-style:none}.audio-player .ap-chapter-list button{display:flex;align-items:baseline;gap:.75rem;width:100%;min-height:2.75rem;margin:0;padding:.5rem .75rem;border:0;border-radius:.5rem;background-color:transparent;color:var(--ap-fg);font:inherit;text-align:left;cursor:pointer}.audio-player .ap-chapter-list button:hover{background-color:var(--ap-hover)}.audio-player .ap-chapter-time{flex:none;min-width:3.25em;color:var(--ap-muted);font-variant-numeric:tabular-nums}.audio-player .ap-chapter-list [aria-current="true"]{background-color:var(--ap-hover);box-shadow:inset 3px 0 0 var(--ap-accent);font-weight:700}.audio-player .ap-chapter-list button:hover .ap-chapter-time,.audio-player .ap-chapter-list [aria-current="true"] .ap-chapter-time{color:var(--ap-fg)}@media(max-width:400px){.audio-player{padding:.875rem 1rem 1rem}.audio-player .ap-buttons{gap:.5rem .375rem}}@media(forced-colors:active){.audio-player{--ap-played:Highlight;--ap-unplayed:CanvasText;--ap-playhead:Highlight;--ap-marker:CanvasText;--ap-bg:Canvas;border-color:CanvasText}.audio-player .ap-play{border:2px solid ButtonText}.audio-player .ap-play svg{fill:ButtonText}.audio-player .ap-btn,.audio-player .ap-chapters{border-color:ButtonText}.audio-player .ap-chapter-list [aria-current="true"]{outline:2px solid Highlight;outline-offset:-2px}.audio-player :focus-visible,.audio-player .ap-speed:focus-within,.audio-player .ap-timeline:focus-within{outline-color:Highlight}}@media(prefers-reduced-motion:reduce){.audio-player,.audio-player *{transition:none!important;animation:none!important}}@media print{.audio-player{display:none}}
+/*
+ * "Listen to this article" player: _includes/audio_player.liquid + assets/js/audio-player.js.
+ * Linked only on posts that set `audio` in their front matter.
+ * Colours come from the theme's --global-* variables, so the player follows the light/dark toggle live.
+ */
+
+.audio-player {
+  --ap-fg: var(--global-text-color);
+  --ap-muted: var(--global-text-color-light);
+  --ap-accent: var(--global-theme-color);
+  --ap-on-accent: var(--global-bg-color);
+  --ap-bg: var(--global-bg-color);
+  --ap-line: var(--global-divider-color);
+  --ap-hover: var(--global-bg-color-accent);
+  --ap-played: var(--global-theme-color);
+  --ap-unplayed: var(--global-divider-color);
+  --ap-playhead: var(--global-text-color);
+  --ap-marker: var(--global-text-color);
+
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem 1.125rem;
+  border: 1px solid var(--ap-line);
+  border-radius: 0.75rem;
+  background-color: var(--ap-bg);
+  color: var(--ap-fg);
+  line-height: 1.4;
+}
+
+.audio-player [hidden] {
+  display: none !important;
+}
+
+.audio-player p {
+  margin: 0;
+}
+
+.audio-player .ap-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.audio-player svg {
+  flex: none;
+}
+
+.audio-player .ap-stroke,
+.audio-player .ap-download path,
+.audio-player .ap-chapters-toggle path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.audio-player .ap-skip path:not(.ap-stroke) {
+  fill: currentColor;
+}
+
+/* Focus: one clear ring, same everywhere in the card. */
+.audio-player :focus:not(:focus-visible) {
+  outline: none;
+}
+
+.audio-player :focus-visible,
+.audio-player .ap-speed:focus-within,
+.audio-player .ap-timeline:focus-within {
+  outline: 3px solid var(--ap-accent);
+  outline-offset: 2px;
+}
+
+@supports selector(:has(*)) {
+  /* Only ring the timeline and speed control for keyboard focus, not after a click. */
+  .audio-player .ap-speed:focus-within,
+  .audio-player .ap-timeline:focus-within {
+    outline: none;
+  }
+
+  .audio-player .ap-speed:has(:focus-visible),
+  .audio-player .ap-timeline:has(:focus-visible) {
+    outline: 3px solid var(--ap-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Header: play button + label */
+.audio-player .ap-head {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.audio-player .ap-play {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--ap-accent);
+  color: var(--ap-on-accent);
+  cursor: pointer;
+}
+
+.audio-player .ap-play svg {
+  width: 1.625rem;
+  height: 1.625rem;
+  fill: currentColor;
+}
+
+.audio-player .ap-play:hover {
+  filter: brightness(1.12);
+}
+
+.audio-player .ap-icon-pause,
+.audio-player.is-playing .ap-icon-play {
+  display: none;
+}
+
+.audio-player.is-playing .ap-icon-pause {
+  display: block;
+}
+
+.audio-player .ap-heading {
+  min-width: 0;
+}
+
+.audio-player .ap-label {
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+
+.audio-player .ap-meta {
+  color: var(--ap-muted);
+  font-size: 0.9375rem;
+}
+
+.audio-player .ap-length:not([hidden]) + .ap-note::before {
+  content: " · ";
+}
+
+.audio-player .ap-error {
+  margin-top: 0.75rem;
+  font-weight: 700;
+}
+
+/* Timeline: waveform (or plain bar) drawn in SVG, with a transparent native range input on top. */
+.audio-player .ap-timeline {
+  position: relative;
+  height: 3rem;
+  margin: 1rem 0 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.audio-player .ap-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  forced-color-adjust: none;
+}
+
+.audio-player .ap-wave .ap-unplayed {
+  fill: var(--ap-unplayed);
+}
+
+.audio-player .ap-wave .ap-played {
+  fill: var(--ap-played);
+}
+
+.audio-player .ap-wave .ap-mark {
+  fill: var(--ap-marker);
+}
+
+.audio-player .ap-wave .ap-playhead {
+  fill: var(--ap-playhead);
+}
+
+.audio-player .ap-wave .ap-knob {
+  fill: var(--ap-playhead);
+  stroke: var(--ap-bg);
+  stroke-width: 2;
+}
+
+.audio-player .ap-seek {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Controls row: time + chapter on the left, buttons on the right; wraps on narrow screens. */
+.audio-player .ap-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.audio-player .ap-where {
+  flex: 1 1 9rem;
+  min-width: 0;
+}
+
+.audio-player .ap-time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.audio-player .ap-time-sep,
+.audio-player .ap-duration {
+  color: var(--ap-muted);
+}
+
+.audio-player .ap-chapter-now {
+  display: block;
+  color: var(--ap-muted);
+  font-size: 0.9375rem;
+  overflow-wrap: anywhere;
+}
+
+.audio-player .ap-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.audio-player .ap-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0 0.625rem;
+  border: 1px solid var(--ap-line);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--ap-fg);
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.audio-player .ap-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.audio-player .ap-btn:hover,
+.audio-player .ap-chapters-toggle[aria-expanded="true"] {
+  background-color: var(--ap-hover);
+  color: var(--ap-fg);
+  text-decoration: none;
+}
+
+.audio-player .ap-skip {
+  padding: 0 0.5rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+/* Speed: visible label + native select inside one bordered control. */
+.audio-player .ap-speed {
+  position: relative;
+  gap: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.audio-player .ap-speed label {
+  margin: 0;
+  padding: 0 0.25rem 0 0.5rem;
+  cursor: pointer;
+}
+
+.audio-player .ap-speed select {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0 1.625rem 0 0.25rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.audio-player .ap-speed select option {
+  background-color: var(--ap-bg);
+  color: var(--ap-fg);
+}
+
+.audio-player .ap-speed::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+/* Chapter list (disclosure) */
+.audio-player .ap-chapters {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--ap-line);
+}
+
+.audio-player .ap-chapter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.audio-player .ap-chapter-list button {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--ap-fg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.audio-player .ap-chapter-list button:hover {
+  background-color: var(--ap-hover);
+}
+
+.audio-player .ap-chapter-time {
+  flex: none;
+  min-width: 3.25em;
+  color: var(--ap-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.audio-player .ap-chapter-list [aria-current="true"] {
+  background-color: var(--ap-hover);
+  box-shadow: inset 3px 0 0 var(--ap-accent);
+  font-weight: 700;
+}
+
+/* The muted grey drops below 4.5:1 on the tinted background, so use full text colour there. */
+.audio-player .ap-chapter-list button:hover .ap-chapter-time,
+.audio-player .ap-chapter-list [aria-current="true"] .ap-chapter-time {
+  color: var(--ap-fg);
+}
+
+/* Phones: a little less padding so the controls fit on two rows. */
+@media (max-width: 400px) {
+  .audio-player {
+    padding: 0.875rem 1rem 1rem;
+  }
+
+  .audio-player .ap-buttons {
+    gap: 0.5rem 0.375rem;
+  }
+}
+
+/* Windows High Contrast and other forced-colour modes */
+@media (forced-colors: active) {
+  .audio-player {
+    --ap-played: Highlight;
+    --ap-unplayed: CanvasText;
+    --ap-playhead: Highlight;
+    --ap-marker: CanvasText;
+    --ap-bg: Canvas;
+    border-color: CanvasText;
+  }
+
+  .audio-player .ap-play {
+    border: 2px solid ButtonText;
+  }
+
+  .audio-player .ap-play svg {
+    fill: ButtonText;
+  }
+
+  .audio-player .ap-btn,
+  .audio-player .ap-chapters {
+    border-color: ButtonText;
+  }
+
+  .audio-player .ap-chapter-list [aria-current="true"] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+
+  .audio-player :focus-visible,
+  .audio-player .ap-speed:focus-within,
+  .audio-player .ap-timeline:focus-within {
+    outline-color: Highlight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .audio-player,
+  .audio-player * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media print {
+  .audio-player {
+    display: none;
+  }
+}

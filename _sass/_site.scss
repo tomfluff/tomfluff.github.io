@@ -410,6 +410,12 @@ article h3 {
   display: flex;
   align-items: center;
 
+  // the inert #light-toggle placeholder kept for theme.js: core styles give it a
+  // display value, which beats the hidden attribute and left a gap after the button
+  #light-toggle[hidden] {
+    display: none !important;
+  }
+
   #display-toggle {
     display: inline-flex;
     align-items: center;

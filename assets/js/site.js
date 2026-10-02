@@ -32,6 +32,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Comments: the giscus embed waits in a <template> until the panel is first opened.
+  // Scripts copied out of a template do not run, so each one is recreated.
+  const comments = document.querySelector("details.post-comments");
+  if (comments) {
+    comments.addEventListener("toggle", () => {
+      const template = comments.querySelector("template[data-comments-template]");
+      const host = comments.querySelector("[data-comments-host]");
+      if (!comments.open || !template || !host) return;
+      host.appendChild(template.content.cloneNode(true));
+      host.querySelectorAll("script").forEach((old) => {
+        const script = document.createElement("script");
+        [...old.attributes].forEach((attr) => script.setAttribute(attr.name, attr.value));
+        script.textContent = old.textContent;
+        old.replaceWith(script);
+      });
+      template.remove();
+    });
+  }
+
   // Publication filter: say how many entries match, and offer a way out when none do.
   const input = document.getElementById("bibsearch");
   const status = document.getElementById("bibsearch-status");

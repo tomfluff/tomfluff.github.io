@@ -84,13 +84,36 @@ layout: default
     </div>
   {% endif %}
 
+  {% assign url_beginning = page.url | slice: 0, 6 %}
+  {% if url_beginning == '/blog/' %}
+    {% include author_note.liquid %}
+  {% endif %}
+
   {% if site.related_blog_posts and site.related_blog_posts.enabled %}
     {% if page.related_posts == null or page.related_posts %}
       {% include related_posts.liquid %}
     {% endif %}
   {% endif %}
 
+  {%- comment -%}
+    Local change: comments sit behind a "Comments" panel. The giscus embed is kept in a
+    <template> and only inserted when the panel is first opened (assets/js/site.js), so
+    posts do not load the comment widget until someone asks for it.
+  {%- endcomment -%}
   {% if site.plugins contains 'al_comments' %}
-    {% include plugins/al_comments.liquid %}
+    {% capture comments_html %}{% include plugins/al_comments.liquid %}{% endcapture %}
+    {% assign comments_check = comments_html | strip %}
+    {% if comments_check != '' %}
+      <details class="post-comments" id="comments">
+        <summary>
+          <i class="fa-regular fa-comments" aria-hidden="true"></i>
+          <span class="post-comments-title">Comments</span>
+          <span class="post-comments-hint">Read or join the discussion on GitHub</span>
+          <i class="fa-solid fa-chevron-down post-comments-chevron" aria-hidden="true"></i>
+        </summary>
+        <div class="post-comments-body" data-comments-host></div>
+        <template data-comments-template>{{ comments_html }}</template>
+      </details>
+    {% endif %}
   {% endif %}
 </div>

@@ -1,0 +1,24 @@
+{%- comment -%}
+  Short note about the author at the end of each blog post, for readers who arrive
+  from social media or search. The text is site.author_note in _config.yml.
+{%- endcomment -%}
+{% if site.author_note %}
+  <aside class="author-note" aria-label="About the author">
+    <img src="{{ '/assets/img/prof_pic_color-480.webp' | relative_url }}" alt="" width="64" height="64" loading="lazy">
+    <div>
+      <p>
+        <strong>
+          {{- site.first_name }}
+          {{ site.last_name -}}</strong
+        ><br>
+        {{ site.author_note }}
+      </p>
+      <ul class="profile-links" aria-label="More from the author">
+        <li><a href="{{ '/' | relative_url }}">About me</a></li>
+        <li>
+          <a href="{{ '/feed.xml' | relative_url }}"><i class="fa-solid fa-rss" aria-hidden="true"></i>RSS feed</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+{% endif %}

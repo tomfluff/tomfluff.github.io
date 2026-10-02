@@ -135,6 +135,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
+# Two sentences shown with the photo at the end of every blog post (_includes/author_note.liquid)
+author_note: >
+  I'm a PhD candidate at The University of Tokyo. I research how low-vision people can use their residual vision to access content.
 blog_name: Blog # blog_name will be displayed in your blog page
 blog_description: a collection of thoughts and writings.
 permalink: /blog/:year/:title/

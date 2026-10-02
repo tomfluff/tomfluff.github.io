@@ -137,7 +137,7 @@
   (function () {
     try {
       var root = document.documentElement;
-      ['text-size', 'line-spacing', 'line-length', 'contrast'].forEach(function (key) {
+      ['text-size', 'line-spacing', 'contrast'].forEach(function (key) {
         var value = localStorage.getItem('display-' + key);
         if (value && value !== 'default') root.setAttribute('data-' + key, value);
       });

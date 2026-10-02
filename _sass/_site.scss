@@ -566,16 +566,6 @@ html[data-line-spacing="relaxed"] {
   }
 }
 
-// About 70 characters of Atkinson per line
-html[data-line-length="narrow"] {
-  article p,
-  article li,
-  article blockquote,
-  .post-summary {
-    max-width: 36em;
-  }
-}
-
 // High contrast: darker text, borders and accent in light mode; pure black and
 // white with a pale accent in dark mode; thicker link underlines
 html[data-contrast="high"] {

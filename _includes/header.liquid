@@ -143,7 +143,7 @@
             <!-- Toogle theme mode -->
             {%- comment -%}
               Local change: a labelled "Display" button opens a panel with text size, line
-              spacing, line length, theme and contrast (assets/js/site.js; styles in
+              spacing, theme and contrast (assets/js/site.js; styles in
               _sass/_site.scss). It replaces the unlabelled theme icon. theme.js still binds a
               click handler to #light-toggle, so an inert element keeps that id.
             {%- endcomment -%}
@@ -166,13 +166,6 @@
                   <div class="display-segments">
                     <button type="button" data-display-setting="line-spacing" data-value="default" aria-pressed="false">Default</button>
                     <button type="button" data-display-setting="line-spacing" data-value="relaxed" aria-pressed="false">Relaxed</button>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend>Line length</legend>
-                  <div class="display-segments">
-                    <button type="button" data-display-setting="line-length" data-value="default" aria-pressed="false">Full</button>
-                    <button type="button" data-display-setting="line-length" data-value="narrow" aria-pressed="false">Narrow</button>
                   </div>
                 </fieldset>
                 <fieldset>

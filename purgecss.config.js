@@ -27,6 +27,6 @@ module.exports = {
     ],
     // Display settings (assets/js/site.js) put these attributes on <html> at runtime,
     // building the names in code, so PurgeCSS never sees them in the HTML or JS.
-    greedy: [/data-text-size/, /data-line-spacing/, /data-line-length/, /data-contrast/],
+    greedy: [/data-text-size/, /data-line-spacing/, /data-contrast/],
   },
 };

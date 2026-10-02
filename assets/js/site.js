@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Display panel: text size, line spacing, line length, theme and contrast. Settings
+  // Display panel: text size, line spacing, theme and contrast. Settings
   // are attributes on <html> (an inline script in the head applies them before first
   // paint) and are saved in localStorage. Theme goes through theme.js's setThemeSetting.
   const displayToggle = document.getElementById("display-toggle");
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const button = event.target.closest("[data-display-setting]");
       if (button) apply(button.dataset.displaySetting, button.dataset.value);
       if (event.target.closest(".display-reset")) {
-        ["text-size", "line-spacing", "line-length", "contrast"].forEach((key) => apply(key, "default"));
+        ["text-size", "line-spacing", "contrast"].forEach((key) => apply(key, "default"));
         apply("theme", "system");
       }
     });

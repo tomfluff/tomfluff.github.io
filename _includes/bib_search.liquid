@@ -1,21 +1,23 @@
 {% if site.bib_search %}
   <script src="{{ '/assets/js/bibsearch.js' | relative_url | bust_file_cache }}" type="module"></script>
   {%- comment -%}
-    Local changes: a visible label instead of a placeholder-only field, and a status line
-    that says when nothing matches, with a way to clear the filter (assets/js/site.js).
+    Local change: a visible label and a search icon instead of a placeholder-only field. The
+    status line and the clear button sit in _layouts/publications.liquid, under the year and
+    venue filters, and are driven by assets/js/site.js.
   {%- endcomment -%}
   <div class="bibsearch">
-    <label for="bibsearch" class="bibsearch-label">Filter publications</label>
-    <input
-      type="text"
-      id="bibsearch"
-      spellcheck="false"
-      autocomplete="off"
-      class="search bibsearch-form-input"
-      placeholder="Keyword, author, or venue"
-      aria-describedby="bibsearch-status"
-    >
-    <p id="bibsearch-status" class="bibsearch-status" role="status" aria-live="polite"></p>
-    <button type="button" class="bibsearch-clear" hidden>Clear filter</button>
+    <label for="bibsearch" class="bibsearch-label">Filter</label>
+    <span class="bibsearch-field">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input
+        type="text"
+        id="bibsearch"
+        spellcheck="false"
+        autocomplete="off"
+        class="search bibsearch-form-input"
+        placeholder="Keyword, author or venue"
+        aria-describedby="bibsearch-status"
+      >
+    </span>
   </div>
 {% endif %}

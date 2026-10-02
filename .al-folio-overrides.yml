@@ -6,7 +6,7 @@ overrides:
     gem_version: 1.0.15
     upstream_path: _includes/bib_search.liquid
     upstream_sha256: 36332b8a7d2ac99156f3499c03655f18f0e6b95c6aec8c66c30550be941c4b2c
-    local_sha256: '034919f9c5868cc7a35907a58cb468dfac9ee2e8924d3e60db7f85f7c194c105'
+    local_sha256: b3d7be4a1cb7aa3afb6b9b9e947168e1255b3e28b90398a3f4fc6c8bac693b87
     acknowledged_at: '2026-10-02'
   _includes/citation.liquid:
     owner: al_folio_core
@@ -97,7 +97,7 @@ overrides:
     gem_version: 1.0.15
     upstream_path: _layouts/bib.liquid
     upstream_sha256: f3c547969ef76219ca1eb21df09dce5a3daf32a1f491b1586f68e3213fa35f53
-    local_sha256: 0c4beee3b349c6ebde2e258a32e490032b1340743abe00fd9cb6d8d2dee4eb31
+    local_sha256: c9d1ee2ef0d5c0219a85eea3e5f408c12118a71d1ce6d5f371e93e6728c6b5aa
     acknowledged_at: '2026-10-02'
   _layouts/post.liquid:
     owner: al_folio_core

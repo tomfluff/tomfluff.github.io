@@ -1575,11 +1575,32 @@ a.see-all {
   color: var(--global-text-color);
 }
 
-// Publication filter: a visible label, theme colours in both modes, and a status
-// line (filled in by assets/js/site.js)
+// Publications page header: title and summary with the filter beside them, then a
+// year menu, a divider and venue chips; status line and "Clear filters" under that
+.pubs-header {
+  margin-bottom: 0.5rem;
+}
+
+.pubs-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem 2rem;
+  margin-bottom: 1rem;
+
+  .post-title {
+    margin-bottom: 0.35rem;
+  }
+}
+
+.pubs-summary {
+  font-size: 1.0625rem;
+  margin: 0;
+}
+
 .bibsearch {
-  max-width: 26rem;
-  margin: 0.75rem 0 1.5rem;
+  flex: 0 1 18rem;
 }
 
 .bibsearch-label {
@@ -1588,8 +1609,25 @@ a.see-all {
   margin-bottom: 0.35rem;
 }
 
+.bibsearch-field {
+  position: relative;
+  display: block;
+
+  i {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--global-text-color-light);
+    pointer-events: none;
+  }
+}
+
 .bibsearch-form-input {
   width: 100%;
+  min-height: 42px;
+  padding: 0.5rem 0.75rem 0.5rem 2.4rem;
+  border-radius: 8px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
   border: 1px solid var(--global-divider-color);
@@ -1600,11 +1638,127 @@ a.see-all {
   }
 }
 
+.pubs-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.pubs-year {
+  flex: none;
+  min-height: 34px;
+  padding: 0.2rem 2rem 0.2rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  background-color: var(--global-bg-color);
+  // chevron drawn in the text colour
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--global-text-color) 50%), linear-gradient(135deg, var(--global-text-color) 50%, transparent 50%);
+  background-position:
+    right 0.95rem center,
+    right 0.65rem center;
+  background-size:
+    0.3rem 0.3rem,
+    0.3rem 0.3rem;
+  background-repeat: no-repeat;
+  color: var(--global-text-color);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: bold;
+  appearance: none;
+  cursor: pointer;
+}
+
+.pubs-divider {
+  align-self: stretch;
+  width: 1px;
+  background-color: var(--global-divider-color);
+}
+
+.pubs-venues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pubs-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0.1rem 0.7rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--global-text-color);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  // the count takes the chip's text colour (a core rule colours every span)
+  span {
+    color: inherit;
+    font-weight: normal;
+  }
+
+  // venue chips use the same colour as the paper chips
+  &.pubs-venue-coloured {
+    border-color: transparent;
+    background-color: var(--venue-light);
+    color: #fff;
+  }
+
+  // the chosen filter: a ring in the text colour, plus aria-pressed for screen readers
+  &[aria-pressed="true"] {
+    box-shadow:
+      0 0 0 2px var(--global-bg-color),
+      0 0 0 4px var(--global-text-color);
+  }
+
+  &:not(.pubs-venue-coloured)[aria-pressed="true"] {
+    background-color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+  }
+}
+
+html[data-theme="dark"] .pubs-venue.pubs-venue-coloured {
+  background-color: var(--venue-dark);
+  color: #1c1c1d;
+}
+
+@media (max-width: 575.98px) {
+  .bibsearch {
+    flex-basis: 100%;
+  }
+
+  .pubs-controls {
+    flex-wrap: wrap;
+  }
+
+  .pubs-year {
+    width: 100%;
+  }
+
+  .pubs-divider {
+    display: none;
+  }
+}
+
 .bibsearch-status {
-  min-height: 1.5em;
-  margin: 0.5rem 0 0;
+  margin: 0.6rem 0 0;
   color: var(--global-text-color-light);
   font-size: 0.9375rem;
+
+  // no gap above the list while no filter is active
+  &:empty {
+    margin: 0;
+  }
 }
 
 .bibsearch-clear {
@@ -1615,6 +1769,11 @@ a.see-all {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   cursor: pointer;
+}
+
+// entries and year headings hidden by the year and venue filters
+.publications .pub-filtered {
+  display: none !important;
 }
 
 // Abstract and Bib are buttons now; give them the same look as the link buttons

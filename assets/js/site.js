@@ -116,27 +116,102 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Publication filter: say how many entries match, and offer a way out when none do.
+  // Publications page: a text filter (bibsearch.js marks non-matching entries "unloaded"),
+  // plus a year menu and venue chips built from the list itself. An entry shows only when
+  // it passes all three; a year heading hides when none of its entries show.
   const input = document.getElementById("bibsearch");
   const status = document.getElementById("bibsearch-status");
   const clear = document.querySelector(".bibsearch-clear");
-  if (input && status && clear) {
-    const entries = () => document.querySelectorAll(".publications ol.bibliography > li");
-    const report = () => {
+  const list = document.querySelector(".publications-page .publications");
+  if (input && status && clear && list) {
+    const entries = Array.from(list.querySelectorAll("ol.bibliography > li"));
+    const rowOf = (li) => li.querySelector(":scope > .row");
+    const yearOf = (li) => rowOf(li)?.dataset.year || "";
+    const venueOf = (li) => rowOf(li)?.dataset.venue || "";
+    const total = entries.length;
+
+    // Summary line: number of papers, first year, and awards
+    const years = entries.map(yearOf).filter(Boolean);
+    const awards = entries.filter((li) => rowOf(li)?.hasAttribute("data-award")).length;
+    const summary = document.querySelector("[data-pubs-summary]");
+    if (summary && total && years.length) {
+      const first = Math.min(...years.map(Number));
+      summary.textContent = `${total} papers since ${first}` + (awards ? `, ${awards} of them with awards.` : ".");
+    }
+
+    // Year menu
+    const yearSelect = document.getElementById("pubs-year");
+    const yearCounts = {};
+    years.forEach((y) => (yearCounts[y] = (yearCounts[y] || 0) + 1));
+    Object.keys(yearCounts)
+      .sort((a, b) => b - a)
+      .forEach((y) => yearSelect.add(new Option(`${y} (${yearCounts[y]})`, y)));
+
+    // Venue chips: venues with two or more papers get their own chip, the rest share one
+    const venueCounts = {};
+    entries.forEach((li) => {
+      const v = venueOf(li);
+      if (v) venueCounts[v] = (venueCounts[v] || 0) + 1;
+    });
+    const mainVenues = Object.keys(venueCounts)
+      .filter((v) => venueCounts[v] > 1)
+      .sort((a, b) => venueCounts[b] - venueCounts[a] || a.localeCompare(b));
+    const otherCount = entries.length - mainVenues.reduce((n, v) => n + venueCounts[v], 0);
+    const venueBox = document.querySelector(".pubs-venues");
+    const chip = (value, label, count, style) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "pubs-venue" + (style ? " pubs-venue-coloured" : "");
+      button.dataset.venue = value;
+      button.setAttribute("aria-pressed", String(value === ""));
+      if (style) button.setAttribute("style", style);
+      button.innerHTML = `${label} <span>${count}</span>`;
+      venueBox.appendChild(button);
+    };
+    chip("", "All", total);
+    mainVenues.forEach((v) => {
+      const sample = entries.find((li) => venueOf(li) === v)?.querySelector(".pub-venue");
+      chip(v, v, venueCounts[v], sample?.getAttribute("style") || "");
+    });
+    if (otherCount > 0) chip("other", "Other venues", otherCount);
+    document.querySelector("[data-pubs-controls]").hidden = false;
+
+    let venue = "";
+    const venueMatches = (li) => !venue || (venue === "other" ? !mainVenues.includes(venueOf(li)) : venueOf(li) === venue);
+
+    const update = () => {
+      const year = yearSelect.value;
+      entries.forEach((li) => li.classList.toggle("pub-filtered", !venueMatches(li) || (year && yearOf(li) !== year)));
+      list.querySelectorAll("h2.bibliography").forEach((heading) => {
+        const ol = heading.nextElementSibling;
+        if (!ol || ol.tagName !== "OL") return;
+        const visible = Array.from(ol.children).some((li) => !li.classList.contains("unloaded") && !li.classList.contains("pub-filtered"));
+        heading.classList.toggle("pub-filtered", !visible);
+        ol.classList.toggle("pub-filtered", !visible);
+      });
+      const shown = entries.filter((li) => !li.classList.contains("unloaded") && !li.classList.contains("pub-filtered")).length;
       const query = input.value.trim();
-      const all = entries().length;
-      const shown = Array.from(entries()).filter((li) => !li.classList.contains("unloaded")).length;
-      if (!query) {
+      const active = Boolean(query || year || venue);
+      if (!active) {
         status.textContent = "";
       } else if (shown === 0) {
-        status.textContent = `No publications match “${query}”.`;
+        status.textContent = query ? `No publications match “${query}” with these filters.` : "No publications match these filters.";
       } else {
-        status.textContent = `Showing ${shown} of ${all} publications.`;
+        status.textContent = `Showing ${shown} of ${total} publications.`;
       }
-      clear.hidden = !query;
+      clear.hidden = !active;
     };
-    // bibsearch.js filters on the same events; report after it has run
-    const later = () => setTimeout(report, 50);
+
+    venueBox.addEventListener("click", (event) => {
+      const button = event.target.closest(".pubs-venue");
+      if (!button) return;
+      venue = button.dataset.venue;
+      venueBox.querySelectorAll(".pubs-venue").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      update();
+    });
+    yearSelect.addEventListener("change", update);
+    // bibsearch.js filters on the same events; update after it has run
+    const later = () => setTimeout(update, 50);
     input.addEventListener("input", later);
     window.addEventListener("hashchange", later);
     later();
@@ -145,6 +220,10 @@ document.addEventListener("DOMContentLoaded", () => {
       input.value = "";
       if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);
       input.dispatchEvent(new Event("input", { bubbles: true }));
+      yearSelect.value = "";
+      venue = "";
+      venueBox.querySelectorAll(".pubs-venue").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.venue === "")));
+      later();
       input.focus();
     });
   }

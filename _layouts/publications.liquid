@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- comment -%}
+  Publications page (_pages/publications.md). The title row carries the filter field; under
+  it, a year menu and venue chips narrow the list. The summary line, the year menu and the
+  venue chips are filled in from the rendered list by assets/js/site.js, so their counts
+  stay correct as papers are added. Without JavaScript the page shows its description and
+  the full list.
+{%- endcomment -%}
+<div class="post publications-page">
+  <header class="pubs-header">
+    <div class="pubs-title-row">
+      <div class="pubs-title">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="pubs-summary" data-pubs-summary>{{ page.description }}</p>
+      </div>
+      {% include bib_search.liquid %}
+    </div>
+    <div class="pubs-controls" data-pubs-controls hidden>
+      <label class="sr-only" for="pubs-year">Year</label>
+      <select id="pubs-year" class="pubs-year">
+        <option value="">All years</option>
+      </select>
+      <span class="pubs-divider" aria-hidden="true"></span>
+      <div class="pubs-venues" role="group" aria-label="Venue"></div>
+    </div>
+    <p id="bibsearch-status" class="bibsearch-status" role="status" aria-live="polite"></p>
+    <button type="button" class="bibsearch-clear" hidden>Clear filters</button>
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+</div>

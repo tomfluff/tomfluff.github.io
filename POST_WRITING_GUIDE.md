@@ -393,6 +393,7 @@ def hello_world():
 
 ### Code with Line Numbers
 
+<!-- prettier-ignore -->
 ```liquid
 {% highlight python linenos %}
 def fibonacci(n):

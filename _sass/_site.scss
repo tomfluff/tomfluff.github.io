@@ -91,6 +91,10 @@
 body {
   font-family:
     "Atkinson Hyperlegible",
+    // Atkinson has no Japanese glyphs; WISS and INTERACTION titles fall back to these
+    "Hiragino Sans",
+    "Yu Gothic UI",
+    "Noto Sans JP",
     Verdana,
     -apple-system,
     BlinkMacSystemFont,
@@ -215,15 +219,26 @@ blockquote {
 // ---------------------------------------------------------------------------
 
 .navbar {
-  // translucency lives in the background, not `opacity`; opacity would fade the
-  // nav links too, letting page content show through the expanded mobile menu
-  background-color: color-mix(in srgb, var(--global-bg-color) 95%, transparent);
+  // solid: any translucency lets body text show through behind the links when
+  // scrolling, which is very visible under magnification
+  background-color: var(--global-bg-color);
   opacity: 1;
+}
 
-  // below the navbar-expand-sm breakpoint the menu drops over page content,
-  // where even 5% bleed-through makes the links hard to read
-  @media (max-width: 575.98px) {
-    background-color: var(--global-bg-color);
+// The current page carries the site's accent rule under its name, so it is not
+// marked by colour and weight alone
+.navbar .navbar-nav .nav-item.active > .nav-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.35rem;
+    width: 1.25rem;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--global-theme-color);
   }
 }
 
@@ -451,7 +466,8 @@ article h2:not(.no-accent) {
     }
 
     .links {
-      a.btn {
+      a.btn,
+      button.btn {
         border: 0;
         background-color: var(--global-bg-color-accent);
         border-radius: 1rem;
@@ -459,7 +475,7 @@ article h2:not(.no-accent) {
         padding-right: 0.5rem;
       }
 
-      a.btn i {
+      .btn i {
         margin-right: 0.25rem;
       }
 
@@ -491,6 +507,161 @@ article h2:not(.no-accent) {
     div.abstract.hidden.open {
       border-color: var(--global-bg-color-accent);
     }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Accessibility baseline
+// ---------------------------------------------------------------------------
+
+// One focus ring everywhere, the same as the narration player's. Several core
+// rules remove the outline on buttons and form fields, so it is restated there.
+:focus-visible {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.form-control:focus-visible,
+.bibsearch-form-input:focus-visible,
+.navbar .nav-link:focus-visible,
+#search-toggle:focus-visible,
+#light-toggle:focus-visible {
+  outline: 3px solid var(--global-theme-color) !important;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--global-theme-color) 25%, transparent);
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 2000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+  font-weight: bold;
+  text-decoration: none;
+
+  &:focus {
+    top: 0.5rem;
+    color: var(--global-bg-color);
+  }
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+// "see all" links sit apart from running text and differ from it only by colour
+// (WCAG 1.4.1), so they carry an underline too
+a.see-all {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+// The theme switch fades colours; skip that for people who ask for less motion
+@media (prefers-reduced-motion: reduce) {
+  html.transition,
+  html.transition body {
+    transition: none !important;
+  }
+}
+
+// News on phones: the date goes above each item instead of wrapping into a
+// narrow column of three lines
+@media (max-width: 575.98px) {
+  .news table,
+  .news tbody,
+  .news tr,
+  .news th,
+  .news td {
+    display: block;
+    width: auto !important;
+  }
+
+  .news th {
+    padding-bottom: 0;
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+  }
+
+  .news td {
+    padding-top: 0.15rem;
+  }
+}
+
+// Pagination: the active page keeps the page colour for its text, so it reads in
+// both themes (white on the dark theme's light purple was 2.6:1), and hover no
+// longer turns text black on the dark background
+.af-page-item.active .af-page-link,
+.pagination .page-item.active .page-link {
+  color: var(--global-bg-color);
+}
+
+.af-page-link:hover,
+.pagination .page-link:hover {
+  color: var(--global-text-color);
+}
+
+// Publication filter: a visible label, theme colours in both modes, and a status
+// line (filled in by assets/js/site.js)
+.bibsearch {
+  max-width: 26rem;
+  margin: 0.75rem 0 1.5rem;
+}
+
+.bibsearch-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+
+.bibsearch-form-input {
+  width: 100%;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+    opacity: 1;
+  }
+}
+
+.bibsearch-status {
+  min-height: 1.5em;
+  margin: 0.5rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.9375rem;
+}
+
+.bibsearch-clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--global-theme-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+// Abstract and Bib are buttons now; give them the same look as the link buttons
+.publications .links button.btn {
+  color: var(--global-text-color);
+  margin-left: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--global-theme-color);
   }
 }
 

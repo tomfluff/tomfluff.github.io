@@ -222,92 +222,94 @@
         </div>
       {% endif %}
       {% if entry.abstract %}
-        <a class="abstract btn btn-md z-depth-0" role="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i>Abstract</a>
+        <button type="button" class="abstract btn btn-md z-depth-0" aria-expanded="false">
+          <i class="fa-regular fa-file-lines" aria-hidden="true"></i>Abstract
+        </button>
       {% endif %}
       {% if entry.doi %}
-        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-md z-depth-0" role="button" aria-label="DOI">
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-md z-depth-0" aria-label="DOI">
           {% include icons/icon-doi.svg %}
           DOI
         </a>
       {% endif %}
       {% if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-md z-depth-0" role="button">
+        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-md z-depth-0">
           {% include icons/icon-arxiv.svg %}
           arXiv
         </a>
       {% endif %}
       {% if entry.hal %}
-        <a href="https://hal.science/{{ entry.hal }}" class="btn btn-sm z-depth-0" role="button">HAL</a>
+        <a href="https://hal.science/{{ entry.hal }}" class="btn btn-sm z-depth-0">HAL</a>
       {% endif %}
       {% if entry.bibtex_show %}
-        <a class="bibtex btn btn-md z-depth-0" role="button"> <i class="fa-solid fa-quote-left" aria-hidden="true"></i>Bib</a>
+        <button type="button" class="bibtex btn btn-md z-depth-0" aria-expanded="false">
+          <i class="fa-solid fa-quote-left" aria-hidden="true"></i>Bib
+        </button>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-md z-depth-0" role="button"><i class="fa-regular fa-file-code" aria-hidden="true"></i>HTML</a>
+          <a href="{{ entry.html }}" class="btn btn-md z-depth-0"><i class="fa-regular fa-file-code" aria-hidden="true"></i>HTML</a>
         {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-md z-depth-0"
             ><i class="fa-regular fa-file-code" aria-hidden="true"></i>HTML</a
           >
         {% endif %}
       {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
-          <a href="{{ entry.pdf }}" class="btn btn-md z-depth-0" role="button"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>PDF</a>
+          <a href="{{ entry.pdf }}" class="btn btn-md z-depth-0"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>PDF</a>
         {% else %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0"
             ><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>PDF</a
           >
         {% endif %}
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
-          <a href="{{ entry.supp }}" class="btn btn-md z-depth-0" role="button"
-            ><i class="fa-regular fa-file-zipper" aria-hidden="true"></i>Supp (ext.)</a
-          >
+          <a href="{{ entry.supp }}" class="btn btn-md z-depth-0"><i class="fa-regular fa-file-zipper" aria-hidden="true"></i>Supp (ext.)</a>
         {% else %}
-          <a href="{{ entry.supp | prepend: '/assets/files/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+          <a href="{{ entry.supp | prepend: '/assets/files/' | relative_url }}" class="btn btn-md z-depth-0"
             ><i class="fa-regular fa-file-zipper" aria-hidden="true"></i>Supp ({{ entry.supp | split: '.' | last }})</a
           >
         {% endif %}
       {% endif %}
       {% if entry.video and site.enable_video_embedding %}
-        <a class="abstract btn btn-md z-depth-0" role="button"><i class="fa-brands fa-youtube" aria-hidden="true"></i>Video</a>
+        <button type="button" class="abstract btn btn-md z-depth-0" aria-expanded="false">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>Video
+        </button>
       {% elsif entry.video %}
-        <a href="{{ entry.video }}" class="btn btn-md z-depth-0" role="button"><i class="fa-brands fa-youtube" aria-hidden="true"></i>Video</a>
+        <a href="{{ entry.video }}" class="btn btn-md z-depth-0"><i class="fa-brands fa-youtube" aria-hidden="true"></i>Video</a>
       {% endif %}
       {% if entry.blog %}
-        <a href="{{ entry.blog }}" class="btn btn-md z-depth-0" role="button"><i class="fa-regular fa-newspaper" aria-hidden="true"></i>Blog</a>
+        <a href="{{ entry.blog }}" class="btn btn-md z-depth-0"><i class="fa-regular fa-newspaper" aria-hidden="true"></i>Blog</a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-md z-depth-0" role="button"><i class="fa-solid fa-code" aria-hidden="true"></i>Code</a>
+        <a href="{{ entry.code }}" class="btn btn-md z-depth-0"><i class="fa-solid fa-code" aria-hidden="true"></i>Code</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
-          <a href="{{ entry.poster }}" class="btn btn-md z-depth-0" role="button"><i class="fa-regular fa-image" aria-hidden="true"></i>Poster</a>
+          <a href="{{ entry.poster }}" class="btn btn-md z-depth-0"><i class="fa-regular fa-image" aria-hidden="true"></i>Poster</a>
         {% else %}
-          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0"
             ><i class="fa-regular fa-image" aria-hidden="true"></i>Poster</a
           >
         {% endif %}
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
-          <a href="{{ entry.slides }}" class="btn btn-md z-depth-0" role="button"
-            ><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>Slides</a
-          >
+          <a href="{{ entry.slides }}" class="btn btn-md z-depth-0"><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>Slides</a>
         {% else %}
-          <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0" role="button"
+          <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0"
             ><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>Slides</a
           >
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-md z-depth-0" role="button"><i class="fa-solid fa-link" aria-hidden="true"></i>Website</a>
+        <a href="{{ entry.website }}" class="btn btn-md z-depth-0"><i class="fa-solid fa-link" aria-hidden="true"></i>Website</a>
       {% endif %}
       {% if entry.demo %}
         {% if entry.demo contains '://' %}
-          <a href="{{ entry.demo }}" class="btn btn-md z-depth-0" role="button"><i class="fa-solid fa-laptop" aria-hidden="true"></i>Demo</a>
+          <a href="{{ entry.demo }}" class="btn btn-md z-depth-0"><i class="fa-solid fa-laptop" aria-hidden="true"></i>Demo</a>
         {% endif %}
       {% endif %}
     </div>
@@ -372,7 +374,6 @@
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
               aria-label="Google Scholar link"
-              role="button"
             >
               {% assign citation_count = 0 %}
               {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
@@ -402,7 +403,6 @@
             <a
               href="https://inspirehep.net/literature/{{ entry.inspirehep_id }}"
               aria-label="Inspirehep link"
-              role="button"
             >
               <img
                 src="https://img.shields.io/badge/inspire-{% inspirehep_citations entry.inspirehep_id %}-001628?logo=inspire&logoColor=001628&labelColor=beige"
@@ -416,14 +416,14 @@
 
     {% if entry.abstract %}
       <!-- Hidden abstract block -->
-      <div class="abstract hidden">
+      <div class="abstract hidden" inert>
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
 
     {% if entry.bibtex_show %}
       <!-- Hidden bibtex block -->
-      <div class="bibtex hidden">
+      <div class="bibtex hidden" inert>
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
         {% endhighlight %}
@@ -432,7 +432,7 @@
 
     {% if entry.video and site.enable_video_embedding %}
       <!-- Hidden video block -->
-      <div class="abstract hidden">
+      <div class="abstract hidden" inert>
         <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
       </div>
     {% endif %}

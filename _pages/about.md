@@ -8,6 +8,7 @@ profile:
   align: right
   image: prof_pic_color.jpg
   image_circular: true # crops the image to make it circular
+  image_alt: Yotam Sechayk smiling, outdoors, with autumn leaves behind him
   more_info: >
     <p style="font-weight: bold;">HCI, Accessibility, AI</p>
     <i>ysechayk (at) acm (dot) org</i>

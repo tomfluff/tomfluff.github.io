@@ -1,4 +1,5 @@
 <header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
@@ -132,7 +133,7 @@
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
-              <button id="search-toggle" type="button" title="Search" aria-label="Open search">
+              <button id="search-toggle" type="button" title="Search (Ctrl K)" aria-label="Search (Ctrl K)">
                 <!-- the shortcut hint is meaningless without a keyboard, so phones get the icon alone -->
                 <span class="nav-link"><span class="search-shortcut-hint">Ctrl K </span><i class="fa-solid fa-magnifying-glass"></i></span>
               </button>
@@ -161,3 +162,5 @@
     </progress>
   {% endif %}
 </header>
+<!-- skip-link target: the main content starts right after the header -->
+<span id="main-content" tabindex="-1"></span>

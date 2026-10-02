@@ -9,13 +9,17 @@
 
 @use "sass:color";
 
-$purple-color: #72099f;
-$light-purple-color: color.adjust($purple-color, $lightness: 40%);
-$complement-purple-color: color.adjust($purple-color, $hue: 180deg);
-$complement-light-purple-color: color.adjust($light-purple-color, $hue: 180deg);
+// Accent: violet. Each value clears 7:1 against its theme's background, and the
+// page colour clears 7:1 as text on it: #5b21a8 on #fff is 9.4:1, #bfa6ff on
+// #1c1c1d is 8.2:1. The dark value is set by hand; deriving it by lightening the
+// light one drifted toward pink.
+$accent-color: #5b21a8;
+$accent-color-dark: #bfa6ff;
+$complement-accent-color: color.adjust($accent-color, $hue: 180deg);
+$complement-accent-color-dark: color.adjust($accent-color-dark, $hue: 180deg);
 
 // secondary-text greys that reach 4.5:1 against each theme's background
 $grey-color-contrast-light: #767676;
 $grey-color-contrast-dark: #949494;
 
-$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-light: rgba($accent-color, 0.05);

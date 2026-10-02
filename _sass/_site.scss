@@ -598,7 +598,7 @@ a.see-all {
 }
 
 // Pagination: the active page keeps the page colour for its text, so it reads in
-// both themes (white on the dark theme's light purple was 2.6:1), and hover no
+// both themes (white on the old dark-theme accent was 2.6:1), and hover no
 // longer turns text black on the dark background
 .af-page-item.active .af-page-link,
 .pagination .page-item.active .page-link {
@@ -737,7 +737,7 @@ a.see-all {
 // ---------------------------------------------------------------------------
 
 :root {
-  --plyr-color-main: #{t.$purple-color};
+  --plyr-color-main: #{t.$accent-color};
   --cursor-radius: 1rem;
 }
 

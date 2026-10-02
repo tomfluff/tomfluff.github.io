@@ -13,9 +13,9 @@
   --global-text-color: #{v.$black-color};
   // darker than v.$grey-color so secondary text clears 4.5:1 on white (WCAG 1.4.3)
   --global-text-color-light: #{t.$grey-color-contrast-light};
-  --global-theme-color: #{t.$purple-color};
-  --global-hover-color: #{t.$purple-color};
-  --cursor-hover-color: #{t.$complement-purple-color};
+  --global-theme-color: #{t.$accent-color};
+  --global-hover-color: #{t.$accent-color};
+  --cursor-hover-color: #{t.$complement-accent-color};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
@@ -90,10 +90,11 @@ html[data-theme="dark"] {
   --global-text-color: #{v.$grey-color-light};
   // lighter than v.$grey-color: on the dark background contrast runs the other way
   --global-text-color-light: #{t.$grey-color-contrast-dark};
-  --global-theme-color: #{t.$light-purple-color};
-  --global-hover-color: #{t.$light-purple-color};
-  --cursor-hover-color: #{t.$complement-light-purple-color};
-  --global-hover-text-color: #{v.$white-color};
+  --global-theme-color: #{t.$accent-color-dark};
+  --global-hover-color: #{t.$accent-color-dark};
+  --cursor-hover-color: #{t.$complement-accent-color-dark};
+  // text placed on the accent (hover states): the light violet needs dark text
+  --global-hover-text-color: #{v.$grey-color-dark};
   --global-footer-bg-color: #{v.$grey-color-light};
   --global-footer-text-color: #{v.$grey-color-dark};
   --global-footer-link-color: #{v.$black-color};

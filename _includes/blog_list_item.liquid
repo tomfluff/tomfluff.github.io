@@ -1,0 +1,46 @@
+{%- comment -%}
+  One entry in the blog index (_pages/blog.md): title, a three-line excerpt, then date,
+  reading time and category, with the post's thumbnail on the right.
+{%- endcomment -%}
+{% assign post = include.post %}
+{% if post.external_source == blank %}
+  {% assign read_time = post.content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+{% else %}
+  {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+{% endif %}
+{% if post.redirect == blank %}
+  {% assign post_href = post.url | relative_url %}
+{% elsif post.redirect contains '://' %}
+  {% assign post_href = post.redirect %}
+{% else %}
+  {% assign post_href = post.redirect | relative_url %}
+{% endif %}
+<li class="blog-item">
+  <div class="blog-item-text">
+    <h2 class="blog-item-title">
+      <a href="{{ post_href }}">{{ post.title }}</a>
+    </h2>
+    {% if post.description %}
+      <p class="blog-item-excerpt">{{ post.description | strip_html }}</p>
+    {% endif %}
+    <p class="blog-item-meta">
+      {% if include.pinned %}
+        <span class="blog-item-pin"><i class="fa-solid fa-thumbtack" aria-hidden="true"></i> Pinned</span>
+        <span aria-hidden="true">&middot;</span>
+      {% endif %}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+      <span aria-hidden="true">&middot;</span>
+      {{ read_time }} min read
+      {% for category in post.categories %}
+        <span aria-hidden="true">&middot;</span>
+        <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category | capitalize }}</a>
+      {% endfor %}
+      {% if post.external_source %}
+        <span aria-hidden="true">&middot;</span> {{ post.external_source }}
+      {% endif %}
+    </p>
+  </div>
+  {% if post.thumbnail %}
+    <img class="blog-item-thumb" src="{{ post.thumbnail | relative_url }}" alt="" loading="lazy">
+  {% endif %}
+</li>

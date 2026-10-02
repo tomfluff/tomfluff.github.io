@@ -717,6 +717,142 @@ article h2:not(.no-accent) {
 }
 
 // ---------------------------------------------------------------------------
+// Blog index: title and description, category links, one list with pins first
+// ---------------------------------------------------------------------------
+
+.blog-index-header {
+  margin-bottom: 1.25rem;
+
+  .post-title {
+    margin-bottom: 0.4rem;
+  }
+
+  .blog-description {
+    font-size: 1.125rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.blog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+
+  a {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    font-size: 0.9375rem;
+    text-decoration: none;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &[aria-current="page"] {
+      background-color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+      font-weight: bold;
+    }
+  }
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 168px;
+  gap: 0 1.5rem;
+  align-items: start;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--global-divider-color);
+
+  .blog-item-text {
+    grid-column: 1;
+  }
+
+  .blog-item-thumb {
+    grid-column: 2;
+    grid-row: 1;
+    width: 168px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--global-divider-color);
+    background-color: var(--global-bg-color-accent);
+  }
+
+  .blog-item-title {
+    font-size: 1.375rem;
+    line-height: 1.25;
+    margin: 0 0 0.4rem;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .blog-item-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 0 0.5rem;
+  }
+
+  .blog-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+    margin: 0;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--global-divider-color);
+      text-underline-offset: 0.2em;
+    }
+  }
+
+  .blog-item-pin {
+    color: var(--global-theme-color);
+    font-weight: bold;
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: minmax(0, 1fr) 92px;
+    gap: 0 0.9rem;
+
+    .blog-item-thumb {
+      width: 92px;
+    }
+
+    .blog-item-title {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Latest posts on the home page: a title, a line of the description and the
 // metadata, so the writing sells itself instead of showing a bare title.
 // ---------------------------------------------------------------------------

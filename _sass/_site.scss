@@ -1379,17 +1379,22 @@ footer .footer-meta {
       margin: 0 0 0.75rem;
     }
 
+    // outlined: a gold ring and icon, with the text in the page's text colour
     .pub-award-pill {
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
-      padding: 0.2rem 0.85rem 0.2rem 0.6rem;
+      padding: 0.15rem 0.85rem 0.15rem 0.6rem;
       border-radius: 999px;
-      border: 1px solid var(--pub-gold-line);
-      background-color: var(--pub-gold);
-      color: #1c1c1d;
+      border: 2px solid var(--pub-gold-line);
+      background-color: transparent;
+      color: var(--global-text-color);
       font-size: 0.9375rem;
       font-weight: bold;
+
+      i {
+        color: var(--pub-gold-line);
+      }
     }
 
     // link buttons: 14px, sentence case, outlined
@@ -1450,7 +1455,9 @@ footer .footer-meta {
   }
 }
 
-// Award gold: #1c1c1d text on #f0b13a is 8.96:1 in both themes
+// Award gold. The thumbnail corner is filled (#1c1c1d on #f0b13a, 8.96:1). The award
+// pill is outlined in --pub-gold-line: #a86f00 on white is 4.25:1, #f0b13a on the dark
+// page is 8.96:1.
 :root {
   --pub-gold: #f0b13a;
   --pub-gold-line: #a86f00;

@@ -1,0 +1,66 @@
+{%- comment -%}
+  Contact links at the end of the home page: a large icon block for each, with its name
+  and one line of detail, all as one link. Built from _data/socials.yml.
+{%- endcomment -%}
+{% assign socials = site.data.socials %}
+<section class="contact-strip" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Contact</h2>
+  <ul class="contact-cards">
+    {% if socials.email %}
+      <li>
+        <a href="mailto:{{ socials.email | encode_email }}">
+          <span class="contact-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+          <span class="contact-text"
+            ><b>Email</b><span>{{ socials.email }}</span></span
+          >
+        </a>
+      </li>
+    {% endif %}
+    {% if socials.scholar_userid %}
+      <li>
+        <a href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}">
+          <span class="contact-icon"><i class="ai ai-google-scholar" aria-hidden="true"></i></span>
+          <span class="contact-text"><b>Google Scholar</b><span>Publications and citations</span></span>
+        </a>
+      </li>
+    {% endif %}
+    {% if socials.github_username %}
+      <li>
+        <a href="https://github.com/{{ socials.github_username }}">
+          <span class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+          <span class="contact-text"
+            ><b>GitHub</b><span>{{ socials.github_username }}</span></span
+          >
+        </a>
+      </li>
+    {% endif %}
+    {% if socials.linkedin_username %}
+      <li>
+        <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}">
+          <span class="contact-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+          <span class="contact-text"
+            ><b>LinkedIn</b><span>{{ socials.linkedin_username }}</span></span
+          >
+        </a>
+      </li>
+    {% endif %}
+    {% if socials.orcid_id %}
+      <li>
+        <a href="https://orcid.org/{{ socials.orcid_id }}">
+          <span class="contact-icon"><i class="fa-brands fa-orcid" aria-hidden="true"></i></span>
+          <span class="contact-text"
+            ><b>ORCID</b><span>{{ socials.orcid_id }}</span></span
+          >
+        </a>
+      </li>
+    {% endif %}
+    {% if socials.rss_icon %}
+      <li>
+        <a href="{{ '/feed.xml' | relative_url }}">
+          <span class="contact-icon"><i class="fa-solid fa-rss" aria-hidden="true"></i></span>
+          <span class="contact-text"><b>RSS</b><span>Blog feed</span></span>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</section>

@@ -125,13 +125,12 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
+    <!-- Social: local change, labelled contact links instead of unlabelled 64px icons -->
     {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
+      {% include contact_strip.liquid %}
+      {% if site.contact_note %}
         <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
+      {% endif %}
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}

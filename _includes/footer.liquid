@@ -1,0 +1,38 @@
+{%- comment -%}
+  Local change: the copyright on the left; the last-updated date and a short credit
+  (site.footer_text) on the right, in smaller text.
+{%- endcomment -%}
+{% capture footer_contents %}
+  <div class="footer-row">
+    <span>&copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.last_name }}</span>
+    <span class="footer-meta">
+      {% if site.last_updated %}Last updated {{ 'now' | date: '%B %-d, %Y' }} &middot;{% endif %}
+      {{ site.footer_text }}
+      {% if site.impressum_path %}
+        &middot; <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>
+      {% endif %}
+    </span>
+  </div>
+{% endcapture %}
+
+{% if site.footer_fixed %}
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      {{ footer_contents }}
+    </div>
+  </footer>
+{% else %}
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    {% if site.newsletter.enabled %}
+      {% if site.plugins contains 'al_newsletter' %}
+        {% include plugins/al_newsletter_form_center.liquid %}
+      {% else %}
+        {% include newsletter.liquid %}
+      {% endif %}
+    {% endif %}
+
+    <div class="container">
+      {{ footer_contents }}
+    </div>
+  </footer>
+{% endif %}

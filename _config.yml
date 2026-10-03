@@ -69,7 +69,7 @@ al_folio:
     allow_remote_loader: false
   features:
     cv:
-      enabled: true
+      enabled: false # the CV is the PDF in cv_pdf; there is no /cv/ page
     distill:
       enabled: true
   compat:

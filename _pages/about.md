@@ -26,7 +26,7 @@ latest_posts:
 
 I am a Ph.D. candidate at The University of Tokyo, advised by [Takeo Igarashi](http://www-ui.is.s.u-tokyo.ac.jp/~takeo/), and co-advised by [Ariel Shamir](https://faculty.runi.ac.il/arik/site/index.asp) of Reichman University.
 
-In 2018 I received a BS in Computer Science and Film Studies as a double-major from Tel-Aviv University, followed by 3+ years as a software engineer at Cadence Design Systems. In 2022, I relocated to Japan to pursue an MSc in Creative Informatics at The University of Tokyo, graduating in 2024.
+In 2018 I received a BS in Computer Science and Film Studies as a double-major from Tel-Aviv University, followed by 2+ years as a software engineer at Cadence Design Systems. In 2022, I relocated to Japan to pursue an MSc in Creative Informatics at The University of Tokyo, graduating in 2024.
 
 My main research interest is accessibility, where I develop and evaluate solutions to help low-vision people more easily use their residual vision to access content. As a **low-vision person** myself, I am motivated to improve visual access to education, media, and everyday-tasks.
 

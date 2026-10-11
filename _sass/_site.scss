@@ -337,8 +337,11 @@ article h3 {
     margin: 0;
   }
 
+  // square, so the photo's space is reserved before it loads
   img {
     width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 
   .profile-band-name {
@@ -631,18 +634,32 @@ html[data-contrast="high"][data-theme="dark"] {
   opacity: 1;
 }
 
-// One navbar height, set here, and the page starts exactly below it. al-folio's
-// progress-bar.js measures the navbar after load and moves the page to match; our
-// larger text made the navbar taller than the 57px the core reserves, so the page
-// jumped down 3-11px once the script ran. The height is in rem, so it grows with
-// the Display text size; the line heights are pinned so that relaxed line spacing,
-// which is for reading text, does not change it.
+// The header sticks to the top of the window instead of floating over the page. A
+// sticky header keeps its own place in the layout, so the page always starts below it,
+// whatever its height: when the navbar wraps on a tablet or at a large text size, or
+// when the phone menu is open. With a fixed header the core reserved 57px instead, and
+// al-folio's progress-bar.js moved the page down to the real height once it had
+// loaded, which made it jump. The navbar's height is in rem, so it grows with the
+// Display text size; its line heights are pinned so relaxed line spacing, which is
+// for reading text, does not change it.
 :root {
   --navbar-height: calc(3.7rem + 1px);
 }
 
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
 #navbar {
   min-height: var(--navbar-height);
+
+  // the header sticks, so the navbar inside it stays in the flow (core .fixed-top
+  // would take it out)
+  &.fixed-top {
+    position: relative;
+  }
 
   .nav-link {
     line-height: 1.7rem;
@@ -653,13 +670,27 @@ html[data-contrast="high"][data-theme="dark"] {
   }
 }
 
-// !important wins over the inline values progress-bar.js sets
+// progress-bar.js sets these inline; !important keeps the page from moving and the
+// reading-progress line at the header's bottom edge
 body.fixed-top-nav {
-  padding-top: var(--navbar-height) !important;
+  padding-top: 0 !important;
 }
 
 #progress {
-  top: var(--navbar-height) !important;
+  position: absolute;
+  top: 100% !important;
+}
+
+// headings reached from a link or the table of contents land below the header
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: calc(var(--navbar-height) + 0.5rem);
+  }
 }
 
 // The current page carries the site's accent rule under its name, so it is not
@@ -670,7 +701,7 @@ body.fixed-top-nav {
   &::after {
     content: "";
     position: absolute;
-    left: 0.5rem;
+    left: var(--nav-link-padding-x, 0.5rem);
     bottom: 0.35rem;
     width: 1.25rem;
     height: 2px;
@@ -679,8 +710,22 @@ body.fixed-top-nav {
   }
 }
 
+// Five pages, search and Display fill the column. Slightly narrower link padding keeps
+// them on one line at the full width; below 992px the search button drops its "Ctrl K"
+// hint (its label still names the shortcut)
+@media (min-width: 576px) {
+  #navbar {
+    --nav-link-padding-x: 0.4rem;
+
+    .navbar-nav .nav-link {
+      padding-left: var(--nav-link-padding-x);
+      padding-right: var(--nav-link-padding-x);
+    }
+  }
+}
+
 .search-shortcut-hint {
-  @media (max-width: 575.98px) {
+  @media (max-width: 991.98px) {
     display: none;
   }
 }
@@ -920,6 +965,84 @@ article h2:not(.no-accent) {
       margin-top: 0;
     }
   }
+}
+
+// Projects page: one full-width card per project. The title link is stretched over the
+// whole card; the Website and GitHub links sit above it so each stays its own target.
+.project-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--global-bg-color);
+
+  &:hover {
+    border-color: var(--global-theme-color);
+  }
+
+  &:has(.project-card-title a:focus-visible) {
+    outline: 3px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  // a fixed 5:2 shape (the read-along banner's) reserves the space before the image
+  // loads, so the text below does not jump
+  .project-card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 2;
+    object-fit: cover;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+}
+
+.project-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.project-card-title {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    // the whole card is the link's target
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.project-card:hover .project-card-title a {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+}
+
+.project-card-text {
+  margin: 0 0 1rem;
+}
+
+.project-card-links {
+  position: relative;
+  z-index: 1;
 }
 
 .post-comments {

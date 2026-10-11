@@ -1,0 +1,43 @@
+{%- comment -%}
+  One project on the projects page (_pages/projects.md). The title link covers the whole
+  card and goes to the project's `redirect` (its own website) or, without one, to its page
+  here. Website and GitHub also get their own labelled links, kept outside the title link
+  so no link sits inside another.
+{%- endcomment -%}
+{%- if project.redirect -%}
+  {%- assign project_href = project.redirect -%}
+{%- else -%}
+  {%- assign project_href = project.url | relative_url -%}
+{%- endif -%}
+<article class="project-card">
+  {% if project.img %}
+    {%
+      include figure.liquid
+      loading="eager"
+      path=project.img
+      sizes="(min-width: 862px) 814px, 100vw"
+      alt=project.img_alt
+      class="project-card-img"
+    %}
+  {% endif %}
+  <div class="project-card-body">
+    <h2 class="project-card-title">
+      <a href="{{ project_href }}">{{ project.title }}</a>
+    </h2>
+    <p class="project-card-text">{{ project.description }}</p>
+    {% if project.redirect or project.github %}
+      <ul class="profile-links project-card-links" aria-label="{{ project.title | escape }} links">
+        {% if project.redirect %}
+          <li>
+            <a href="{{ project.redirect }}"><i class="fa-solid fa-globe" aria-hidden="true"></i>Website</a>
+          </li>
+        {% endif %}
+        {% if project.github %}
+          <li>
+            <a href="{{ project.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </div>
+</article>

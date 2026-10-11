@@ -257,13 +257,11 @@ exclude:
   - vendor
   - _pages/about_einstein* # exclude about_einstein pages
   - _pages/books.md # exclude books page
-  - _pages/projects.md # exclude projects page
   - _pages/dropdown.md # exclude dropdown page
   - _pages/profiles.md # exclude profiles page
   - _pages/repositories.md # exclude repositories page
   - _pages/teaching.md # exclude teaching page
   - _pages/plugins.md # exclude the al-folio plugin catalog page
-  - _projects/*_project.md # exclude default individual project pages
   - _narration/
   - POST_WRITING_GUIDE.md
 keep_files:

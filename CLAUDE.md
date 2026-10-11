@@ -12,6 +12,7 @@ This is a guided, collaborative process. Yotam decides _what_; Claude proposes _
 - **Ask on anything ambiguous.** Wording, tone, design choices, structure, and anything touching Yotam's voice or research framing are his calls. Present options, don't pick silently. Mechanical fixes (typos, broken links, formatting) — just do them.
 - **Commit when asked. Never push.** Edit the working tree freely; wait for an explicit "commit" before committing, and never `git push` — deploying is always Yotam's call.
 - **Verify by serving locally** before reporting a change as done (see below). Don't claim a page renders correctly without having built it.
+- **Only what's public and confirmed.** Keep papers still under review off the site until they're accepted. In posts, state only experiences Yotam has described and features he has seen working; flag anything inferred instead of writing it as fact.
 - **Surgical changes.** Touch only what the request implies. This is a fork of al-folio; leave upstream files alone unless the task is about them.
 
 ## Local development

@@ -968,7 +968,7 @@ article h2:not(.no-accent) {
 }
 
 // Projects page: one full-width card per project. The title link is stretched over the
-// whole card; the Website and GitHub links sit above it so each stays its own target.
+// whole card; the Website, GitHub and blog post links sit above it so each stays its own target.
 .project-list {
   display: grid;
   gap: 2rem;
@@ -1034,6 +1034,11 @@ article h2:not(.no-accent) {
 .project-card:hover .project-card-title a {
   color: var(--global-theme-color);
   text-decoration: underline;
+}
+
+.project-card-date {
+  margin: 0 0 0.5rem;
+  color: var(--global-text-color-light);
 }
 
 .project-card-text {

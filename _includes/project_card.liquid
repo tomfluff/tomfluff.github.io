@@ -1,8 +1,8 @@
 {%- comment -%}
   One project on the projects page (_pages/projects.md). The title link covers the whole
   card and goes to the project's `redirect` (its own website) or, without one, to its page
-  here. Website and GitHub also get their own labelled links, kept outside the title link
-  so no link sits inside another.
+  here. Website, GitHub and the blog post (`post`) also get their own labelled links, kept
+  outside the title link so no link sits inside another. `date` is the release date.
 {%- endcomment -%}
 {%- if project.redirect -%}
   {%- assign project_href = project.redirect -%}
@@ -24,8 +24,13 @@
     <h2 class="project-card-title">
       <a href="{{ project_href }}">{{ project.title }}</a>
     </h2>
+    {% if project.date %}
+      <p class="project-card-date">
+        Released <time datetime="{{ project.date | date: '%Y-%m-%d' }}">{{ project.date | date: '%B %-d, %Y' }}</time>
+      </p>
+    {% endif %}
     <p class="project-card-text">{{ project.description }}</p>
-    {% if project.redirect or project.github %}
+    {% if project.redirect or project.github or project.post %}
       <ul class="profile-links project-card-links" aria-label="{{ project.title | escape }} links">
         {% if project.redirect %}
           <li>
@@ -35,6 +40,11 @@
         {% if project.github %}
           <li>
             <a href="{{ project.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+          </li>
+        {% endif %}
+        {% if project.post %}
+          <li>
+            <a href="{{ project.post | relative_url }}"><i class="fa-solid fa-newspaper" aria-hidden="true"></i>Blog post</a>
           </li>
         {% endif %}
       </ul>

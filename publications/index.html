@@ -292,7 +292,7 @@
   <span class="na">address</span> <span class="p">=</span> <span class="s">{Japan}</span><span class="p">,</span>
   <span class="na">language</span> <span class="p">=</span> <span class="s">{japanese}</span><span class="p">,</span>
   <span class="na">preview_alt</span> <span class="p">=</span> <span class="s">{First page of the Smart Replay paper, written in Japanese, showing the title, authors, abstract, and a figure of the Smart Replay interface for e-learning videos.}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> <div class="footer-row"> <span>© 2026 Yotam Sechayk</span> <span class="footer-meta"> Last updated October 11, 2026 · Built with <a href="https://jekyllrb.com/" rel="external nofollow noopener" target="_blank">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> </span> </div> </div> </footer> <script>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> <div class="footer-row"> <span>© 2026 Yotam Sechayk</span> <span class="footer-meta"> Last updated October 12, 2026 · Built with <a href="https://jekyllrb.com/" rel="external nofollow noopener" target="_blank">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> </span> </div> </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -356,6 +356,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/accessibility-on-by-default/";
+          
+        },
+      },{id: "post-slidenotes-comments-that-point-at-the-slide",
+        
+          title: "SlideNotes: Comments That Point at the Slide",
+        
+        description: "Comments on slides are hard for me to follow, because the mark that shows what a comment refers to is often subtle. So I built SlideNotes, a browser tool where every comment is tied to a numbered region on the slide. I explain what it does, how the exports work for co-authors and AI agents, and why nothing you load ever leaves your machine.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/slidenotes/";
           
         },
       },{id: "post-a-label-is-not-a-priority",
@@ -558,7 +569,15 @@ ninja.data = [{
           section: "News",},{id: "news-released-slidenotes-as-open-source-software-review-slide-decks-right-in-the-browser-mark-regions-write-comments-and-export-a-comment-sheet-for-co-authors-or-ai-agents-nothing-leaves-your-machine-try-it-at-tomfluff-github-io-slidenotes",
           title: 'Released SlideNotes as open-source software! Review slide decks right in the browser: mark...',
           description: "",
-          section: "News",},{id: "projects-read-along",
+          section: "News",},{id: "news-released-read-along-as-an-open-source-public-preview-a-mod-for-claude-code-that-reads-claude-s-replies-aloud-and-highlights-each-sentence-as-you-hear-it-with-voices-that-run-on-your-own-machine-try-it-at-sechayk-com-claude-read-along-and-read-why-i-built-it",
+          title: 'Released Read-along as an open-source public preview! A mod for Claude Code that...',
+          description: "",
+          section: "News",},{id: "projects-slidenotes",
+          title: 'SlideNotes',
+          description: "Review slide decks in the browser. Mark a region on a slide, write the comment next to it, and export a comment sheet for co-authors or AI agents. Slides never leave your machine.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/slidenotes/";
+            },},{id: "projects-read-along",
           title: 'Read-along',
           description: "A mod for Claude Code that reads Claude&#39;s replies aloud and highlights each sentence as you hear it. The voices run on your own machine, in many languages. Public preview, version 0.9.0.",
           section: "Projects",handler: () => {

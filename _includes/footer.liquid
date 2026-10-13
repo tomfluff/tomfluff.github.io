@@ -1,8 +1,47 @@
 {%- comment -%}
-  Local change: the copyright on the left; the last-updated date and a short credit
-  (site.footer_text) on the right, in smaller text.
+  Local change: a row of links (contact, profiles and the RSS feed, from
+  _data/socials.yml) on every page except the home page, which has the same links in
+  its Contact section; under it the copyright on the left, and the
+  last-updated date and a short credit (site.footer_text) on the right, in smaller text.
 {%- endcomment -%}
+{% assign socials = site.data.socials %}
 {% capture footer_contents %}
+  {% unless page.layout == 'about' %}
+  <nav aria-label="Contact and feed">
+    <ul class="footer-links">
+      {% if socials.email %}
+        <li>
+          <a href="mailto:{{ socials.email | encode_email }}"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>Email</span></a>
+        </li>
+      {% endif %}
+      {% if socials.scholar_userid %}
+        <li>
+          <a href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}"><i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span></a>
+        </li>
+      {% endif %}
+      {% if socials.github_username %}
+        <li>
+          <a href="https://github.com/{{ socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+        </li>
+      {% endif %}
+      {% if socials.linkedin_username %}
+        <li>
+          <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+        </li>
+      {% endif %}
+      {% if socials.orcid_id %}
+        <li>
+          <a href="https://orcid.org/{{ socials.orcid_id }}"><i class="fa-brands fa-orcid" aria-hidden="true"></i><span>ORCID</span></a>
+        </li>
+      {% endif %}
+      {% if socials.rss_icon %}
+        <li>
+          <a href="{{ '/feed.xml' | relative_url }}"><i class="fa-solid fa-rss" aria-hidden="true"></i><span>RSS</span></a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endunless %}
   <div class="footer-row">
     <span>&copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.last_name }}</span>
     <span class="footer-meta">

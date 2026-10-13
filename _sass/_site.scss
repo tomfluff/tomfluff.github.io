@@ -1334,6 +1334,41 @@ html[data-theme="dark"] {
   --contact-block-line: #6e6e78;
 }
 
+// Contact, profile and feed links on every page: an icon and a name each, with
+// the underline on the name only
+footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 32px;
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    span {
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+    }
+  }
+
+  i {
+    width: 1.1em;
+    text-align: center;
+  }
+}
+
 footer .footer-row {
   display: flex;
   flex-wrap: wrap;

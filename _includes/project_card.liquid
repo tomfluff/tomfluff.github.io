@@ -1,8 +1,10 @@
 {%- comment -%}
   One project on the projects page (_pages/projects.md). The title link covers the whole
   card and goes to the project's `redirect` (its own website) or, without one, to its page
-  here. Website, GitHub and the blog post (`post`) also get their own labelled links, kept
-  outside the title link so no link sits inside another. `date` is the release date.
+  here. Website, Paper, GitHub, Video, Demo and the blog post (`post`) also get their own
+  labelled links, kept outside the title link so no link sits inside another. Research
+  projects show their `venue` and `award`, and `lead` when someone else led the work; side
+  projects show `date`, the release date.
 {%- endcomment -%}
 {%- if project.redirect -%}
   {%- assign project_href = project.redirect -%}
@@ -15,31 +17,55 @@
       include figure.liquid
       loading="eager"
       path=project.img
-      sizes="(min-width: 862px) 814px, 100vw"
+      sizes="(min-width: 862px) 400px, (min-width: 576px) 50vw, 100vw"
       alt=project.img_alt
       class="project-card-img"
     %}
   {% endif %}
   <div class="project-card-body">
-    <h2 class="project-card-title">
+    <h3 class="project-card-title">
       <a href="{{ project_href }}">{{ project.title }}</a>
-    </h2>
-    {% if project.date %}
+    </h3>
+    {% if project.venue %}
+      <p class="project-card-date">
+        {{ project.venue -}}
+        {%- if project.award %} &middot; {{ project.award }}{% endif %}
+        {% if project.lead -%}
+          <br>
+          Co-author, led by {{ project.lead -}}
+        {%- endif %}
+      </p>
+    {% elsif project.date %}
       <p class="project-card-date">
         Released <time datetime="{{ project.date | date: '%Y-%m-%d' }}">{{ project.date | date: '%B %-d, %Y' }}</time>
       </p>
     {% endif %}
     <p class="project-card-text">{{ project.description }}</p>
-    {% if project.redirect or project.github or project.post %}
+    {% if project.redirect or project.paper or project.github or project.video or project.demo or project.post %}
       <ul class="profile-links project-card-links" aria-label="{{ project.title | escape }} links">
-        {% if project.redirect %}
+        {% if project.redirect and project.redirect != project.demo and project.redirect != project.github %}
           <li>
             <a href="{{ project.redirect }}"><i class="fa-solid fa-globe" aria-hidden="true"></i>Website</a>
+          </li>
+        {% endif %}
+        {% if project.paper %}
+          <li>
+            <a href="{{ project.paper | relative_url }}"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>Paper</a>
           </li>
         {% endif %}
         {% if project.github %}
           <li>
             <a href="{{ project.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+          </li>
+        {% endif %}
+        {% if project.video %}
+          <li>
+            <a href="{{ project.video }}"><i class="fa-solid fa-video" aria-hidden="true"></i>Video</a>
+          </li>
+        {% endif %}
+        {% if project.demo %}
+          <li>
+            <a href="{{ project.demo }}"><i class="fa-solid fa-play" aria-hidden="true"></i>Demo</a>
           </li>
         {% endif %}
         {% if project.post %}

@@ -967,15 +967,32 @@ article h2:not(.no-accent) {
   }
 }
 
-// Projects page: one full-width card per project. The title link is stretched over the
-// whole card; the Website, GitHub and blog post links sit above it so each stays its own target.
+// Projects page: research projects, then side projects, two cards a row (one on
+// phones). The title link is stretched over the whole card; the Website, Paper, GitHub
+// and other links sit above it so each stays its own target.
+.project-group {
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 .project-list {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .project-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--global-divider-color);
   border-radius: 12px;
   overflow: hidden;
@@ -994,24 +1011,28 @@ article h2:not(.no-accent) {
     margin: 0;
   }
 
-  // a fixed 5:2 shape (the read-along banner's) reserves the space before the image
-  // loads, so the text below does not jump
+  // a fixed 2:1 shape reserves the space before the image loads, so the text below
+  // does not jump; the paper figures are made at 2:1, and the wider banners are cropped
   .project-card-img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 5 / 2;
+    aspect-ratio: 2 / 1;
     object-fit: cover;
     border-bottom: 1px solid var(--global-divider-color);
   }
 }
 
+// the links sit at the bottom of the card, so they line up across a row
 .project-card-body {
-  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem 1.25rem 1.25rem;
 }
 
 .project-card-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 0 0.5rem;
 
   a {
@@ -1048,6 +1069,7 @@ article h2:not(.no-accent) {
 .project-card-links {
   position: relative;
   z-index: 1;
+  margin-top: auto;
 }
 
 .post-comments {

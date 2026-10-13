@@ -9,6 +9,7 @@ redirect: https://sechayk.com/slidenotes/
 github: https://github.com/tomfluff/slidenotes
 post: /blog/2026/slidenotes/
 date: 2026-09-23
+kind: side
 importance: 2
 ---
 

@@ -4,9 +4,17 @@
 {%- endcomment -%}
 {% assign post = include.post %}
 {% if post.external_source == blank %}
-  {% assign read_time = post.content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+  {% assign read_words = post.content | strip_html | number_of_words %}
 {% else %}
-  {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+  {% assign read_words = post.feed_content | strip_html | number_of_words %}
+{% endif %}
+{% comment %} An external post with no text of its own sets read_time by hand, or shows none. {% endcomment %}
+{% if post.read_time %}
+  {% assign read_time = post.read_time %}
+{% elsif read_words > 0 %}
+  {% assign read_time = read_words | divided_by: 180 | plus: 1 %}
+{% else %}
+  {% assign read_time = null %}
 {% endif %}
 {% if post.redirect == blank %}
   {% assign post_href = post.url | relative_url %}
@@ -29,8 +37,10 @@
         <span aria-hidden="true">&middot;</span>
       {% endif %}
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
-      <span aria-hidden="true">&middot;</span>
-      {{ read_time }} min read
+      {% if read_time %}
+        <span aria-hidden="true">&middot;</span>
+        {{ read_time }} min read
+      {% endif %}
       {% for category in post.categories %}
         <span aria-hidden="true">&middot;</span>
         <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category | capitalize }}</a>

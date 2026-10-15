@@ -20,7 +20,14 @@
         {% else %}
           {% assign post_href = post.redirect | relative_url %}
         {% endif %}
-        {% assign post_read_time = post.content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+        {% assign post_read_words = post.content | strip_html | number_of_words %}
+        {% if post.read_time %}
+          {% assign post_read_time = post.read_time %}
+        {% elsif post_read_words > 0 %}
+          {% assign post_read_time = post_read_words | divided_by: 180 | plus: 1 %}
+        {% else %}
+          {% assign post_read_time = null %}
+        {% endif %}
         <li>
           <a href="{{ post_href }}">
             {% if post.thumbnail %}
@@ -29,7 +36,10 @@
               <span class="related-noimage" aria-hidden="true"></span>
             {% endif %}
             <span class="related-title">{{ post.title }}</span>
-            <span class="related-meta">{{ post.date | date: '%B %-d, %Y' }} &middot; {{ post_read_time }} min read</span>
+            <span class="related-meta">
+              {{- post.date | date: '%B %-d, %Y' -}}
+              {%- if post_read_time %} &middot; {{ post_read_time }} min read{% endif -%}
+            </span>
           </a>
         </li>
       {% endfor %}

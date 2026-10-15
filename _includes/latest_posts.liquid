@@ -11,9 +11,16 @@
     <ul class="latest-posts-list">
       {% for item in latest_posts limit: latest_posts_limit %}
         {% if item.external_source == blank %}
-          {% assign read_time = item.content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+          {% assign read_words = item.content | strip_html | number_of_words %}
         {% else %}
-          {% assign read_time = item.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+          {% assign read_words = item.feed_content | strip_html | number_of_words %}
+        {% endif %}
+        {% if item.read_time %}
+          {% assign read_time = item.read_time %}
+        {% elsif read_words > 0 %}
+          {% assign read_time = read_words | divided_by: 180 | plus: 1 %}
+        {% else %}
+          {% assign read_time = null %}
         {% endif %}
 
         <li class="latest-post">
@@ -53,8 +60,10 @@
 
           <p class="latest-post-meta">
             <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
-            <span aria-hidden="true">&middot;</span>
-            {{ read_time }} min read
+            {% if read_time %}
+              <span aria-hidden="true">&middot;</span>
+              {{ read_time }} min read
+            {% endif %}
             {% if item.tags.size > 0 %}
               <span aria-hidden="true">&middot;</span>
               {% for tag in item.tags limit: 3 %}

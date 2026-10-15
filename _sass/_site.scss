@@ -1673,6 +1673,39 @@ footer .footer-meta {
         margin-right: 0;
       }
 
+      // a split button: two links that read as one, [Poster HTML | PDF]; they share
+      // the middle border, and the hovered or focused half draws over its neighbour
+      .btn-split {
+        display: inline-flex;
+
+        a.btn {
+          position: relative;
+        }
+
+        a.btn:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        a.btn + a.btn {
+          margin-left: -1px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        a.btn:hover,
+        a.btn:focus-visible {
+          z-index: 1;
+        }
+      }
+
+      .btn-split-tag {
+        color: var(--global-text-color-light);
+        font-size: 0.75rem;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+      }
+
       // inline SVG icons match the surrounding text size and align with it
       a.btn svg {
         width: 1em;

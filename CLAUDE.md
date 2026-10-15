@@ -63,6 +63,14 @@ Conventions worth stating up front:
 - `description` is a real paragraph (it's used as the excerpt), not a one-line summary.
 - New posts: mirror the front matter of a recent post rather than inventing fields.
 
+## Publications
+
+Entries live in `_bibliography/papers.bib`; the link buttons under each one come from `_layouts/bib.liquid` (a local override). Before building a new kind of button, check what is there:
+
+- `poster` takes a URL, a PDF in `assets/pdf/`, or an HTML page in `assets/html/` (standalone pages, skipped by Prettier).
+- `poster_pdf` next to an HTML `poster` turns them into one split button, **[Poster HTML | PDF]** (`.btn-split` in `_sass/_site.scss`). Reuse that pattern for any other two-format link.
+- Short addresses for QR codes live in `posters/<slug>/index.html`, a static page that forwards to the poster. Printed codes can't change, so keep these paths stable and update only where they forward.
+
 ## Non-goals
 
 Don't restructure the al-folio theme, add dependencies, or "improve" adjacent code that isn't part of the request.

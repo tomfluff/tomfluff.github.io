@@ -12,3 +12,5 @@ assets/audio/**/*.json
 assets/css/main.scss
 # Written by `al-folio upgrade overrides accept`
 .al-folio-overrides.yml
+# Standalone HTML pages (for example posters), kept exactly as exported
+assets/html/**

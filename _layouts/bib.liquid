@@ -287,14 +287,27 @@
       {% if entry.code %}
         <a href="{{ entry.code }}" class="btn btn-md z-depth-0"><i class="fa-solid fa-code" aria-hidden="true"></i>Code</a>
       {% endif %}
+      {% comment %}
+        Local change: an HTML poster lives in assets/html/, a PDF one in assets/pdf/.
+        poster_pdf adds a second button for the PDF when the poster itself is HTML.
+      {% endcomment %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
           <a href="{{ entry.poster }}" class="btn btn-md z-depth-0"><i class="fa-regular fa-image" aria-hidden="true"></i>Poster</a>
+        {% elsif entry.poster contains '.html' %}
+          <a href="{{ entry.poster | prepend: '/assets/html/' | relative_url }}" class="btn btn-md z-depth-0"
+            ><i class="fa-regular fa-image" aria-hidden="true"></i>Poster</a
+          >
         {% else %}
           <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0"
             ><i class="fa-regular fa-image" aria-hidden="true"></i>Poster</a
           >
         {% endif %}
+      {% endif %}
+      {% if entry.poster_pdf %}
+        <a href="{{ entry.poster_pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-md z-depth-0"
+          ><i class="fa-regular fa-file-pdf" aria-hidden="true"></i>Poster (PDF)</a
+        >
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}

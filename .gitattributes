@@ -1,2 +1,3 @@
-# Force LF line endings, needed for Docker to work on Windows
+# Use LF (Unix) line endings for every text file; Docker on Windows needs it for *.sh
+* text=auto eol=lf
 *.sh text eol=lf

@@ -486,6 +486,11 @@ I'm also looking forward to the panel's advice on building a research career as 
 
 If you're at UIST 2026, come say hi!
 
+<!-- prettier-ignore-start -->
+> **Read the poster online.** My symposium poster has an [accessible web version](/assets/html/visual-communication-ds-poster.html) that you can zoom, reflow, and read with a screen reader.
+{: .block-tip }
+<!-- prettier-ignore-end -->
+
 If you want to read more about why I care so much about designing _with_ the vision we have, check out my post on why [my needs are not "special"](/blog/2026/my-needs-are-not-special/).
 
 I'm grateful to my advisors, Takeo Igarashi and Ariel Shamir, and to everyone who shared their experiences in these studies.

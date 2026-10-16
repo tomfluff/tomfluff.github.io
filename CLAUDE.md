@@ -70,7 +70,7 @@ Entries live in `_bibliography/papers.bib`; the link buttons under each one come
 - `poster` takes a URL, a PDF in `assets/pdf/`, or an HTML page in `assets/html/` (standalone pages, skipped by Prettier).
 - `poster_pdf` next to an HTML `poster` turns them into one split button, **[Poster HTML | PDF]** (`.btn-split` in `_sass/_site.scss`). Reuse that pattern for any other two-format link.
 - Short addresses for QR codes live in `posters/<slug>/index.html`, a static page that forwards to the poster. Printed codes can't change, so keep these paths stable and update only where they forward.
-- `assets/html/visual-communication-ds-poster.html` has front matter (with a `permalink` to keep its URL) so Liquid can add a link to the blog post once that post is published. Re-exporting the poster drops it, so add it back.
+- Every poster page in `assets/html/` has front matter (with a `permalink` to keep its URL) and `{% include plugins/al_analytics_scripts.liquid %}` before `</head>`, so it gets the site's Google Analytics. `visual-communication-ds-poster.html` also uses Liquid to add a link to the blog post once that post is published. Re-exporting a poster drops both, so add them back.
 
 ## Non-goals
 

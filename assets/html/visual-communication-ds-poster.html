@@ -1,5 +1,5 @@
 ---
-# Jekyll processes this page only to add the blog post link below once the post is published (2026-11-01).
+# Jekyll processes this page to add the site's analytics, and the blog post link below once the post is published (2026-11-01).
 layout: null
 sitemap: false
 permalink: /assets/html/visual-communication-ds-poster.html
@@ -81,6 +81,8 @@ footer { border-top:3px solid var(--fg); margin-top:3rem; padding-top:1rem; }
 .job { display:inline-block; background:#cea665; color:#1c1b19; padding:.3rem .9rem; border-radius:2rem; font-weight:800; }
 @media print { html { font-size:100%; } nav.toc, .skip { display:none; } }
 </style>
+<!-- Analytics, from the site's _config.yml -->
+{% include plugins/al_analytics_scripts.liquid %}
 </head>
 <body>
 <a class="skip" href="#main">Skip to poster content</a>

@@ -1,3 +1,9 @@
+---
+# Jekyll processes this page only to add the site's analytics.
+layout: null
+sitemap: false
+permalink: /assets/html/see-what-i-mean-poster.html
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -71,6 +77,8 @@ td .bar.g span { background:var(--bar2); }
 footer { border-top:3px solid var(--blue); margin-top:3rem; padding-top:1rem; }
 @media print { html { font-size:100%; } nav.toc, .skip { display:none; } }
 </style>
+<!-- Analytics, from the site's _config.yml -->
+{% include plugins/al_analytics_scripts.liquid %}
 </head>
 <body>
 <a class="skip" href="#main">Skip to poster content</a>

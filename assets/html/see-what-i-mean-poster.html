@@ -35,6 +35,13 @@ nav.toc { background:var(--tint); padding:.8rem 1.2rem; margin-top:1.5rem; }
 nav.toc h2 { font-size:1.1rem; border:0; margin:0 0 .3rem; padding:0; }
 nav.toc ol { margin:0; padding-left:1.4rem; }
 .answer { background:var(--tint); border-left:6px solid var(--blue); padding:.6rem 1rem; margin:.4rem 0 1rem; }
+.takeaway { background:var(--yel); color:#000; padding:.8rem 1.1rem; margin:1.6rem 0 .4rem; font-size:1.2rem; }
+.takeaway .label { color:#000; }
+.themes { padding-left:0; list-style:none; }
+.themes li { background:var(--tint); border-top:6px solid var(--blue); padding:.7rem 1rem; margin:.7rem 0; }
+.themes .t { display:block; font-family:Lexend, sans-serif; font-weight:700; color:var(--blue); }
+.stat { border:3px solid var(--blue); padding:.6rem 1rem; margin:1rem 0; }
+.stat .n { font-family:Lexend, sans-serif; font-weight:700; font-size:1.8rem; color:var(--blue); margin-right:.6rem; }
 .label { font-family:Lexend, sans-serif; font-weight:700; color:var(--blue); }
 figure { margin:1rem 0 1.6rem; }
 figure img { width:100%; height:auto; border:2px solid var(--fg); display:block; }
@@ -88,7 +95,7 @@ footer { border-top:3px solid var(--blue); margin-top:3rem; padding-top:1rem; }
 <li><a href="#exploration">During exploration: ask, follow, point</a></li>
 <li><a href="#probe">How the probe works</a></li>
 <li><a href="#study">Technology probe study</a></li>
-<li><a href="#rq1">RQ1: Seeing my view helped</a></li>
+<li><a href="#rq1">RQ1: Sharing my view helped</a></li>
 <li><a href="#rq2">RQ2: Adapted answers mattered</a></li>
 <li><a href="#dr">Design recommendations</a></li>
 </ol>
@@ -102,6 +109,7 @@ footer { border-top:3px solid var(--blue); margin-top:3rem; padding-top:1rem; }
 <p class="answer"><span class="label">Answer.</span> <strong>Sharing their view helped</strong> under both personas: it complemented vision, reduced effort, and kept independence.</p>
 <h3>RQ2: Should AI support systems for low-vision individuals adapt their response content?</h3>
 <p class="answer"><span class="label">Answer.</span> <strong>Adapted answers mattered</strong>: 8 of 12 participants preferred the AI that adapts its answers to low vision, and 9 of 12 followed its directions.</p>
+<p class="takeaway"><span class="label">Key takeaway. Adapt both sides:</span> what the AI sees and what it says.</p>
 </section>
 
 <section aria-labelledby="exploration">
@@ -162,26 +170,17 @@ footer { border-top:3px solid var(--blue); margin-top:3rem; padding-top:1rem; }
 
 <section aria-labelledby="study">
 <h2 id="study">Technology probe study</h2>
-<p>12 low-vision participants, within-subjects design. Session order:</p>
-<ol class="flow">
-<li>Training</li>
-<li>Persona A: chart 1</li>
-<li>NASA-TLX and custom Likert questions</li>
-<li>Persona B: chart 2</li>
-<li>NASA-TLX and custom Likert questions</li>
-<li>SUS questionnaire and interview</li>
-</ol>
+<p><strong>12 low-vision participants</strong> explored two charts, one per AI persona: a <strong>general AI (GAI)</strong> and a <strong>low-vision AI (LVAI)</strong> that adapts its answers.</p>
 </section>
 
 <section aria-labelledby="rq1">
-<h2 id="rq1">RQ1: Seeing my view helped</h2>
-<h3>Complement vision</h3>
-<blockquote><p>“…when I asked, it just kind of confirmed that I didn’t have to go out of my way to go down and look and piece apart that information. It just kind of laid it out.”</p><p class="who"><span class="vh">Participant </span>P5</p></blockquote>
-<h3>Reduce effort</h3>
-<blockquote><p>“usually I have to go scan a chart in, and then manipulate it, and then start looking up the information I’m questioning. This is more of a one-stop shop.”</p><p class="who"><span class="vh">Participant </span>P3</p></blockquote>
-<h3>Agency and independence</h3>
-<blockquote><p>“It’s just giving me more agency because it’s not something I can necessarily see.”</p><p class="who"><span class="vh">Participant </span>P11</p></blockquote>
-<blockquote><p>“…there’s only so many questions you can ask someone before they ask, are you sure you know what you’re doing? … So it’s really important to be able to navigate this data independently.”</p><p class="who"><span class="vh">Participant </span>P9</p></blockquote>
+<h2 id="rq1">RQ1: Sharing my view helped</h2>
+<ul class="themes">
+<li><span class="t">Complement vision</span>Filled in <strong>what vision missed</strong>: colors, labels, and values out of view.</li>
+<li><span class="t">Agency and independence</span><strong>Asked only when needed</strong>, without the social cost of asking a person.</li>
+<li><span class="t">Reduce effort</span><strong>One click</strong> replaced panning, zooming, and cross-referencing.</li>
+</ul>
+<p class="stat"><span class="n">89.6</span><strong>Usability (SUS)</strong>, out of 100.</p>
 </section>
 
 <section aria-labelledby="rq2">
@@ -194,23 +193,22 @@ footer { border-top:3px solid var(--blue); margin-top:3rem; padding-top:1rem; }
 <tr><th scope="row">Semantic guidance</th><td>84.8%<span class="bar" aria-hidden="true"><span style="width:84.8%"></span></span></td><td>29.1%<span class="bar g" aria-hidden="true"><span style="width:29.1%"></span></span></td></tr>
 </tbody>
 </table>
-<blockquote><p>“much more specific about tying [the visuals] back to numbers or magnitudes … better suited to [their] personal needs.”</p><p class="who"><span class="vh">Participant </span>P2</p></blockquote>
-<blockquote><p>“…as my vision gets narrower… it’s gonna be harder for me to locate [countries]… with this technology, I could click on it, it could tell me, and I could keep moving.”</p><p class="who"><span class="vh">Participant </span>P12</p></blockquote>
-<blockquote><p>“describe some of the things on this map that appear very small… what in this chart is potentially visibly difficult to notice.”</p><p class="who"><span class="vh">Participant </span>P11</p></blockquote>
+<blockquote><p>“…much more specific… better suited to [their] personal needs.”</p><p class="who"><span class="vh">Participant </span>P2</p></blockquote>
+<blockquote><p>“I could click on it, it could tell me, and I could keep moving.”</p><p class="who"><span class="vh">Participant </span>P12</p></blockquote>
 <div class="limit">
 <h3>Limitation</h3>
-<p><strong>5 of 12</strong> found the LVAI <strong>wordier</strong>, and it did not align with their in-the-moment needs.</p>
+<p><strong>5 of 12</strong> found the LVAI <strong>wordier</strong> than they needed in the moment.</p>
 <blockquote><p>“Sometimes I want an easy answer, value, name.”</p><p class="who"><span class="vh">Participant </span>P1</p></blockquote>
 </div>
 </section>
 
 <section aria-labelledby="dr">
-<h2 id="dr">Design recommendations: adapt both sides, what the AI sees and what it says</h2>
+<h2 id="dr">Design recommendations</h2>
 <ol class="dr">
 <li><span class="t">DR1: Anchor answers on the chart</span>Pin, highlight, and annotate in the user’s view.</li>
 <li><span class="t">DR2: Design for verifiability</span>Show what the AI refers to, so users can check it.</li>
 <li><span class="t">DR3: Scale answers to the action</span>Quick answers for clicks, detail for typed questions.</li>
-<li><span class="t">DR4: Augment vision, keep agency</span>Keep every exchange user-initiated; the user’s view leads.</li>
+<li><span class="t">DR4: Augment vision, keep agency</span>Keep exchanges user-initiated; the user’s view leads.</li>
 </ol>
 </section>
 </main>

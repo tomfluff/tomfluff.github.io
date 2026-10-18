@@ -186,6 +186,8 @@ footer a {
 
 blockquote {
   font-size: 1rem;
+  // the post's citation quotes its full URL, which is wider than a phone at large text sizes
+  overflow-wrap: break-word;
 
   &.block-note {
     border-color: var(--global-note-block);
@@ -469,6 +471,84 @@ article h3 {
       color: var(--global-theme-color);
     }
   }
+
+  .display-icon {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .display-backdrop {
+    display: none;
+  }
+}
+
+// Below 992px the button is the "Aa" icon alone, like the search button losing its
+// "Ctrl K" hint, so the navbar keeps to one row; the word stays for screen readers
+@media (max-width: 991.98px) {
+  .display-settings {
+    #display-toggle {
+      justify-content: center;
+      min-width: 2.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .display-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+  }
+}
+
+// Phones: the button sits in the top bar between the name and the menu button, and the
+// panel is a sheet from the bottom of the screen over a dimmed page. The bar lines up
+// with the text column, which leaves room for all three at the largest text size.
+@media (max-width: 575.98px) {
+  #navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .display-settings {
+    position: static;
+    order: 1;
+    margin-left: auto;
+
+    #display-toggle {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+    }
+
+    .display-icon {
+      font-size: 1.05rem;
+    }
+
+    .display-backdrop:not([hidden]) {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 1060;
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  #navbar .navbar-toggler {
+    order: 2;
+    margin-left: 0.5rem;
+    padding-right: 0;
+  }
+
+  #navbar .navbar-collapse {
+    order: 3;
+  }
 }
 
 .display-panel {
@@ -487,10 +567,28 @@ article h3 {
     0 8px 24px -6px rgba(0, 0, 0, 0.22),
     0 2px 6px rgba(0, 0, 0, 0.08);
 
+  .display-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+  }
+
   .display-panel-title {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    margin: 0 0 0.75rem;
+    margin: 0;
+  }
+
+  // only the phone sheet needs a close button; elsewhere a click outside or Escape closes it
+  .display-done {
+    display: none;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: 0;
+    background: none;
+    color: var(--global-theme-color);
+    font-weight: bold;
+    cursor: pointer;
   }
 
   fieldset {
@@ -561,10 +659,39 @@ article h3 {
   }
 
   @media (max-width: 575.98px) {
-    position: static;
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1070;
     width: auto;
-    margin: 0.5rem 0;
-    box-shadow: none;
+    max-height: 85dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 1rem 1.5rem calc(1.25rem + env(safe-area-inset-bottom));
+    border: 0;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);
+
+    .display-panel-title {
+      font-size: 1.25rem;
+    }
+
+    .display-done {
+      display: block;
+    }
+
+    .display-segments button {
+      min-height: 44px;
+    }
+  }
+
+  // the reading aid follows a mouse, trackpad or pen, so touch-only screens don't offer it
+  @media not all and (any-pointer: fine) {
+    .display-reading-aid {
+      display: none;
+    }
   }
 }
 
@@ -623,6 +750,33 @@ html[data-contrast="high"][data-theme="dark"] {
   --global-hover-color: #d9ccff;
 }
 
+// Reading aid (Display panel; behaviour in assets/js/site.js). The band sits under the
+// sticky header (z-index 1030) and the Display panel, and lets clicks through.
+.reading-aid {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+  pointer-events: none;
+  border-top: 2px solid var(--global-theme-color);
+  border-bottom: 2px solid var(--global-theme-color);
+  background-color: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+
+  // Line focus dims everything outside the band
+  &[data-mode="focus"] {
+    background-color: transparent;
+    box-shadow: 0 0 0 200vmax rgba(0, 0, 0, 0.45);
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .reading-aid[data-mode="focus"] {
+  box-shadow: 0 0 0 200vmax rgba(0, 0, 0, 0.62);
+}
+
 // ---------------------------------------------------------------------------
 // Navbar
 // ---------------------------------------------------------------------------
@@ -663,6 +817,17 @@ body > header {
 
   .nav-link {
     line-height: 1.7rem;
+  }
+
+  // the open phone menu scrolls on its own: the header sticks, so a menu taller than
+  // the screen (at a large text size, or a phone held sideways) would otherwise hide its
+  // end until the page itself reached the bottom
+  @media (max-width: 575.98px) {
+    .navbar-collapse {
+      max-height: calc(100dvh - var(--navbar-height));
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
   }
 
   .navbar-brand {

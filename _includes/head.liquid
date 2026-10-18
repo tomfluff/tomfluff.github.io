@@ -141,7 +141,7 @@
     var root = document.documentElement;
     root.classList.add('js');
     try {
-      ['text-size', 'line-spacing', 'contrast'].forEach(function (key) {
+      ['text-size', 'line-spacing', 'contrast', 'reading-aid'].forEach(function (key) {
         var value = localStorage.getItem('display-' + key);
         if (value && value !== 'default') root.setAttribute('data-' + key, value);
       });

@@ -32,11 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Display panel: text size, line spacing, theme and contrast. Settings
+  // Display panel: text size, line spacing, theme, contrast and reading aid. Settings
   // are attributes on <html> (an inline script in the head applies them before first
   // paint) and are saved in localStorage. Theme goes through theme.js's setThemeSetting.
   const displayToggle = document.getElementById("display-toggle");
   const displayPanel = document.getElementById("display-panel");
+  const displayBackdrop = document.querySelector(".display-backdrop");
   if (displayToggle && displayPanel) {
     const root = document.documentElement;
     const read = (key) => {
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const setOpen = (open) => {
       displayPanel.hidden = !open;
+      if (displayBackdrop) displayBackdrop.hidden = !open;
       displayToggle.setAttribute("aria-expanded", String(open));
       if (open) {
         markPressed();
@@ -82,10 +84,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const button = event.target.closest("[data-display-setting]");
       if (button) apply(button.dataset.displaySetting, button.dataset.value);
       if (event.target.closest(".display-reset")) {
-        ["text-size", "line-spacing", "contrast"].forEach((key) => apply(key, "default"));
+        ["text-size", "line-spacing", "contrast", "reading-aid"].forEach((key) => apply(key, "default"));
         apply("theme", "system");
       }
+      if (event.target.closest(".display-done")) {
+        setOpen(false);
+        displayToggle.focus();
+      }
     });
+    // on phones the panel is a sheet over a dimmed page; tapping the page closes it
+    displayBackdrop?.addEventListener("click", () => setOpen(false));
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && !displayPanel.hidden) {
         setOpen(false);
@@ -95,6 +103,83 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (event) => {
       if (!displayPanel.hidden && !event.target.closest(".display-settings")) setOpen(false);
     });
+  }
+
+  // Reading aid (Display panel): a band across the page at the pointer. "Ruler" marks the
+  // band; "Line focus" also dims the rest of the page. Over text the band snaps to the line
+  // under the pointer, at that line's height; elsewhere it follows the pointer. It follows
+  // a mouse, trackpad or pen only: a finger gives no position between taps, so touch is
+  // ignored, and the setting is hidden on touch-only screens (_site.scss).
+  {
+    const root = document.documentElement;
+    const band = document.createElement("div");
+    band.className = "reading-aid";
+    band.setAttribute("aria-hidden", "true");
+    band.hidden = true;
+    document.body.appendChild(band);
+    let pointer = null;
+    let frame = 0;
+
+    // the text line at (x, y): its vertical centre and line height, or null off text
+    const lineAt = (x, y) => {
+      let node, offset;
+      if (document.caretPositionFromPoint) {
+        const pos = document.caretPositionFromPoint(x, y);
+        if (pos) [node, offset] = [pos.offsetNode, pos.offset];
+      } else if (document.caretRangeFromPoint) {
+        const range = document.caretRangeFromPoint(x, y);
+        if (range) [node, offset] = [range.startContainer, range.startOffset];
+      }
+      if (!node || node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) return null;
+      const element = node.parentElement;
+      if (element.closest("header, .display-panel, button, input, textarea")) return null;
+      const range = document.createRange();
+      range.setStart(node, Math.min(offset, node.length));
+      range.collapse(true);
+      const rect = [...range.getClientRects()][0] || range.getBoundingClientRect();
+      if (!rect || !rect.height) return null;
+      const style = getComputedStyle(element);
+      const lineHeight = parseFloat(style.lineHeight) || parseFloat(style.fontSize) * 1.6;
+      const centre = rect.top + rect.height / 2;
+      // caret positions also exist in margins next to text; only accept the line the pointer is on
+      if (Math.abs(centre - y) > lineHeight * 0.75) return null;
+      return { centre, height: lineHeight };
+    };
+
+    const draw = () => {
+      frame = 0;
+      const mode = root.getAttribute("data-reading-aid");
+      if (!mode || !pointer) {
+        band.hidden = true;
+        return;
+      }
+      const fallback = parseFloat(getComputedStyle(document.body).fontSize) * 1.9;
+      const line = lineAt(pointer.x, pointer.y) || { centre: pointer.y, height: fallback };
+      const height = line.height + 6;
+      band.style.top = `${line.centre - height / 2}px`;
+      band.style.height = `${height}px`;
+      band.dataset.mode = mode;
+      band.hidden = false;
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(draw);
+    };
+
+    const follow = (event) => {
+      if (event.pointerType === "touch") return;
+      pointer = { x: event.clientX, y: event.clientY };
+      schedule();
+    };
+    document.addEventListener("pointermove", follow);
+    document.addEventListener("pointerdown", follow);
+    // a mouse leaving the window hides the band
+    document.documentElement.addEventListener("mouseleave", () => {
+      pointer = null;
+      schedule();
+    });
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    new MutationObserver(schedule).observe(root, { attributes: true, attributeFilter: ["data-reading-aid"] });
   }
 
   // Comments: the giscus embed waits in a <template> until the panel is first opened.

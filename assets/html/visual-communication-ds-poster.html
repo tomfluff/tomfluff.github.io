@@ -7,6 +7,8 @@ body { margin:0; background:var(--bg); color:var(--fg); font-family:"Open Sans",
 .wrap { max-width:46rem; margin:0 auto; padding:0 1rem 3rem; }
 h1, h2, h3 { line-height:1.2; font-weight:800; }
 h1 { font-size:2.1rem; margin:.4rem 0 .6rem; color:#cea665; }
+/* "Communication" in Open Sans 800 is about 8.2em wide, so on phones the title scales with the screen to fit one word per line. */
+@media screen { h1 { font-size:min(2.1rem, calc((100vw - 2rem) / 9)); } }
 h1 .sub { display:block; font-size:1.25rem; font-weight:400; color:#ffffff; margin-top:.4rem; }
 h2 { font-size:1.45rem; color:var(--gold); border-bottom:3px solid currentColor; padding-bottom:.3rem; margin:2.6rem 0 1rem; }
 h2.teal { color:var(--teal); } h2.both { color:var(--both); }

@@ -43,6 +43,7 @@ figcaption { margin-top:.6rem; }
 .steps { padding-left:0; list-style:none; counter-reset:s; }
 .steps > li { counter-increment:s; }
 .steps > li > h3::before { content:counter(s) "  "; background:var(--blue); color:var(--bg); padding:0 .4rem; margin-right:.5rem; }
+@media (min-width:56rem) { .steps { display:grid; grid-template-columns:repeat(3, 1fr); gap:0 1.2rem; } .steps figure { margin-bottom:0; } }
 blockquote { margin:.8rem 0; padding:.2rem 0 .2rem 1rem; border-left:5px solid var(--blue); }
 blockquote p { margin:.2rem 0; }
 .who { font-weight:700; }
@@ -53,6 +54,7 @@ th, td { text-align:left; padding:.5rem .6rem; border-bottom:2px solid var(--tra
 td .bar { display:block; height:.7rem; background:var(--track); margin-top:.3rem; }
 td .bar span { display:block; height:100%; background:var(--bar); }
 td .bar.g span { background:var(--bar2); }
+@media (max-width:30rem) { table { font-size:.85rem; } th, td { padding:.4rem .3rem; } }
 .limit { background:var(--grey); padding:.4rem 1rem 1rem; margin-top:1.4rem; }
 .flow { padding-left:1.4rem; }
 .dr { padding-left:0; list-style:none; }

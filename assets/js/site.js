@@ -69,11 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       markPressed();
     };
+    // Under browser zoom the top bar can wrap onto several rows, and the header is sticky,
+    // so the dropdown is capped at the space left below it and scrolls inside. The phone
+    // sheet (position: fixed) has its own cap in _site.scss.
+    const fit = () => {
+      displayPanel.style.maxHeight = "";
+      if (displayPanel.hidden || getComputedStyle(displayPanel).position !== "absolute") return;
+      displayPanel.style.maxHeight = `${innerHeight - displayPanel.getBoundingClientRect().top - 8}px`;
+    };
     const setOpen = (open) => {
       displayPanel.hidden = !open;
       if (displayBackdrop) displayBackdrop.hidden = !open;
       displayToggle.setAttribute("aria-expanded", String(open));
       if (open) {
+        fit();
         markPressed();
         displayPanel.querySelector("[aria-pressed='true']")?.focus();
       }
@@ -87,11 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
         ["text-size", "line-spacing", "contrast", "reading-aid"].forEach((key) => apply(key, "default"));
         apply("theme", "system");
       }
+      // text size changes the height of the top bar
+      fit();
       if (event.target.closest(".display-done")) {
         setOpen(false);
         displayToggle.focus();
       }
     });
+    window.addEventListener("resize", fit);
     // on phones the panel is a sheet over a dimmed page; tapping the page closes it
     displayBackdrop?.addEventListener("click", () => setOpen(false));
     document.addEventListener("keydown", (event) => {

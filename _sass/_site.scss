@@ -557,6 +557,10 @@ article h3 {
   top: calc(100% + 0.5rem);
   z-index: 1050;
   width: 20rem;
+  // site.js caps the height at the space below the top bar (browser zoom), and the
+  // rest scrolls inside the panel
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 1rem 1.1rem 0.85rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 12px;

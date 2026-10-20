@@ -105,9 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Reading aid (Display panel): a band across the page at the pointer. "Ruler" marks the
-  // band; "Line focus" also dims the rest of the page. Over text the band snaps to the line
-  // under the pointer, at that line's height; elsewhere it follows the pointer. It follows
+  // Reading aid (Display panel). "Ruler" is a thin line across the page at the pointer.
+  // "Line focus" is a band that dims the rest of the page: over text it snaps to the line
+  // under the pointer, at that line's height; elsewhere it follows the pointer. Both follow
   // a mouse, trackpad or pen only: a finger gives no position between taps, so touch is
   // ignored, and the setting is hidden on touch-only screens (_site.scss).
   {
@@ -153,11 +153,16 @@ document.addEventListener("DOMContentLoaded", () => {
         band.hidden = true;
         return;
       }
-      const fallback = parseFloat(getComputedStyle(document.body).fontSize) * 1.9;
-      const line = lineAt(pointer.x, pointer.y) || { centre: pointer.y, height: fallback };
-      const height = line.height + 6;
-      band.style.top = `${line.centre - height / 2}px`;
-      band.style.height = `${height}px`;
+      if (mode === "ruler") {
+        band.style.top = `${pointer.y}px`;
+        band.style.height = "";
+      } else {
+        const fallback = parseFloat(getComputedStyle(document.body).fontSize) * 1.9;
+        const line = lineAt(pointer.x, pointer.y) || { centre: pointer.y, height: fallback };
+        const height = line.height + 6;
+        band.style.top = `${line.centre - height / 2}px`;
+        band.style.height = `${height}px`;
+      }
       band.dataset.mode = mode;
       band.hidden = false;
     };

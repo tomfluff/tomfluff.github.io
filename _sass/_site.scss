@@ -758,13 +758,18 @@ html[data-contrast="high"][data-theme="dark"] {
   right: 0;
   z-index: 1020;
   pointer-events: none;
-  border-top: 2px solid var(--global-theme-color);
-  border-bottom: 2px solid var(--global-theme-color);
-  background-color: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
 
-  // Line focus dims everything outside the band
+  // Ruler: a line at the pointer
+  &[data-mode="ruler"] {
+    height: 3px;
+    margin-top: -1.5px;
+    background-color: var(--global-theme-color);
+  }
+
+  // Line focus: a band around the line, with everything outside it dimmed
   &[data-mode="focus"] {
-    background-color: transparent;
+    border-top: 2px solid var(--global-theme-color);
+    border-bottom: 2px solid var(--global-theme-color);
     box-shadow: 0 0 0 200vmax rgba(0, 0, 0, 0.45);
   }
 
@@ -1955,7 +1960,7 @@ html[data-theme="dark"] {
   font-weight: bold;
   text-decoration: none;
 
-  &:focus {
+  &:focus-visible {
     top: 0.5rem;
     color: var(--global-bg-color);
   }

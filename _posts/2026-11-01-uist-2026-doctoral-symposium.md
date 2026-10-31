@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visual Communication for Low-Vision Information Access"
-date: 2026-11-01 09:00:00-0500
+date: 2026-11-01 08:19:00+0900
 thumbnail: assets/img/posts/uist26-ds-thumbnail.png
 og_image: /assets/img/posts/uist26-ds-social.png
 featured: true
